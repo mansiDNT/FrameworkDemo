@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 739.904 sec <<< FAILURE! - in TestSuite
+login_negative(com.index.LoginIndex)  Time elapsed: 18.315 sec  <<< FAILURE!
+java.lang.AssertionError: Login is not successful. expected [true] but found [false]
+	at com.index.LoginIndex.login_negative(LoginIndex.java:74)
+
