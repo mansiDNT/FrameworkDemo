@@ -15,7 +15,7 @@ public class LoginIndex extends SeleniumInit {
 	@Test
 	public void login() throws Exception
 	{
-		 System.out.println("Username is : " + Common.getCellValue("Sheet1",1,0));
+		 System.out.println("Username is: " + Common.getCellValue("Sheet1",1,0));
     	 System.out.println("Password is: " + Common.getCellValue("Sheet1",1,1));
    
     	 System.out.println(Common.getCellValue("Sheet1",1,0));
