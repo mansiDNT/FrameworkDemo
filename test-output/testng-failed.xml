@@ -10,6 +10,22 @@
     <listener class-name="com.utility.CustomReporterforEmail"/>
     <listener class-name="com.utility.CustomReporterBuildSummary"/>
   </listeners>
+  <test name="TC-1. Login validation.(failed)" parallel="none">
+    <classes>
+      <class name="com.index.LoginIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="one"/>
+          <include name="one"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.index.LoginIndex -->
+    </classes>
+  </test> <!-- TC-1. Login validation.(failed) -->
   <test name="TC-2. Negative Login validation.(failed)" parallel="none">
     <classes>
       <class name="com.index.LoginIndex">
@@ -17,7 +33,6 @@
           <include name="fetchSuiteConfiguration"/>
           <include name="one"/>
           <include name="one"/>
-          <include name="testResults"/>
           <include name="setUp"/>
           <include name="setUp"/>
           <include name="tearDown"/>
