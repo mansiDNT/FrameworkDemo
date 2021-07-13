@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="4" verbose="0" name="Failed suite [Login Test Cases]" parallel="none" allow-return-values="true">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" name="Failed suite [Login Test Cases]" allow-return-values="true" verbose="10">
   <parameter name="selenium.port" value="4444"/>
   <parameter name="selenium.host" value="localhost"/>
   <parameter name="selenium.browser" value="chrome"/>
@@ -10,34 +10,16 @@
     <listener class-name="com.utility.CustomReporterforEmail"/>
     <listener class-name="com.utility.CustomReporterBuildSummary"/>
   </listeners>
-  <test name="TC-1. Login validation.(failed)" parallel="none">
+  <test thread-count="4" name="TC-2. Negative Login validation.(failed)" verbose="10">
     <classes>
       <class name="com.index.LoginIndex">
         <methods>
+          <include name="testResults"/>
+          <include name="one"/>
+          <include name="setUp"/>
           <include name="fetchSuiteConfiguration"/>
-          <include name="one"/>
-          <include name="one"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.index.LoginIndex -->
-    </classes>
-  </test> <!-- TC-1. Login validation.(failed) -->
-  <test name="TC-2. Negative Login validation.(failed)" parallel="none">
-    <classes>
-      <class name="com.index.LoginIndex">
-        <methods>
-          <include name="fetchSuiteConfiguration"/>
-          <include name="one"/>
-          <include name="one"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
           <include name="login_negative"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.index.LoginIndex -->
     </classes>

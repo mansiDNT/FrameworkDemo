@@ -2,10 +2,12 @@
 
 <html>
   <head>
+  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -22,22 +24,23 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Login_Test_Cases">
-              <span class="suite-name border-skipped">Login Test Cases</span>
+            <a href="#" panel-name="suite-Login_Test_Cases" class="navigator-link">
+              <span class="suite-name border-failed">Login Test Cases</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -47,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Login_Test_Cases">
+                  <a href="#" panel-name="test-xml-Login_Test_Cases" class="navigator-link ">
                     <span>C:\Users\BAPS\eclipse-workspace\FrameworkDemo\Build\Login.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Login_Test_Cases">
+                  <a href="#" panel-name="testlist-Login_Test_Cases" class="navigator-link ">
                     <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Login_Test_Cases">
+                  <a href="#" panel-name="group-Login_Test_Cases" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Login_Test_Cases">
+                  <a href="#" panel-name="times-Login_Test_Cases" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Login_Test_Cases">
+                  <a href="#" panel-name="reporter-Login_Test_Cases" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Login_Test_Cases">
+                  <a href="#" panel-name="ignored-methods-Login_Test_Cases" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Login_Test_Cases">
+                  <a href="#" panel-name="chronological-Login_Test_Cases" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -90,26 +93,35 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Login_Test_Cases" class="hide-methods skipped suite-Login_Test_Cases"> (hide)</a> <!-- hide-methods skipped suite-Login_Test_Cases -->
-                      <a href="#" panel-name="suite-Login_Test_Cases" class="show-methods skipped suite-Login_Test_Cases"> (show)</a> <!-- show-methods skipped suite-Login_Test_Cases -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="hide-methods failed suite-Login_Test_Cases"> (hide)</a> <!-- hide-methods failed suite-Login_Test_Cases -->
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="show-methods failed suite-Login_Test_Cases"> (show)</a> <!-- show-methods failed suite-Login_Test_Cases -->
                     </span>
-                    <div class="method-list-content skipped suite-Login_Test_Cases">
+                    <div class="method-list-content failed suite-Login_Test_Cases">
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login">login</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" class="method navigator-link" hash-for-method="login_negative">login_negative</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                    </div> <!-- method-list-content failed suite-Login_Test_Cases -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="hide-methods passed suite-Login_Test_Cases"> (hide)</a> <!-- hide-methods passed suite-Login_Test_Cases -->
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="show-methods passed suite-Login_Test_Cases"> (show)</a> <!-- show-methods passed suite-Login_Test_Cases -->
+                    </span>
+                    <div class="method-list-content passed suite-Login_Test_Cases">
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login_negative">login_negative</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Login_Test_Cases -->
+                    </div> <!-- method-list-content passed suite-Login_Test_Cases -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -121,9 +133,59 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Login_Test_Cases" class="panel Login_Test_Cases">
-          <div class="suite-Login_Test_Cases-class-skipped">
+          <div class="suite-Login_Test_Cases-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">com.index.LoginIndex</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login_negative">
+                  </a> <!-- login_negative -->
+                  <span class="method-name">login_negative</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login is not successful. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at com.index.LoginIndex.login_negative(LoginIndex.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Login_Test_Cases-class-failed -->
+          <div class="suite-Login_Test_Cases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.index.LoginIndex</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -134,15 +196,8 @@
                   <span class="method-name">login</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="login_negative">
-                  </a> <!-- login_negative -->
-                  <span class="method-name">login_negative</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Login_Test_Cases-class-skipped -->
+          </div> <!-- suite-Login_Test_Cases-class-passed -->
         </div> <!-- panel Login_Test_Cases -->
         <div panel-name="test-xml-Login_Test_Cases" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -151,8 +206,8 @@
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;4&quot; verbose=&quot;0&quot; name=&quot;Login Test Cases&quot; parallel=&quot;none&quot; allow-return-values=&quot;true&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;4&quot; name=&quot;Login Test Cases&quot; allow-return-values=&quot;true&quot; verbose=&quot;10&quot;&gt;
   &lt;parameter name=&quot;selenium.port&quot; value=&quot;4444&quot;/&gt;
   &lt;parameter name=&quot;selenium.host&quot; value=&quot;localhost&quot;/&gt;
   &lt;parameter name=&quot;selenium.browser&quot; value=&quot;chrome&quot;/&gt;
@@ -162,7 +217,7 @@
     &lt;listener class-name=&quot;com.utility.CustomReporterforEmail&quot;/&gt;
     &lt;listener class-name=&quot;com.utility.CustomReporterBuildSummary&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;TC-1. Login validation.&quot;&gt;
+  &lt;test thread-count=&quot;4&quot; name=&quot;TC-1. Login validation.&quot; verbose=&quot;10&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.index.LoginIndex&quot;&gt;
         &lt;methods&gt;
@@ -171,7 +226,7 @@
       &lt;/class&gt; &lt;!-- com.index.LoginIndex --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TC-1. Login validation. --&gt;
-  &lt;test name=&quot;TC-2. Negative Login validation.&quot;&gt;
+  &lt;test thread-count=&quot;4&quot; name=&quot;TC-2. Negative Login validation.&quot; verbose=&quot;10&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.index.LoginIndex&quot;&gt;
         &lt;methods&gt;
@@ -224,16 +279,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login')
 data.setCell(0, 2, 'com.index.LoginIndex')
-data.setCell(0, 3, 2);
+data.setCell(0, 3, 6656);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'login_negative')
 data.setCell(1, 2, 'com.index.LoginIndex')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 6305);
 window.suiteTableData['Login_Test_Cases']= { tableData: data, tableDiv: 'times-div-Login_Test_Cases'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 ms</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Login_Test_Cases">
               </div> <!-- times-div-Login_Test_Cases -->
             </div> <!-- times-div -->
@@ -247,13 +302,22 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">login</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='C:\Users\BAPS\eclipse-workspace\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
+                <span class="reporter-method-output"><br>Step 1 : Enter username.<br></span>
+                <span class="reporter-method-output"><br>Step 2 : Enter password.<br></span>
+                <span class="reporter-method-output"><br>Step 3 : Click on Signin button.<br></span>
+                <span class="reporter-method-output"><br>Step 4 : Verify 'Login' is successful.<br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">login_negative</span>
               <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br>Step 1 : Enter username.<br></span>
+                <span class="reporter-method-output"><br>Step 2 : Enter password.<br></span>
+                <span class="reporter-method-output"><br>Step 3 : Click on Signin button.<br></span>
+                <span class="reporter-method-output"><br>Step 4 : Verify 'Login' is successful.<br></span>
                 <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='C:\Users\BAPS\eclipse-workspace\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
+                <span class="reporter-method-output"><br><b><i>Failure Reason:</b></i></span>
+                <span class="reporter-method-output"><br><Strong><font color=#ff0000>java.lang.AssertionError: Login is not successful. expected [true] but found [false]</font></strong></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -282,48 +346,51 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.LoginIndex</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@7ceb3185)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@7add323c)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@3b8f0a79)</span>
-                <span class="method-start">1908 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@4a734c04)</span>
+                <span class="method-start">256 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">setUp(public void com.index.LoginIndex.login() throws java.lang.Exception, org.testng.TestRunner@3b8f0a79)</span>
-                <span class="method-start">1914 ms</span>
+                <span class="method-name">setUp(public void com.index.LoginIndex.login() throws java.lang.Exception, org.testng.TestRunner@4a734c04)</span>
+                <span class="method-start">281 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">3497 ms</span>
+                <span class="method-start">10797 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=login status=SKIP method=LoginIndex.login()[pri:0, instance:com.index.LoginIndex@2c...)</span>
-                <span class="method-start">3500 ms</span>
+                <span class="method-name">tearDown([TestResult name=login status=SUCCESS method=LoginIndex.login()[pri:0, instance:com.index.LoginIndex...)</span>
+                <span class="method-start">17455 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@7ceb3185)</span>
-                <span class="method-start">3521 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@7add323c)</span>
+                <span class="method-start">17722 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">setUp(public void com.index.LoginIndex.login_negative() throws java.lang.Exception, org.testng.TestRunner@...)</span>
-                <span class="method-start">3521 ms</span>
+                <span class="method-start">17724 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">login_negative</span>
-                <span class="method-start">4077 ms</span>
+                <span class="method-start">26832 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=login_negative status=SKIP method=LoginIndex.login_negative()[pri:0, instance:com.i...)</span>
-                <span class="method-start">4077 ms</span>
+                <span class="method-name">tearDown([TestResult name=login_negative status=FAILURE method=LoginIndex.login_negative()[pri:0, instance:co...)</span>
+                <span class="method-start">33141 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">testResults</span>
+                <span class="method-start">33201 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

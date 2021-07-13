@@ -56,7 +56,7 @@ import org.testng.Reporter;
  */
 public class Common {
 
-	
+	public static  String userDir = System.getProperty("user.dir");
 	 
 	protected static Wait<WebDriver> wait;
 	public static String alerttext;
@@ -777,7 +777,7 @@ public class Common {
 	{
 		String ser=null;
 		try {
-			FileInputStream ExcelFile = new FileInputStream("C:\\Users\\MANSI\\eclipse-workspace\\FrameworkDemo\\test_data\\Credentials.xlsx");
+			FileInputStream ExcelFile = new FileInputStream(userDir + "\\test_data\\Credentials.xlsx");
 			ExcelWBook = new XSSFWorkbook(ExcelFile);
 			ExcelWSheet = ExcelWBook.getSheet(sheet);
 			ser = getCellData(i, j);
