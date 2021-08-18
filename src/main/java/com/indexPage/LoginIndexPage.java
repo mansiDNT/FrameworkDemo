@@ -16,7 +16,7 @@ public class LoginIndexPage extends AbstractPage {
 		// TODO Auto-generated constructor stub
 	} 
 
-	@FindBy(id="qb-username")
+	@FindBy(id="user-name")
 	WebElement email_field;
 	public LoginVerificationPage enterEmail(String username)
 	{
@@ -24,7 +24,7 @@ public class LoginIndexPage extends AbstractPage {
 		return new LoginVerificationPage(driver);
 	}
 	
-	@FindBy(id="qb-password")
+	@FindBy(id="password")
 	WebElement password_field;
 	public LoginVerificationPage enterPassword(String password)
 	{
@@ -34,7 +34,8 @@ public class LoginIndexPage extends AbstractPage {
 	}
 	
 	
-	@FindBy(xpath = "//button[contains(text(),'Sign In')]")
+	
+	@FindBy(xpath = "//input[@id='login-button']")
 	WebElement login_button;
 	public LoginVerificationPage clickOnLoginButton()
 	{

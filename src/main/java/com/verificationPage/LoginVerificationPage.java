@@ -21,7 +21,7 @@ Boolean bool;
 	public boolean verifySuccessfulLogin() {
 		
 		Common.pause(2);
-		WebElement var = driver.findElement(By.xpath("//div[@class='qb-logodark']"));
+		WebElement var = driver.findElement(By.xpath("//div[@class='app_logo']"));
 		if(null!=var && var.isDisplayed()){
 		test.log(LogStatus.PASS, "Login is successful.");
 		bool=true;
@@ -35,13 +35,26 @@ Boolean bool;
 	public boolean verifyNegativeLogin() {
 		
 		Common.pause(2);
-		if(driver.findElement(By.xpath("//div[@class='qb-logodark']")).isDisplayed()){
-			test1.log(LogStatus.FAIL, "Login not successful.");
-		bool=false;
+		if(driver.findElement(By.xpath("//*[@id='login_button_container']/div/form/div[3]/h3")).isDisplayed()){
+			test1.log(LogStatus.PASS, "Username and password do not match any user in this service");
+		bool=true;
 		}else {
-			test1.log(LogStatus.PASS,"Login is successful.");
-			bool=true;
+			test1.log(LogStatus.FAIL,"Login is successful.");
+			bool=false;
 		}
+		return bool;
+	}
+	
+	public boolean verifyBlankUserName(){
+		Common.pause(2);
+		if(driver.findElement(By.xpath("//*[@id='login_button_container']/div/form/div[3]/h3")).isDisplayed()){
+			test1.log(LogStatus.PASS, "UserName is required");
+		bool=true;
+		}else {
+			test1.log(LogStatus.FAIL,"Login is successful.");
+			bool=false;
+		}
+		
 		return bool;
 	}
 	

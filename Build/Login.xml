@@ -13,7 +13,7 @@
 
 	<!-- <parameter name="selenium.url" value="https://test.enterprisesecure.com.au/payment/dashboard" 
 		/> -->
-	<parameter name="selenium.url" value="https://qbank.accelq.com/" />
+	<parameter name="selenium.url" value="https://www.saucedemo.com/" />
  <listeners>
 		<!--  <listener class-name="com.utility.CustomReporterListener" />  -->
 		<listener class-name="com.utility.CustomReporterEmailBuildSummary" />
@@ -36,6 +36,7 @@
 			</class>
 		</classes>
 	</test>  
+	
 	<test name="TC-2. Negative Login validation.">		
 		<classes>
 			<class name="com.index.LoginIndex">
@@ -45,4 +46,16 @@
 			</class>
 		</classes>
 	</test>  
+	
+	<test name="TC-3. Blank UserName validation.">		
+		<classes>
+			<class name="com.index.LoginIndex">
+				<methods>
+					<include name="login_blankUserName" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+	
 </suite>
