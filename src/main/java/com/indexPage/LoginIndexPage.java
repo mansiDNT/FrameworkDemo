@@ -16,7 +16,7 @@ public class LoginIndexPage extends AbstractPage {
 		// TODO Auto-generated constructor stub
 	} 
 
-	@FindBy(id="qb-username")
+	@FindBy(id="login-email")
 	WebElement email_field;
 	public LoginVerificationPage enterEmail(String username)
 	{
@@ -24,7 +24,7 @@ public class LoginIndexPage extends AbstractPage {
 		return new LoginVerificationPage(driver);
 	}
 	
-	@FindBy(id="qb-password")
+	@FindBy(id="login-password")
 	WebElement password_field;
 	public LoginVerificationPage enterPassword(String password)
 	{
@@ -34,7 +34,7 @@ public class LoginIndexPage extends AbstractPage {
 	}
 	
 	
-	@FindBy(xpath = "//button[contains(text(),'Sign In')]")
+	@FindBy(xpath="//button[@type=\"submit\"]")
 	WebElement login_button;
 	public LoginVerificationPage clickOnLoginButton()
 	{
@@ -43,5 +43,36 @@ public class LoginIndexPage extends AbstractPage {
 		Common.clickOn(driver, login_button);
 		return new LoginVerificationPage(driver);
 	}
+	
+	@FindBy(xpath="//div[contains(text(),\"Invalid email id provided.\")]")
+	WebElement Error_msg;
+	public LoginVerificationPage validationmsg()
+	{
+		//login_button.click();
+		//driver.findElement(By.xpath("//button[contains(text(),'Sign In')]")).click();
+		Common.clickOn(driver, Error_msg);
+		return new LoginVerificationPage(driver);
+	}
 
+	@FindBy(xpath="//a[contains(text(),\"Subscription Plans\")]")
+	WebElement scroll_down;
+	public LoginVerificationPage ScrollDown()
+	{
+		//login_button.click();
+		//driver.findElement(By.xpath("//button[contains(text(),'Sign In')]")).click();
+		Common.scrollToVertical(driver, scroll_down);
+		return new LoginVerificationPage(driver);
+	}
+	
+	@FindBy(id="dropdownMenuButton")
+	WebElement threeDot;
+	public LoginVerificationPage ClickonThreeDot()
+	{
+		//login_button.click();
+		//driver.findElement(By.xpath("//button[contains(text(),'Sign In')]")).click();
+		Common.clickOn(driver, threeDot);
+		return new LoginVerificationPage(driver);
+	}
+
+	
 }
