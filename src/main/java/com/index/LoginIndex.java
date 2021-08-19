@@ -24,18 +24,14 @@ public class LoginIndex extends SeleniumInit {
 		// login button disabled
 		testStepsLog("Step " + (stepCount++) + " : Enter username.");
 		test.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter username.");
-		// loginVerificationPage =
-		// loginIndexPage.enterEmail((Common.getCellValue("Sheet1",1,0)).toString());
+
 		loginVerificationPage = loginIndexPage.enterEmail(Common.getCellValue("Sheet1", 1, 0));
 		test.log(LogStatus.PASS,
 				"Username entered correctly.Entered username is : " + Common.getCellValue("Sheet1", 1, 0));
 
 		testStepsLog("Step " + (stepCount++) + " : Enter password.");
 		test.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter password.");
-		// loginVerificationPage =
-		// loginIndexPage.enterPassword((Common.getCellValue("Sheet1",1,0)).toString());
-		// loginVerificationPage =
-		// loginIndexPage.enterEmail((Common.getCellValue("Sheet1",1,0)).toString());
+
 		loginVerificationPage = loginIndexPage.enterPassword(Common.getCellValue("Sheet1", 1, 1));
 		test.log(LogStatus.PASS,
 				"Password entered correctly.Entered username is : " + Common.getCellValue("Sheet1", 1, 0));
@@ -58,16 +54,12 @@ public class LoginIndex extends SeleniumInit {
 		// login button disabled
 		testStepsLog("Step " + (stepCount++) + " : Enter username.");
 		test1.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter username.");
-		// loginVerificationPage =
-		// loginIndexPage.enterEmail(Common.getCellValue("Sheet1",1,0));
 		loginVerificationPage = loginIndexPage.enterEmail(Common.getCellValue("Sheet1", 1, 0));
 		test1.log(LogStatus.PASS,
 				"Username entered correctly.Entered username is : " + Common.getCellValue("Sheet1", 1, 0));
 
 		testStepsLog("Step " + (stepCount++) + " : Enter password.");
 		test1.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter password.");
-		// loginVerificationPage =
-		// loginIndexPage.enterPassword(Common.getCellValue("Sheet1",1,0));
 		loginVerificationPage = loginIndexPage.enterPassword(Common.getCellValue("Sheet1", 1, 2));
 		test1.log(LogStatus.PASS,
 				"Password entered correctly.Entered username is : " + Common.getCellValue("Sheet1", 1, 0));
@@ -89,4 +81,13 @@ public class LoginIndex extends SeleniumInit {
 		boolean errorMessage = loginVerificationPage.verifyBlankUserName();
 		Assert.assertTrue(errorMessage, "UserName is required");
 	}
+
+	@Test
+	public void login_blankPassword() throws Exception {
+		loginVerificationPage = loginIndexPage.enterEmail(Common.getCellValue("Sheet1", 1, 0));
+		loginVerificationPage = loginIndexPage.enterPassword("");
+		loginVerificationPage = loginIndexPage.clickOnLoginButton();
+		boolean errorMessage = loginVerificationPage.verifyBlankPassword();
+		Assert.assertTrue(errorMessage, "Password is required");
+			}
 }

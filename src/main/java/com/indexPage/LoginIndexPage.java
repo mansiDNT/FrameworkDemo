@@ -29,7 +29,7 @@ public class LoginIndexPage extends AbstractPage {
 	public LoginVerificationPage enterPassword(String password)
 	{
 		Common.enterDataIn(driver, password_field, password);
-		//Common.pause(2);
+		
 		return new LoginVerificationPage(driver);
 	}
 	
@@ -39,8 +39,7 @@ public class LoginIndexPage extends AbstractPage {
 	WebElement login_button;
 	public LoginVerificationPage clickOnLoginButton()
 	{
-		//login_button.click();
-		//driver.findElement(By.xpath("//button[contains(text(),'Sign In')]")).click();
+		
 		Common.clickOn(driver, login_button);
 		return new LoginVerificationPage(driver);
 	}
