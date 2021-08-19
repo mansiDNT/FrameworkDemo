@@ -60,7 +60,7 @@ Boolean bool;
 	
 	public boolean verifyBlankPassword(){
 		Common.pause(2);
-		if(driver.findElement(By.xpath("//*[@id='login_button_container']/div/form/div[3]/h3")).isDisplayed()){
+		if(driver.findElement(By.xpath("//input[@id='login-button']")).isDisplayed()){
 			test1.log(LogStatus.PASS, "Password is required");
 		bool=true;
 		}else {

@@ -48,9 +48,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
+import com.index.AddCartIndex;
+import com.indexPage.AddCartIndexPage;
 import com.indexPage.LoginIndexPage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.verificationPage.CartVerificationPage;
 import com.verificationPage.LoginVerificationPage;
 
 public class SeleniumInit {
@@ -92,19 +95,11 @@ public class SeleniumInit {
 	public static ExtentTest test1;
 	static ExtentReports report;
 	
-	/* Page's declaration */
-
-//	public  TemplateIndexPage templateIndexPage;
-//	public  TemplateVerificationPage templateVerificationPage;
-//	
 	public  LoginIndexPage loginIndexPage;
 	public  LoginVerificationPage loginVerificationPage;
-//	
-//	public  DashboardIndexPage dashboardIndexPage;
-//	public  DashboardVerificationPage dashboardVerificationPage;
-//	
-//	public  RFPIndexPage rfpIndexPage;
-//	public  RFPVerificationPage rfpVerificationPage;
+	
+	public AddCartIndexPage addCartIndexPage;
+	public CartVerificationPage cartVerificationPage;
 
 	/**
 	 * Fetches suite-configuration from XML suite file.
@@ -172,6 +167,7 @@ public class SeleniumInit {
 		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 	}
 	
+		@SuppressWarnings("deprecation")
 		@BeforeMethod(alwaysRun = true)
 		public void setUp(Method method, ITestContext testContext) throws IOException, InterruptedException {
 			
@@ -271,7 +267,7 @@ public class SeleniumInit {
 				osName = capability.getPlatform().name();
 				browserVersion = capability.getVersion();
 				
-			//	driver = new RemoteWebDriver(remote_grid, options);
+			
 				this.driver = new ChromeDriver(capability);
 
 				System.out.println("=========" + " Google Chrome Browser " + "==========");
@@ -294,7 +290,7 @@ public class SeleniumInit {
 				browserVersion = capability.getVersion();
 
 				log(browserVersion);
-				//driver = new RemoteWebDriver(remote_grid, capability);
+				
 				this.driver = new InternetExplorerDriver(capability);
 
 				System.out.println("=========" + " Internet Explorer Browser " + "==========");
@@ -331,19 +327,11 @@ public class SeleniumInit {
 			currentWindowHandle = driver.getWindowHandle();
 
 			System.out.println("Current Window Handle ID:--->" + currentWindowHandle);
-
-			// Page Object Initialization According To Its Test Suite.
-//			templateIndexPage = new TemplateIndexPage(driver);
-//			templateVerificationPage = new TemplateVerificationPage(driver);
-//			
 			loginIndexPage = new LoginIndexPage(driver);
 			loginVerificationPage = new LoginVerificationPage(driver);
-//			
-//			dashboardIndexPage = new DashboardIndexPage(driver);
-//			dashboardVerificationPage = new DashboardVerificationPage(driver);
-//			
-//			rfpIndexPage = new RFPIndexPage(driver);
-//			rfpVerificationPage = new RFPVerificationPage(driver);
+			
+			addCartIndexPage=new AddCartIndexPage(driver);
+			cartVerificationPage=new CartVerificationPage(driver);
 			
 		}
 	/**

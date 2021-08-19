@@ -441,11 +441,11 @@ public class Common {
 		// TODO code application logic here
         // File (or directory) to be moved
 		// store file path
-        String filepath = "C:\\Users\\MANSI\\eclipse-workspace\\FrameworkDemo\\test-output\\screenshots";
+        String filepath = userDir + "\\test-output\\screenshots";
         File file = new File(filepath);
   
         // call deleteDirectory function to delete
-        // subdirectory and files
+        // sub directory and files
         deleteDirectory(file);
   
         // delete main GFG folder
@@ -462,7 +462,7 @@ public class Common {
 		try {
 			/*
 			 * String reportFolder = "target" + File.separator +
-			 * "failsafe-reports" + File.separator + "firefox" + File.separator;
+			 * "fail safe-reports" + File.separator + "firefox" + File.separator;
 			 */
 			String reportFolder = "test-output" + File.separator;
 			String screenshotsFolder = "screenshots";

@@ -89,5 +89,5 @@ public class LoginIndex extends SeleniumInit {
 		loginVerificationPage = loginIndexPage.clickOnLoginButton();
 		boolean errorMessage = loginVerificationPage.verifyBlankPassword();
 		Assert.assertTrue(errorMessage, "Password is required");
-			}
+	}
 }

@@ -57,5 +57,24 @@
 		</classes>
 	</test>  
 	
+	<test name="TC-4. Blank Password validation.">		
+		<classes>
+			<class name="com.index.LoginIndex">
+				<methods>
+					<include name="login_blankPassword" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+	<test name="TC-5.Add to cart validation.">		
+		<classes>
+			<class name="com.index.AddCartIndex">
+				<methods>
+					<include name="addProductToCart" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
 	
 </suite>
