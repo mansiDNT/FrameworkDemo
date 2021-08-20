@@ -10,7 +10,7 @@ public class AddCartIndex extends LoginIndex{
 		login();
 		cartVerificationPage=addCartIndexPage.clickOnAddToCart();
 		boolean errormessage=cartVerificationPage.verifyCartCount();
-		Assert.assertTrue(errormessage, "Product is added to count.");
+		Assert.assertTrue(errormessage, "Product is added to cart.");
 		
 	}
 

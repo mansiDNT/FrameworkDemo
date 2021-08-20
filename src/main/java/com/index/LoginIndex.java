@@ -70,7 +70,7 @@ public class LoginIndex extends SeleniumInit {
 
 		testStepsLog("Step " + (stepCount++) + " : Verify 'Login' is successful.");
 		boolean errorMessage = loginVerificationPage.verifyNegativeLogin();
-		Assert.assertTrue(errorMessage, "Login is not successful.");
+		Assert.assertTrue(errorMessage, "Username and password do not match any user in this service");
 	}
 
 	@Test
