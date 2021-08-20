@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Login_Test_Cases">
-                    <span>C:\Users\KALPESH\git\FrameworkDemo\FrameworkDemo\Build\Login.xml</span>
+                    <span>C:\Users\BAPS\git\FrameworkDemo\Build\RegisterAccount.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">2 methods, 1 failed,  1 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,15 +101,24 @@
                     <div class="method-list-content failed suite-Login_Test_Cases">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login">login</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login_negative">login_negative</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.RegisterIndex" hash-for-method="EmalilExist">EmalilExist</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Login_Test_Cases -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="hide-methods skipped suite-Login_Test_Cases"> (hide)</a> <!-- hide-methods skipped suite-Login_Test_Cases -->
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="show-methods skipped suite-Login_Test_Cases"> (show)</a> <!-- show-methods skipped suite-Login_Test_Cases -->
+                    </span>
+                    <div class="method-list-content skipped suite-Login_Test_Cases">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.RegisterIndex" hash-for-method="RegisterAccount">RegisterAccount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Login_Test_Cases -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -124,69 +133,52 @@
           <div class="suite-Login_Test_Cases-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.index.LoginIndex</span>
+              <span class="class-name">com.index.RegisterIndex</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="login">
-                  </a> <!-- login -->
-                  <span class="method-name">login</span>
-                  <div class="stack-trace">java.lang.NoClassDefFoundError: org/openxmlformats/schemas/drawingml/x2006/main/ThemeDocument
-	at java.lang.Class.getDeclaredConstructors0(Native Method)
-	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)
-	at java.lang.Class.getConstructor0(Class.java:3075)
-	at java.lang.Class.getDeclaredConstructor(Class.java:2178)
-	at org.apache.poi.xssf.usermodel.XSSFFactory.createDocumentPart(XSSFFactory.java:55)
-	at org.apache.poi.POIXMLFactory.createDocumentPart(POIXMLFactory.java:58)
-	at org.apache.poi.POIXMLDocumentPart.read(POIXMLDocumentPart.java:580)
-	at org.apache.poi.POIXMLDocument.load(POIXMLDocument.java:165)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:300)
-	at com.init.Common.getCellValue(Common.java:781)
-	at com.index.LoginIndex.login(LoginIndex.java:18)
-Caused by: java.lang.ClassNotFoundException: org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	... 38 more
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="login_negative">
-                  </a> <!-- login_negative -->
-                  <span class="method-name">login_negative</span>
-                  <div class="stack-trace">java.lang.NoClassDefFoundError: org/openxmlformats/schemas/drawingml/x2006/main/ThemeDocument
-	at java.lang.Class.getDeclaredConstructors0(Native Method)
-	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)
-	at java.lang.Class.getConstructor0(Class.java:3075)
-	at java.lang.Class.getDeclaredConstructor(Class.java:2178)
-	at org.apache.poi.xssf.usermodel.XSSFFactory.createDocumentPart(XSSFFactory.java:55)
-	at org.apache.poi.POIXMLFactory.createDocumentPart(POIXMLFactory.java:58)
-	at org.apache.poi.POIXMLDocumentPart.read(POIXMLDocumentPart.java:580)
-	at org.apache.poi.POIXMLDocument.load(POIXMLDocument.java:165)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:300)
-	at com.init.Common.getCellValue(Common.java:781)
-	at com.index.LoginIndex.login_negative(LoginIndex.java:51)
-Caused by: java.lang.ClassNotFoundException: org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	... 38 more
+                  <a name="EmalilExist">
+                  </a> <!-- EmalilExist -->
+                  <span class="method-name">EmalilExist</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:60)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:477)
+	at com.init.Common.scrollToElement(Common.java:166)
+	at com.indexPage.RegisterIndexPage.Clickonregisternow(RegisterIndexPage.java:23)
+	at com.index.RegisterIndex.EmalilExist(RegisterIndex.java:26)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Login_Test_Cases-class-failed -->
+          <div class="suite-Login_Test_Cases-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.index.RegisterIndex</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="RegisterAccount">
+                  </a> <!-- RegisterAccount -->
+                  <span class="method-name">RegisterAccount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Login_Test_Cases-class-skipped -->
         </div> <!-- panel Login_Test_Cases -->
         <div panel-name="test-xml-Login_Test_Cases" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\KALPESH\git\FrameworkDemo\FrameworkDemo\Build\Login.xml</span>
+            <span class="header-content">C:\Users\BAPS\git\FrameworkDemo\Build\RegisterAccount.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,30 +188,30 @@ Caused by: java.lang.ClassNotFoundException: org.openxmlformats.schemas.drawingm
   &lt;parameter name=&quot;selenium.port&quot; value=&quot;4444&quot;/&gt;
   &lt;parameter name=&quot;selenium.host&quot; value=&quot;localhost&quot;/&gt;
   &lt;parameter name=&quot;selenium.browser&quot; value=&quot;chrome&quot;/&gt;
-  &lt;parameter name=&quot;selenium.url&quot; value=&quot;https://qbank.accelq.com/&quot;/&gt;
+  &lt;parameter name=&quot;selenium.url&quot; value=&quot;https://www.filechannels.net/login&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.utility.CustomReporterEmailBuildSummary&quot;/&gt;
     &lt;listener class-name=&quot;com.utility.CustomReporterforEmail&quot;/&gt;
     &lt;listener class-name=&quot;com.utility.CustomReporterBuildSummary&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;TC-1. Login validation.&quot;&gt;
+  &lt;test name=&quot;TC-1. Verify email Register.&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.index.LoginIndex&quot;&gt;
+      &lt;class name=&quot;com.index.RegisterIndex&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;login&quot;/&gt;
+          &lt;include name=&quot;EmalilExist&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.index.LoginIndex --&gt;
+      &lt;/class&gt; &lt;!-- com.index.RegisterIndex --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TC-1. Login validation. --&gt;
-  &lt;test name=&quot;TC-2. Negative Login validation.&quot;&gt;
+  &lt;/test&gt; &lt;!-- TC-1. Verify email Register. --&gt;
+  &lt;test name=&quot;TC-2. Register new Account.&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.index.LoginIndex&quot;&gt;
+      &lt;class name=&quot;com.index.RegisterIndex&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;login_negative&quot;/&gt;
+          &lt;include name=&quot;RegisterAccount&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.index.LoginIndex --&gt;
+      &lt;/class&gt; &lt;!-- com.index.RegisterIndex --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TC-2. Negative Login validation. --&gt;
+  &lt;/test&gt; &lt;!-- TC-2. Register new Account. --&gt;
 &lt;/suite&gt; &lt;!-- Login Test Cases --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -231,10 +223,10 @@ Caused by: java.lang.ClassNotFoundException: org.openxmlformats.schemas.drawingm
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TC-1. Login validation. (1 class)</span>
+                <span class="test-name">TC-1. Verify email Register. (1 class)</span>
               </li>
               <li>
-                <span class="test-name">TC-2. Negative Login validation. (1 class)</span>
+                <span class="test-name">TC-2. Register new Account. (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -262,18 +254,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login')
-data.setCell(0, 2, 'com.index.LoginIndex')
-data.setCell(0, 3, 3133);
+data.setCell(0, 1, 'EmalilExist')
+data.setCell(0, 2, 'com.index.RegisterIndex')
+data.setCell(0, 3, 8398);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login_negative')
-data.setCell(1, 2, 'com.index.LoginIndex')
-data.setCell(1, 3, 25);
+data.setCell(1, 1, 'RegisterAccount')
+data.setCell(1, 2, 'com.index.RegisterIndex')
+data.setCell(1, 3, 0);
 window.suiteTableData['Login_Test_Cases']= { tableData: data, tableDiv: 'times-div-Login_Test_Cases'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Login_Test_Cases">
               </div> <!-- times-div-Login_Test_Cases -->
             </div> <!-- times-div -->
@@ -285,19 +277,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">login</span>
+              <span class="reporter-method-name">EmalilExist</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='C:\Users\KALPESH\git\FrameworkDemo\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
+                <span class="reporter-method-output"><br>Step 1 : Click on Register now link.<br></span>
+                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='C:\Users\BAPS\git\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
                 <span class="reporter-method-output"><br><b><i>Failure Reason:</b></i></span>
-                <span class="reporter-method-output"><br><Strong><font color=#ff0000>java.lang.NoClassDefFoundError: org/openxmlformats/schemas/drawingml/x2006/main/ThemeDocument</font></strong></span>
+                <span class="reporter-method-output"><br><Strong><font color=#ff0000>java.lang.NullPointerException</font></strong></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">login_negative</span>
+              <span class="reporter-method-name">RegisterAccount</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='C:\Users\KALPESH\git\FrameworkDemo\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
-                <span class="reporter-method-output"><br><b><i>Failure Reason:</b></i></span>
-                <span class="reporter-method-output"><br><Strong><font color=#ff0000>java.lang.NoClassDefFoundError: org/openxmlformats/schemas/drawingml/x2006/main/ThemeDocument</font></strong></span>
+                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='C:\Users\BAPS\git\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -308,11 +299,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.index.LoginIndex</span>
+              <span class="ignored-class-name">com.index.RegisterIndex</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">login</span>
+                <span class="ignored-method-name">EmalilExist</span>
                 <br/>
-                <span class="ignored-method-name">login_negative</span>
+                <span class="ignored-method-name">RegisterAccount</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -324,51 +315,47 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.index.LoginIndex</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.index.RegisterIndex</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@cb4b1b)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@1bb571c)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@97cac)</span>
-                <span class="method-start">1517 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@b6decd)</span>
+                <span class="method-start">442 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void com.index.LoginIndex.login() throws java.lang.Exception, org.testng.TestRunner@97cac)</span>
-                <span class="method-start">1560 ms</span>
+                <span class="method-name">setUp(public void com.index.RegisterIndex.EmalilExist() throws java.lang.Exception, org.testng.TestRunner@...)</span>
+                <span class="method-start">454 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">login</span>
-                <span class="method-start">10245 ms</span>
+                <span class="method-name">EmalilExist</span>
+                <span class="method-start">17275 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=login status=FAILURE method=LoginIndex.login()[pri:0, instance:com.index.LoginIndex...)</span>
-                <span class="method-start">13524 ms</span>
+                <span class="method-name">tearDown([TestResult name=EmalilExist status=FAILURE method=RegisterIndex.EmalilExist()[pri:0, instance:com.i...)</span>
+                <span class="method-start">25713 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@cb4b1b)</span>
-                <span class="method-start">13952 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@1bb571c)</span>
+                <span class="method-start">25820 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void com.index.LoginIndex.login_negative() throws java.lang.Exception, org.testng.TestRunner@...)</span>
-                <span class="method-start">13952 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">login_negative</span>
-                <span class="method-start">23870 ms</span>
+                <span class="method-name">setUp(public void com.index.RegisterIndex.RegisterAccount() throws java.lang.Exception, org.testng.TestRun...)</span>
+                <span class="method-start">25821 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">RegisterAccount</span>
+                <span class="method-start">29277 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=login_negative status=FAILURE method=LoginIndex.login_negative()[pri:0, instance:co...)</span>
-                <span class="method-start">23895 ms</span>
+                <span class="method-name">tearDown([TestResult name=RegisterAccount status=SKIP method=RegisterIndex.RegisterAccount()[pri:0, instance:...)</span>
+                <span class="method-start">29277 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-suite after">
-                <span class="method-name">testResults</span>
-                <span class="method-start">23910 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

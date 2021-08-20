@@ -48,10 +48,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
+import com.indexPage.ChanneIndexPage;
 import com.indexPage.LoginIndexPage;
+import com.indexPage.RegisterIndexPage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.verificationPage.ChannelVerificationPage;
 import com.verificationPage.LoginVerificationPage;
+import com.verificationPage.RegisterVerificationPage;
 
 public class SeleniumInit {
 
@@ -99,6 +103,14 @@ public class SeleniumInit {
 //	
 	public  LoginIndexPage loginIndexPage;
 	public  LoginVerificationPage loginVerificationPage;
+	
+	public RegisterIndexPage RegisterindexPage;
+	public RegisterVerificationPage registerVerificationPage;
+	
+	public ChanneIndexPage ChannelindexPage; 
+	public ChannelVerificationPage channelverificationpage;
+	
+	//public SignInIndexPage signinindexpage;
 //	
 //	public  DashboardIndexPage dashboardIndexPage;
 //	public  DashboardVerificationPage dashboardVerificationPage;
@@ -336,9 +348,16 @@ public class SeleniumInit {
 //			templateIndexPage = new TemplateIndexPage(driver);
 //			templateVerificationPage = new TemplateVerificationPage(driver);
 //			
+			
 			loginIndexPage = new LoginIndexPage(driver);
 			loginVerificationPage = new LoginVerificationPage(driver);
-//			
+			
+			RegisterindexPage = new RegisterIndexPage(driver);
+			registerVerificationPage = new RegisterVerificationPage(driver);
+			
+			ChannelindexPage = new ChanneIndexPage(driver);
+			channelverificationpage = new ChannelVerificationPage(driver);		
+					
 //			dashboardIndexPage = new DashboardIndexPage(driver);
 //			dashboardVerificationPage = new DashboardVerificationPage(driver);
 //			

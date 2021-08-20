@@ -1,3 +1,4 @@
+
 package com.verificationPage;
 
 import org.openqa.selenium.By;
@@ -21,7 +22,7 @@ Boolean bool;
 	public boolean verifySuccessfulLogin() {
 		
 		Common.pause(2);
-		WebElement var = driver.findElement(By.xpath("//div[@class='qb-logodark']"));
+		WebElement var = driver.findElement(By.xpath("//a[contains(text(),\"Sign Out\")]"));
 		if(null!=var && var.isDisplayed()){
 		test.log(LogStatus.PASS, "Login is successful.");
 		bool=true;
@@ -35,12 +36,12 @@ Boolean bool;
 	public boolean verifyNegativeLogin() {
 		
 		Common.pause(2);
-		if(driver.findElement(By.xpath("//div[@class='qb-logodark']")).isDisplayed()){
-			test1.log(LogStatus.FAIL, "Login not successful.");
-		bool=false;
+		if(driver.findElement(By.xpath("//div[contains(text(),\"Invalid email id provided.\")]")).isDisplayed()){
+			test1.log(LogStatus.PASS, "Login is successful.");
+		bool=true;
 		}else {
-			test1.log(LogStatus.PASS,"Login is successful.");
-			bool=true;
+			test1.log(LogStatus.FAIL,"Login not successful.");
+			bool=false;
 		}
 		return bool;
 	}

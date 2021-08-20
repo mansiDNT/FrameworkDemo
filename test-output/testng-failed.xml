@@ -4,44 +4,42 @@
   <parameter name="selenium.port" value="4444"/>
   <parameter name="selenium.host" value="localhost"/>
   <parameter name="selenium.browser" value="chrome"/>
-  <parameter name="selenium.url" value="https://qbank.accelq.com/"/>
+  <parameter name="selenium.url" value="https://www.filechannels.net/login"/>
   <listeners>
     <listener class-name="com.utility.CustomReporterEmailBuildSummary"/>
     <listener class-name="com.utility.CustomReporterforEmail"/>
     <listener class-name="com.utility.CustomReporterBuildSummary"/>
   </listeners>
-  <test name="TC-1. Login validation.(failed)" parallel="none">
+  <test name="TC-1. Verify email Register.(failed)" parallel="none">
     <classes>
-      <class name="com.index.LoginIndex">
+      <class name="com.index.RegisterIndex">
         <methods>
           <include name="fetchSuiteConfiguration"/>
           <include name="one"/>
           <include name="one"/>
-          <include name="testResults"/>
+          <include name="EmalilExist"/>
           <include name="setUp"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
-          <include name="login"/>
         </methods>
-      </class> <!-- com.index.LoginIndex -->
+      </class> <!-- com.index.RegisterIndex -->
     </classes>
-  </test> <!-- TC-1. Login validation.(failed) -->
-  <test name="TC-2. Negative Login validation.(failed)" parallel="none">
+  </test> <!-- TC-1. Verify email Register.(failed) -->
+  <test name="TC-2. Register new Account.(failed)" parallel="none">
     <classes>
-      <class name="com.index.LoginIndex">
+      <class name="com.index.RegisterIndex">
         <methods>
           <include name="fetchSuiteConfiguration"/>
           <include name="one"/>
           <include name="one"/>
-          <include name="testResults"/>
+          <include name="RegisterAccount"/>
           <include name="setUp"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
-          <include name="login_negative"/>
         </methods>
-      </class> <!-- com.index.LoginIndex -->
+      </class> <!-- com.index.RegisterIndex -->
     </classes>
-  </test> <!-- TC-2. Negative Login validation.(failed) -->
+  </test> <!-- TC-2. Register new Account.(failed) -->
 </suite> <!-- Failed suite [Login Test Cases] -->

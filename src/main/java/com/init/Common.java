@@ -252,6 +252,11 @@ public class Common {
 		element.sendKeys(data);
 	}
 	
+	public static String getText(WebDriver driver, WebElement element) {
+		
+		return element.getText();
+	}
+	
 	public static void clickOn(WebDriver driver, WebElement element) {
 		highlightElement(driver, element);
 		Common.pause(1);
@@ -441,7 +446,8 @@ public class Common {
 		// TODO code application logic here
         // File (or directory) to be moved
 		// store file path
-        String filepath = "C:\\Users\\MANSI\\eclipse-workspace\\FrameworkDemo\\test-output\\screenshots";
+        String filepath = userDir +"\\test-output\\screenshots";
+        
         File file = new File(filepath);
   
         // call deleteDirectory function to delete
