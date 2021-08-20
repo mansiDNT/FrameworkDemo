@@ -10,36 +10,6 @@
     <listener class-name="com.utility.CustomReporterforEmail"/>
     <listener class-name="com.utility.CustomReporterBuildSummary"/>
   </listeners>
-  <test name="TC-1. Login validation.(failed)" parallel="none">
-    <classes>
-      <class name="com.index.LoginIndex">
-        <methods>
-          <include name="one"/>
-          <include name="one"/>
-          <include name="one"/>
-          <include name="one"/>
-          <include name="testResults"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="fetchSuiteConfiguration"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.index.LoginIndex -->
-      <class name="com.index.AddCartIndex">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="login"/>
-          <include name="addProductToCart"/>
-        </methods>
-      </class> <!-- com.index.AddCartIndex -->
-    </classes>
-  </test> <!-- TC-1. Login validation.(failed) -->
   <test name="TC-2. Negative Login validation.(failed)" parallel="none">
     <classes>
       <class name="com.index.LoginIndex">
@@ -48,13 +18,11 @@
           <include name="one"/>
           <include name="one"/>
           <include name="one"/>
-          <include name="testResults"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="login_negative"/>
-          <include name="fetchSuiteConfiguration"/>
           <include name="setUp"/>
           <include name="setUp"/>
           <include name="setUp"/>
@@ -63,39 +31,13 @@
       </class> <!-- com.index.LoginIndex -->
       <class name="com.index.AddCartIndex">
         <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="one"/>
+          <include name="testResults"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.index.AddCartIndex -->
     </classes>
   </test> <!-- TC-2. Negative Login validation.(failed) -->
-  <test name="TC-3. Blank UserName validation.(failed)" parallel="none">
-    <classes>
-      <class name="com.index.LoginIndex">
-        <methods>
-          <include name="one"/>
-          <include name="one"/>
-          <include name="one"/>
-          <include name="one"/>
-          <include name="testResults"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="fetchSuiteConfiguration"/>
-          <include name="login_blankUserName"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.index.LoginIndex -->
-      <class name="com.index.AddCartIndex">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.index.AddCartIndex -->
-    </classes>
-  </test> <!-- TC-3. Blank UserName validation.(failed) -->
 </suite> <!-- Failed suite [Login Test Cases] -->
