@@ -70,7 +70,7 @@ public class LoginIndex extends SeleniumInit {
 
 		testStepsLog("Step " + (stepCount++) + " : Verify 'Login' is successful.");
 		boolean errorMessage = loginVerificationPage.verifyNegativeLogin();
-		Assert.assertTrue(errorMessage, "User not able to log in.");
+		Assert.assertTrue(errorMessage, "Login is not successful.");
 	}
 
 	@Test
