@@ -22,7 +22,7 @@ public class LoginIndex extends SeleniumInit {
 	public void login_negative() throws Exception
 	{
 		
-		testStepsLog("Step " + (stepCount++) + " : Enter email address.");
+		testStepsLog("Step "      + (stepCount++) + " : Enter email address.");
 		test.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter username.");
 		loginVerificationPage = loginIndexPage.enterEmail(Common.getCellValue("Login",1,0));
 		test.log(LogStatus.PASS, "Username entered correctly.Entered username is : " +Common.getCellValue("Login",1,0));
