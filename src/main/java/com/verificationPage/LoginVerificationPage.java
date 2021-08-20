@@ -35,12 +35,12 @@ Boolean bool;
 	public boolean verifyNegativeLogin() {
 		
 		Common.pause(2);
-		if(driver.findElement(By.xpath("//*[@id='login_button_container']/div/form/div[3]/h3")).isDisplayed()){
-			test1.log(LogStatus.PASS, "Username and password do not match any user in this service");
-		bool=true;
+		if(driver.findElement(By.xpath("//span[contains(text(),'Products')]")).isDisplayed()){
+			test1.log(LogStatus.FAIL, "Username and password do not match any user in this service");
+		bool=false;
 		}else {
-			test1.log(LogStatus.FAIL,"Login is successful.");
-			bool=false;
+			test1.log(LogStatus.PASS,"Login is successful.");
+			bool=true;
 		}
 		return bool;
 	}
