@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.google.errorprone.annotations.Var;
 import com.init.AbstractPage;
 import com.init.Common;
 import com.relevantcodes.extentreports.LogStatus;

@@ -8,12 +8,11 @@ import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
+
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -22,10 +21,9 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import org.apache.commons.io.FileUtils;
+
 import org.apache.commons.lang.exception.ExceptionUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -48,7 +46,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
-import com.index.AddCartIndex;
+
 import com.indexPage.AddCartIndexPage;
 import com.indexPage.LoginIndexPage;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -114,7 +112,7 @@ public class SeleniumInit {
 
 		// Pass the URL to be tested
 		testUrl = testContext.getCurrentXmlTest().getParameter("selenium.url");
-		// testUrl = TestData.getURL();
+		
 		System.out.println("Before suite");
 		System.out.println("======" + testUrl + "=========");
 		
@@ -127,12 +125,6 @@ public class SeleniumInit {
 	}
 	
 
-	/*
-	 * @BeforeSuite public void testPrint() { System.out.println("Before suite");
-	 * report = new
-	 * ExtentReports(System.getProperty("user.dir")+"ExtentReportResults.html");
-	 * test = report.startTest("ExtentDemo"); }
-	 */
 	
 	
 	private ExtentTest getNewTest(String testName) {
@@ -145,9 +137,7 @@ public class SeleniumInit {
 	{
 		
 		
-		//System.out.println("The passed tests - " + passed_count);
-		//System.out.println("The failed tests - " + failed_count);
-		//System.out.println("The skipped tests - " + skipped_count);
+		
 		report.endTest(test);
 		report.endTest(test1);
 		report.endTest(test2);
@@ -169,7 +159,7 @@ public class SeleniumInit {
 		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 	}
 	
-		@SuppressWarnings("deprecation")
+		
 		@BeforeMethod(alwaysRun = true)
 		public void setUp(Method method, ITestContext testContext) throws IOException, InterruptedException {
 			
@@ -208,9 +198,9 @@ public class SeleniumInit {
 		
 			DesiredCapabilities capability = null;
 			System.out.println(targetBrowser);
-			URL remote_grid;
+		
 			try {
-				remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
+				URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
 			
 			if (targetBrowser == null || targetBrowser.contains("firefox")) {
 
@@ -244,10 +234,7 @@ public class SeleniumInit {
 			} else if (targetBrowser.contains("chrome")) {
 
 				capability = DesiredCapabilities.chrome();
-				/*LoggingPreferences loggingprefs = new LoggingPreferences();
-		        loggingprefs.enable(LogType.PERFORMANCE, Level.ALL);
-		        capability.setCapability(CapabilityType.LOGGING_PREFS, loggingprefs);*/
-				//File file = new File(userDir + "//lib//chromedriver.exe");
+				
 				File file = new File(userDir + "//lib//chromedriver.exe");
 				
 				System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
@@ -324,7 +311,7 @@ public class SeleniumInit {
 			driver.manage().window().maximize();
 
 			Common.waitForPageLoaded(driver);
-			// Common.setConfigDate(driver);
+			
 
 			currentWindowHandle = driver.getWindowHandle();
 
@@ -366,17 +353,7 @@ public class SeleniumInit {
 		}
 	}
 
-	/*
-	 * @AfterMethod public void takeScreenShotOnFailure(ITestResult testResult)
-	 * throws IOException { if (testResult.getStatus() == ITestResult.FAILURE) {
-	 * File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	 * File screenshotName = new
-	 * File("errorScreenshots\\" + testResult.getName() +  ".jpg");
-	 * FileUtils.copyFile(scrFile, screenshotName);
-	 * 
-	 * // Reporter.log("<br><img src='"
-	 * +screenshotName+"' height='300' width='300'/><br>"); } }
-	 */
+	
 	
 	/**
 	 * After Method
@@ -550,29 +527,8 @@ public class SeleniumInit {
 		Reporter.log("<br><b>Time taken for step- </b>" + duration);
 	}
 	
-	/**
-	 * Log success message to Reporter output.
-	 * 
-	 */
 
-	/*public static void success() {
 
-		System.out.println("<Strong><font color=#008000>Pass</font></strong>");
-		Reporter.log("<br></br><Strong><font color=#008000>Pass                  </font></strong><img src='" + userDir
-				+ "\\report-imgs\\pass.png' alt='pass' height='15' width='15'/>");
-	}
-
-	*//**
-	 * Log failure message to Reporter output.
-	 * 
-	 *//*
-
-	public static void failure() {
-
-		System.out.println("<Strong><font color=#ff0000>Fail</font></strong>");
-		Reporter.log("<br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='" + userDir
-				+ "\\report-imgs\\fail.png' alt='fail' height='15' width='15'/>");
-	}*/
 
 	
 }
