@@ -37,7 +37,8 @@ import org.testng.xml.XmlSuite;
 
 public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 
-	private static final Logger L = Logger.getLogger(CustomReporterListener.class);
+	private static final Logger L = Logger
+			.getLogger(CustomReporterListener.class);
 
 	// ~ Instance fields ------------------------------------------------------
 
@@ -50,8 +51,8 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 	private int m_methodIndex;
 
 	private Scanner scanner;
-
-	int passCount = 0;
+	
+	int passCount=0;
 
 	private static HashMap<String, String> map = new HashMap<String, String>();
 
@@ -61,9 +62,9 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 	int skipped = 0;
 	int failedcount = 0;
 	int total_a = 0;
-	int qty_pass = 0;
+	int qty_pass= 0;
 	// ~ Methods --------------------------------------------------------------
-
+ 
 	/*
 	 * public static void maperrors() {
 	 * 
@@ -71,8 +72,8 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 	 * "In Error mapping..............*************************3465768487488............"
 	 * ); map.put(
 	 * "org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. "
-	 * , "Server or Node is not running."); map.
-	 * put("Timed out after 20 seconds waiting for visibility of Proxy element"
+	 * , "Server or Node is not running.");
+	 * map.put("Timed out after 20 seconds waiting for visibility of Proxy element"
 	 * ,
 	 * "Particular Element is not found on page after 20 second waiting can be due to Page is not loaded completely OR Element is Not found on page"
 	 * ); map.put("Unable to locate the element",
@@ -106,7 +107,8 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 				"element could not be found.  Check Possibility: 1.Update automation code. 2.Element may not present on the screen. 3.Possibility for \"BUG\"");
 		map.put("Unable to bind to locking port 7054 within 45000 ms",
 				"Port is already locked by other browser and may not be free.Please restart selenium node and server");
-		map.put("Unexpected error launching Internet Explorer", "Unable to launch IE.");
+		map.put("Unexpected error launching Internet Explorer",
+				"Unable to launch IE.");
 		map.put("Unable to find element on closed window",
 				"Browser window may closed unexpectedly. This will fix automatically on next run");
 		map.put("Error communicating with the remote browser.",
@@ -124,29 +126,30 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 
 	/** Creates summary of the run */
 	@Override
-	public void generateReport(List<XmlSuite> xml, List<ISuite> suites, String outdir) { // 1
+	public void generateReport(List<XmlSuite> xml, List<ISuite> suites,
+			String outdir) { //1
 		try {
-			m_out = createWriter(outdir); // 2
+			m_out = createWriter(outdir); //2
 		} catch (IOException e) {
 			L.error("output file", e);
 			return;
 		}
 
-		startHtml(m_out); // 3
+		startHtml(m_out); //3
 		generateSuiteSummaryReport(suites);
-		TotalTime(suites); // 4
-		generateMethodSummaryReport(suites); // 5
+		TotalTime(suites); //4
+		generateMethodSummaryReport(suites); //5
 
 		// generateMethodDetailReport(suites);
-
-		// endHtml(m_out); //previous
+		
+		//endHtml(m_out); //previous
 		m_out.flush();
 		m_out.close();
 	}
 
 	String Time;
 
-	public String TotalTime(List<ISuite> suites) { // 4.1
+	public String TotalTime(List<ISuite> suites) { //4.1
 		long time_start = Long.MAX_VALUE;
 		long time_end = Long.MIN_VALUE;
 		ITestContext overview = null;
@@ -157,33 +160,35 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 
 				overview = r.getTestContext();
 
-				time_start = Math.min(overview.getStartDate().getTime(), time_start);
+				time_start = Math.min(overview.getStartDate().getTime(),
+						time_start);
 				time_end = Math.max(overview.getEndDate().getTime(), time_end);
 
 			}
 		}
-		// m_out.println("</tr><td class=\"numi\"><center>"+((time_end -
+		// m_out.println("</tr><td  class=\"numi\"><center>"+((time_end -
 		// time_start) / 1000.) / 60.+"</center></td> </tr>");
 		NumberFormat formatter = new DecimalFormat("#,##0.0");
-		Time = String.valueOf(formatter.format(((time_end - time_start) / 1000.) / 60.));
+		Time = String.valueOf(formatter
+				.format(((time_end - time_start) / 1000.) / 60.));
 
 		return Time;
 	}
 
-	protected PrintWriter createWriter(String outdir) throws IOException { // 2.1
+	protected PrintWriter createWriter(String outdir) throws IOException {  //2.1
 		// java.util.Date now = new Date();
 		new File(outdir).mkdirs();
-		return new PrintWriter(
-				new BufferedWriter(new FileWriter(new File(outdir, "CustomReporterEmailBuildSummary" + ".html"))));
+		return new PrintWriter(new BufferedWriter(new FileWriter(new File(
+				outdir, "CustomReporterEmailBuildSummary" + ".html"))));
 	}
 
 	/**
 	 * Creates a table showing the highlights of each test method with links to
 	 * the method details
 	 */
-	protected void generateMethodSummaryReport(List<ISuite> suites) { // 5.1
+	protected void generateMethodSummaryReport(List<ISuite> suites) {  //5.1
 		m_methodIndex = 0;
-		startResultSummaryTable("methodOverview"); // 5.2
+		startResultSummaryTable("methodOverview"); //5.2
 		int testIndex = 1;
 		for (ISuite suite : suites) {
 			if (suites.size() > 1) {
@@ -194,17 +199,19 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 				ITestContext testContext = r2.getTestContext();
 				String testName = testContext.getName();
 				m_testIndex = testIndex;
-				// resultSummary_passed(suite, testContext.getPassedTests());
-				// //5.3
+				//resultSummary_passed(suite, testContext.getPassedTests()); //5.3
 				System.out.println("Passed---");
-				resultSummary_passed(suite, testContext.getPassedTests(), testName, "passed", "");
+				resultSummary_passed(suite, testContext.getPassedTests(), testName,
+						"passed", "");
 				System.out.println("Failed---");
-				resultSummary(suite, testContext.getFailedConfigurations(), // 5.4
+				resultSummary(suite, testContext.getFailedConfigurations(), //5.4
 						testName, "failed", " (configuration methods)");
-				resultSummary(suite, testContext.getFailedTests(), testName, "failed", "");
+				resultSummary(suite, testContext.getFailedTests(), testName,
+						"failed", "");
 				System.out.println("Skipped---");
-
-				resultSummary_skipped(suite, testContext.getSkippedTests(), testName, "skipped", "");
+			
+				resultSummary_skipped(suite, testContext.getSkippedTests(), testName,
+						"skipped", "");
 
 				/*
 				 * resultSummary(suite, testContext.getSkippedConfigurations(),
@@ -217,11 +224,11 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 				testIndex++;
 
 			}
-
+			
 		}
 		endHtml(m_out);
 		testCaseNo();
-		// m_out.println("</table>");
+		//m_out.println("</table>");
 	}
 
 	/** Creates a section showing known results for each method */
@@ -232,7 +239,7 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 			for (ISuiteResult r2 : r.values()) {
 				ITestContext testContext = r2.getTestContext();
 				if (r.values().size() > 0) {
-					// m_out.println("<h1>" + testContext.getName() + "</h1>");
+					//m_out.println("<h1>" + testContext.getName() + "</h1>");
 				}
 				resultDetail(testContext.getFailedConfigurations());
 				resultDetail(testContext.getFailedTests());
@@ -247,32 +254,29 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 
 	public void testCaseNo() {
 
-		// m_out.println("<td bgcolor='DeepSkyBlue' colspan='4' align='left'
-		// height='30px'><h3 style='margin-top:0px;margin-bottom:0px;'> Total
-		// Test Cases : "
-		// + (qty_tests) + "<br/> Failed Test Cases : "
-		// + (failedcount/2) + "<br/> Passed Test cases : "
-		// + passed + "<br/> Skipped Test cases : "
-		// + skipped + "<br/></h3></td>");
-
+//		m_out.println("<td bgcolor='DeepSkyBlue' colspan='4' align='left' height='30px'><h3 style='margin-top:0px;margin-bottom:0px;'> Total Test Cases  : "
+//				+ (qty_tests) + "<br/> Failed Test Cases  : "
+//				+ (failedcount/2) + "<br/> Passed Test cases : " 
+//				+ passed + "<br/> Skipped Test cases : " 
+//				+ skipped + "<br/></h3></td>");
+		
 		m_out.println(
 				"<table width='350px' height='30px' border='1' align='left'><tbody><tr colspan='2'><td bgcolor='#0088cc' colspan='2'><h3><center><font color='white'>Build Summary</font></center></h3></td></tr><tr><td><b>"
-						+ "Passed Test cases</b>   </td> <td> <center><b>" + passed
-						+ "</b></center></td></tr><tr><td><b> Failed Test Cases </b></td><td> <center><b>"
-						+ (failedcount - skipped)
-						+ "</b></center></td></tr> 	 <tr><td><b>Skipped Test cases</b>   </td><td><center><b> "
-						+ skipped
-						+ "</b></center> </td></tr><tr bgcolor='skyblue'><td> <b>Total Test Cases </b>  </td><td> <center><b>"
-						+ qty_tests + "</b></center></td></tr></tbody></table>");
+				+ "Passed Test cases</b>   </td> <td> <center><b>"
+						+ passed + "</b></center></td></tr><tr><td><b> Failed Test Cases </b></td><td> <center><b>" + (failedcount-skipped)
+						+ "</b></center></td></tr> 	 <tr><td><b>Skipped Test cases</b>   </td><td><center><b> " + skipped
+						+ "</b></center> </td></tr><tr bgcolor='skyblue'><td> <b>Total Test Cases </b>  </td><td> <center><b>" + qty_tests
+						+ "</b></center></td></tr></tbody></table>");
 	}
 
-	/*
-	 * private void resultSummary_passed(ISuite suite, IResultMap tests) {
-	 * //5.3.1 System.out.println("passed count : " + passed); //passCount=
-	 * passed;
-	 * 
-	 * for (ITestNGMethod method : getMethodSet(tests, suite)) { passed++; } }
-	 */
+	/*private void resultSummary_passed(ISuite suite, IResultMap tests) { //5.3.1
+		System.out.println("passed count : " + passed);
+		//passCount= passed;
+		        
+		for (ITestNGMethod method : getMethodSet(tests, suite)) {
+			passed++;
+		}
+	}*/
 
 	private void resultSummary_total(ISuite suite, IResultMap tests) {
 
@@ -281,54 +285,54 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 
 		}
 	}
-
-	// private void resultSummary_passed(ISuite suite, IResultMap tests, String
-	// testname,
-	// String style, String details) { //5.4.1
-	//
-	// if (tests.getAllResults().size() > 0) {
-	//
-	// StringBuffer buff = new StringBuffer();
-	// String lastClassName = "";
-	// int mq = 0;
-	// int cq = 0;
-	// for (ITestNGMethod method : getMethodSet(tests, suite)) {
-	// ++passed;
-	// }
-	// }
-	// }
-
-	private void resultSummary_skipped(ISuite suite, IResultMap tests, String testname, String style, String details) { // 5.4.1
+	
+//	private void resultSummary_passed(ISuite suite, IResultMap tests, String testname,
+//			String style, String details) { //5.4.1
+//
+//		if (tests.getAllResults().size() > 0) {
+//
+//			StringBuffer buff = new StringBuffer();
+//			String lastClassName = "";
+//			int mq = 0;
+//			int cq = 0;
+//			for (ITestNGMethod method : getMethodSet(tests, suite)) {
+//				++passed;
+//			}
+//			}
+//	}
+	
+	private void resultSummary_skipped(ISuite suite, IResultMap tests, String testname,
+			String style, String details) { //5.4.1
 
 		if (tests.getAllResults().size() > 0) {
 
 			for (ITestNGMethod method : getMethodSet(tests, suite)) {
 				skipped++;
 			}
-		}
+			}
 	}
-
 	ArrayList<String> PassedTestCases = new ArrayList<String>();
-
-	private void resultSummary_passed(ISuite suite, IResultMap tests, String testname, String style, String details) { // 5.4.1
+	private void resultSummary_passed(ISuite suite, IResultMap tests, String testname,
+			String style, String details) { //5.4.1
 
 		if (tests.getAllResults().size() > 0) {
 
 			for (ITestNGMethod method : getMethodSet(tests, suite)) {
-
-				if (!checkpassedTestCases(testname)) {
-					System.out.println("Name and Count:" + testname + "==" + passed);
+				
+				
+				if(!checkpassedTestCases(testname))
+				{System.out.println("Name and Count:"+testname+"=="+passed);
 					PassedTestCases.add(testname);
 					++passed;
 				}
-
+				
 			}
-		}
+			}
 	}
-
+	
 	ArrayList<String> PassedTestName = new ArrayList<String>();
-
-	public boolean checkpassedTestCases(String testName) {
+	public boolean checkpassedTestCases(String testName)
+	{
 		return PassedTestCases.contains(testName);
 	}
 
@@ -337,8 +341,8 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 	 */
 	ArrayList<String> testArray = new ArrayList<String>();
 	int retry = 0;
-
-	private void resultSummary(ISuite suite, IResultMap tests, String testname, String style, String details) { // 5.4.1
+	private void resultSummary(ISuite suite, IResultMap tests, String testname,
+			String style, String details) { //5.4.1
 
 		if (tests.getAllResults().size() > 0) {
 
@@ -347,88 +351,90 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 			int mq = 0;
 			int cq = 0;
 			for (ITestNGMethod method : getMethodSet(tests, suite)) {
-
-				// failedcount++;
-				if (!checkTestCases(testname) && !isPassed(testname)) {
-					testArray.add(testname);
-					m_row += 1;
-					m_methodIndex += 1;
-					ITestClass testClass = method.getTestClass();
-					String className = testClass.getName();
-					// if (mq == 0)
-					{
-						String id = (m_testIndex == null ? null : "t" + Integer.toString(m_testIndex));
-						// titleRow(testname + " &#8212; " + style + details, 5,
-						// id);
-						//
-
-						// m_out.print("<tr");
-						if (id != null) {
-							// m_out.print(" id=\"" + id + "\"");
-						}
-						// m_out.println("><td width='35%'><b>" + testname +
-						// "</b></td>");
-						m_row = 0;
-
-						//
-						m_testIndex = null;
-						namecount++;
-						failedcount++; // perivious
+				
+				//failedcount++;
+			if(!checkTestCases(testname) && !isPassed(testname))
+			{
+				testArray.add(testname);
+				m_row += 1;
+				m_methodIndex += 1;
+				ITestClass testClass = method.getTestClass();
+				String className = testClass.getName();
+				// if (mq == 0)
+				{
+					String id = (m_testIndex == null ? null : "t"
+							+ Integer.toString(m_testIndex));
+					// titleRow(testname + " &#8212; " + style + details, 5,
+					// id);
+					//
+					
+					
+					
+					//m_out.print("<tr");
+					if (id != null) {
+						//m_out.print(" id=\"" + id + "\"");
 					}
+					//m_out.println("><td width='35%'><b>" + testname + "</b></td>");
+					m_row = 0;
 
+					//
+					m_testIndex = null;
+					namecount++;
+					failedcount++; //perivious
+				}
+
+				/*
+				 * if (!className.equalsIgnoreCase(lastClassName)) { if (mq > 0)
+				 * { cq += 1; m_out.print("<tr class=\"" + style + (cq % 2 == 0
+				 * ? "even" : "odd") + "\">" + "<td"); if (mq > 1) {
+				 * m_out.print(" rowspan=\"" + mq + "\""); } m_out.println(">" +
+				 * lastClassName + "</td>" + buff);
+				 * 
+				 * } mq = 0; buff.setLength(0); lastClassName = className; }
+				 */
+				Set<ITestResult> resultSet = tests.getResults(method);
+				long end = Long.MIN_VALUE;
+				long start = Long.MAX_VALUE;
+				for (ITestResult testResult : tests.getResults(method)) {
+					if (testResult.getEndMillis() > end) {
+						end = testResult.getEndMillis();
+					}
+					if (testResult.getStartMillis() < start) {
+						start = testResult.getStartMillis();
+					}
+				}
+				mq += 1;
+				if (mq > 1) {
 					/*
-					 * if (!className.equalsIgnoreCase(lastClassName)) { if (mq
-					 * > 0) { cq += 1; m_out.print("<tr class=\"" + style + (cq
-					 * % 2 == 0 ? "even" : "odd") + "\">" + "<td"); if (mq > 1)
-					 * { m_out.print(" rowspan=\"" + mq + "\""); }
-					 * m_out.println(">" + lastClassName + "</td>" + buff);
-					 * 
-					 * } mq = 0; buff.setLength(0); lastClassName = className; }
+					 * buff.append("<tr class=\"" + style + (cq % 2 == 0 ? "odd"
+					 * : "even") + "\">");
 					 */
-					Set<ITestResult> resultSet = tests.getResults(method);
-					long end = Long.MIN_VALUE;
-					long start = Long.MAX_VALUE;
-					for (ITestResult testResult : tests.getResults(method)) {
-						if (testResult.getEndMillis() > end) {
-							end = testResult.getEndMillis();
-						}
-						if (testResult.getStartMillis() < start) {
-							start = testResult.getStartMillis();
-						}
-					}
-					mq += 1;
-					if (mq > 1) {
-						/*
-						 * buff.append("<tr class=\"" + style + (cq % 2 == 0 ?
-						 * "odd" : "even") + "\">");
-						 */
-					}
+				}
 
-					if (mq > 0) {
-						cq += 1;
-						/*
-						 * m_out.print("<td"); if (mq > 1) {
-						 * m_out.print(" rowspan=\"" + mq + "\""); }
-						 * m_out.println(">" + lastClassName + "</td>");
-						 */
-
-						getShortException(tests);
-
-					}
-
-					String description = method.getDescription();
-					String testInstanceName = resultSet.toArray(new ITestResult[] {})[0].getTestName();
+				if (mq > 0) {
+					cq += 1;
 					/*
-					 * buff.append("<td class=\"numi\"><center>" + (end -
-					 * start)/1000 + "</center></td>" + "</tr>" );
-					 */
-					/*
-					 * m_out.println("<td width='5%' class=\"numi\"><center>" +
-					 * (end - start) / 1000 + "</center></td>" + "");
+					 * m_out.print("<td"); if (mq > 1) {
+					 * m_out.print(" rowspan=\"" + mq + "\""); }
+					 * m_out.println(">" + lastClassName + "</td>");
 					 */
 
-				} // to check test name
+					getShortException(tests);
 
+				}
+
+				String description = method.getDescription();
+				String testInstanceName = resultSet
+						.toArray(new ITestResult[] {})[0].getTestName();
+				/*
+				 * buff.append("<td class=\"numi\"><center>" + (end -
+				 * start)/1000 + "</center></td>" + "</tr>" );
+				 */
+				/*m_out.println("<td width='5%' class=\"numi\"><center>" + (end - start)
+						/ 1000 + "</center></td>" + "");*/
+
+			}//to check test name
+			
 			}
 			/*
 			 * if (mq > 0) { cq += 1; m_out.print("<tr class=\"" + style + (cq %
@@ -442,44 +448,39 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 		System.out.println("Test Cases No. : " + namecount);
 
 	}
-
-	public boolean checkTestCases(String testName) {
-
+	
+	public boolean checkTestCases(String testName)
+	{
+		
 		return testArray.contains(testName);
 	}
 
-	public boolean isPassed(String testName) {
+	public boolean isPassed(String testName)
+	{
 		return PassedTestCases.contains(testName);
 	}
-
+	
 	/** Starts and defines columns result summary table */
-	private void startResultSummaryTable(String style) { // 5.2.1
+	private void startResultSummaryTable(String style) {  //5.2.1
 		tableStart(style, "summary");
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm a z,MM/dd/yyyy");
 
-		/*
-		 * m_out.
-		 * println("<tr><td bgcolor='white' colspan='4'> <table border='0' width='100%' bgcolor='#e6f7ff'><tr>"
-		 * + "<td  width='25%'  bgcolor='white'>" +
-		 * "<center><img width='150px' src='http://www.kiwiqa.com/wp-content/themes/twentythirteen/images/logo.png'/></center>"
-		 * +
-		 * "</td><td ><center><font color='#008bcc'><b><h1>Failed Test Cases Analysis</h1></b></font></center></td> "
-		 * + "<td width='25%' bgcolor='white'>" +
-		 * "<center><img width='150px' src='http://adtech-tokyo.com/2015/lib/img/exb/videogram.jpg'/></center></td> "
-		 * + "</tr></table> </td></tr>"); //m_out.
-		 * println("<tr><td colspan='4'>To view Full Report : <a href=\"http://localhost:8080/job/Videogram/HTML_Report/\">http://localhost:8080/job/Videogram_Chrome/HTML_Report</a></td></tr>"
-		 * ); m_out.
-		 * println("<tr><td colspan='4'>Overall test suite completion : <b>" +
-		 * Time + " minutes</b><br/> Date and Time of Run: <b>" +
-		 * sdf.format(date) +
-		 * "</b><br/> Browser : <b>"+SeleniumInit.BrowserName+"<t></t>" +
-		 * SeleniumInit.BrowserVersion + "</b><br/>OS: <b>" +
-		 * System.getProperty("os.name") + "</b></td></tr>");
-		 * m_out.println("<tr bgcolor='SkyBlue'><th>Test Cases</th>" +
-		 * "<th>Failure Reason</th><th>Failure Error</th><th>Total Time<br/>(sec.)</th>"
-		 * );
-		 */
+		/*m_out.println("<tr><td bgcolor='white' colspan='4'> <table border='0' width='100%' bgcolor='#e6f7ff'><tr>"
+				+ "<td  width='25%'  bgcolor='white'>"
+				+ "<center><img width='150px' src='http://www.kiwiqa.com/wp-content/themes/twentythirteen/images/logo.png'/></center>"
+				+ "</td><td ><center><font color='#008bcc'><b><h1>Failed Test Cases Analysis</h1></b></font></center></td> "
+				+ "<td width='25%' bgcolor='white'>"
+				+ "<center><img width='150px' src='http://adtech-tokyo.com/2015/lib/img/exb/videogram.jpg'/></center></td> "
+				+ "</tr></table> </td></tr>");
+		//m_out.println("<tr><td colspan='4'>To view Full Report : <a href=\"http://localhost:8080/job/Videogram/HTML_Report/\">http://localhost:8080/job/Videogram_Chrome/HTML_Report</a></td></tr>");
+		m_out.println("<tr><td colspan='4'>Overall test suite completion : <b>"
+				+ Time + " minutes</b><br/> Date and Time of Run: <b>"
+				+ sdf.format(date) + "</b><br/> Browser : <b>"+SeleniumInit.BrowserName+"<t></t>"
+				+ SeleniumInit.BrowserVersion +  "</b><br/>OS: <b>"
+				+ System.getProperty("os.name") + "</b></td></tr>");
+		m_out.println("<tr bgcolor='SkyBlue'><th>Test Cases</th>"
+				+ "<th>Failure Reason</th><th>Failure Error</th><th>Total Time<br/>(sec.)</th>");*/
 		m_row = 0;
 	}
 
@@ -506,17 +507,11 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 			ITestNGMethod method = result.getMethod();
 			m_methodIndex++;
 			String cname = method.getTestClass().getName();
-			/*
-			 * m_out.println("<h2 id=\"m" + m_methodIndex + "\">" + cname + ":"
-			 * + method.getMethodName() + "</h2>");
-			 */
+			/*m_out.println("<h2 id=\"m" + m_methodIndex + "\">" + cname + ":"
+					+ method.getMethodName() + "</h2>");*/
 			Set<ITestResult> resultSet = tests.getResults(method);
 			generateForResult(result, method, resultSet.size());
-			/*
-			 * m_out.
-			 * println("<p class=\"totop\"><a href=\"#summary\">back to summary</a></p>"
-			 * );
-			 */
+			/*m_out.println("<p class=\"totop\"><a href=\"#summary\">back to summary</a></p>");*/
 
 		}
 	}
@@ -540,40 +535,38 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 				scanner = new Scanner(str);
 				String firstLine = scanner.nextLine();
 
-				// m_out.println("<td width='25%'>");
+				//m_out.println("<td width='25%'>");
 				for (Entry<String, String> e : map.entrySet()) {
 
 					if (firstLine.contains(e.getKey())) {
 						// m_out.print(map.get(str));
 						// m_out.print("contains <br/>");
-						// m_out.print(e.getValue() + "<br/>");
+						//m_out.print(e.getValue() + "<br/>");
 					} else {
 						// m_out.print("Not contains <br/>");
 						// m_out.print(str+"<br/>");
 					}
 				}
 
-				// m_out.println("</td>");
+				//m_out.println("</td>");
 
 				/*
 				 * if(map.containsKey(str)) { m_out.print(map.get(str)); }else{
 				 * m_out.print("Not contains"); m_out.print(str); }
 				 */
 
-				// m_out.println("<td width='35%'>");
+				//m_out.println("<td width='35%'>");
 				boolean wantsMinimalOutput = result.getStatus() == ITestResult.SUCCESS;
 				if (hasReporterOutput) {
-					/*
-					 * m_out.print("<h3>" + (wantsMinimalOutput ?
-					 * "Expected Exception" : "Failure") + "</h3>");
-					 */
+					/*m_out.print("<h3>"
+							+ (wantsMinimalOutput ? "Expected Exception"
+									: "Failure") + "</h3>");*/
 				}
 
 				// Getting first line of the stack trace
 
-				/*
-				 * m_out.println(firstLine); m_out.println("</td>");
-				 */
+				/*m_out.println(firstLine);
+				m_out.println("</td>");*/
 			}
 
 		}
@@ -593,32 +586,30 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 			if (hasParameters) {
 
 				for (Object p : parameters) {
-					// m_out.println(Utils.escapeHtml(Utils.toString(p)) + " |
-					// ");
+					//m_out.println(Utils.escapeHtml(Utils.toString(p)) + " | ");
 				}
 			}
 
 		}
 	}
 
-	private void generateForResult(ITestResult ans, ITestNGMethod method, int resultSetSize) {
+	private void generateForResult(ITestResult ans, ITestNGMethod method,
+			int resultSetSize) {
 		Object[] parameters = ans.getParameters();
 		boolean hasParameters = parameters != null && parameters.length > 0;
 		if (hasParameters) {
 			tableStart("result", null);
-			// m_out.print("<tr class=\"param\">");
+			//m_out.print("<tr class=\"param\">");
 			for (int x = 1; x <= parameters.length; x++) {
-				// m_out.print("<th>Param." + x + "</th>");
+				//m_out.print("<th>Param." + x + "</th>");
 			}
-			// m_out.println("</tr>");
-			// m_out.print("<tr class=\"param stripe\">");
+			//m_out.println("</tr>");
+			//m_out.print("<tr class=\"param stripe\">");
 			for (Object p : parameters) {
-				/*
-				 * m_out.println("<td>" + Utils.escapeHtml(Utils.toString(p)) +
-				 * "</td>");
-				 */
+			/*	m_out.println("<td>" + Utils.escapeHtml(Utils.toString(p))
+						+ "</td>");*/
 			}
-			// m_out.println("</tr>");
+			//m_out.println("</tr>");
 		}
 		List<String> msgs = Reporter.getOutput(ans);
 		boolean hasReporterOutput = msgs.size() > 0;
@@ -626,55 +617,56 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 		boolean hasThrowable = exception != null;
 		if (hasReporterOutput || hasThrowable) {
 			if (hasParameters) {
-				// m_out.print("<tr><td");
+				//m_out.print("<tr><td");
 				if (parameters.length > 1) {
-					// m_out.print(" colspan=\"" + parameters.length + "\"");
+					//m_out.print(" colspan=\"" + parameters.length + "\"");
 				}
-				// m_out.println(">");
+				//m_out.println(">");
 			} else {
-				// m_out.println("<div>");
+				//m_out.println("<div>");
 			}
 			if (hasReporterOutput) {
 				if (hasThrowable) {
-					// m_out.println("<h3>Test Messages</h3>");
+					//m_out.println("<h3>Test Messages</h3>");
 				}
 				for (String line : msgs) {
-					// m_out.println(line + "<br/>");
+					//m_out.println(line + "<br/>");
 				}
 			}
 			if (hasThrowable) {
 				boolean wantsMinimalOutput = ans.getStatus() == ITestResult.SUCCESS;
 				if (hasReporterOutput) {
-					/*
-					 * m_out.println("<h3>" + (wantsMinimalOutput ?
-					 * "Expected Exception" : "Failure") + "</h3>");
-					 */
+					/*m_out.println("<h3>"
+							+ (wantsMinimalOutput ? "Expected Exception"
+									: "Failure") + "</h3>");*/
 				}
 				generateExceptionReport(exception, method);
 			}
 			if (hasParameters) {
-				// m_out.println("</td></tr>");
+				//m_out.println("</td></tr>");
 			} else {
-				// m_out.println("</div>");
+				//m_out.println("</div>");
 			}
 		}
 		if (hasParameters) {
-
-			// m_out.println("</table>");
+			
+			//m_out.println("</table>");
 		}
 	}
 
-	protected void generateExceptionReport(Throwable exception, ITestNGMethod method) {
-		// m_out.print("<div class=\"stacktrace\">");
-		// m_out.print(Utils.stackTrace(exception, true)[0]);
-		// m_out.println("</div>");
+	protected void generateExceptionReport(Throwable exception,
+			ITestNGMethod method) {
+//		m_out.print("<div class=\"stacktrace\">");
+//		m_out.print(Utils.stackTrace(exception, true)[0]);
+//		m_out.println("</div>");
 	}
 
 	/**
 	 * Since the methods will be sorted chronologically, we want to return the
 	 * ITestNGMethod from the invoked methods.
 	 */
-	private Collection<ITestNGMethod> getMethodSet(IResultMap tests, ISuite suite) {
+	private Collection<ITestNGMethod> getMethodSet(IResultMap tests,
+			ISuite suite) {
 		List<IInvokedMethod> r = Lists.newArrayList();
 		List<IInvokedMethod> invokedMethods = suite.getAllInvokedMethods();
 		for (IInvokedMethod im : invokedMethods) {
@@ -699,12 +691,11 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 		}
 		return result;
 	}
-
 	@SuppressWarnings("unused")
 	public void generateSuiteSummaryReport(List<ISuite> suites) {
-
+		
 		NumberFormat formatter = new DecimalFormat("#,##0.0");
-
+	
 		int qty_pass_m = 0;
 		int qty_pass_s = 0;
 		int qty_skip = 0;
@@ -714,20 +705,21 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 		m_testIndex = 1;
 		for (ISuite suite : suites) {
 			if (suites.size() >= 1) {
-				// titleRow(suite.getName(), 10);
+				//titleRow(suite.getName(), 10);
 			}
 			Map<String, ISuiteResult> tests = suite.getResults();
 			for (ISuiteResult r : tests.values()) {
 				qty_tests += 1;
 				ITestContext overview = r.getTestContext();
-
-				// startSummaryRow(overview.getName());
+				
+				//startSummaryRow(overview.getName());
 				int q = getMethodSet(overview.getPassedTests(), suite).size();
 				qty_pass_m += q;
-
+				
+				
 			}
 		}
-
+		
 	}
 
 	private void summaryCell(String[] val) {
@@ -739,19 +731,16 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 	}
 
 	private void summaryCell(String v, boolean isgood) {
-		/*
-		 * m_out.print("<td class=\"numi" + (isgood ? "" : "_attn") + "\">" + v
-		 * + "</td>");
-		 */
+		/*m_out.print("<td class=\"numi" + (isgood ? "" : "_attn") + "\">" + v
+				+ "</td>");*/
 	}
 
 	private void startSummaryRow(String label) {
 		m_row += 1;
-		/*
-		 * m_out.print("<tr" + (m_row % 2 == 0 ? " class=\"stripe\"" : "") +
-		 * "><td style=\"text-align:left;padding-right:2em\"><a href=\"#t" +
-		 * m_testIndex + "\">" + label + "</a>" + "</td>");
-		 */
+		/*m_out.print("<tr"
+				+ (m_row % 2 == 0 ? " class=\"stripe\"" : "")
+				+ "><td style=\"text-align:left;padding-right:2em\"><a href=\"#t"
+				+ m_testIndex + "\">" + label + "</a>" + "</td>");*/
 	}
 
 	private void summaryCell(int v, int maxexpected) {
@@ -759,12 +748,9 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 	}
 
 	private void tableStart(String cssclass, String id) {
-		/*
-		 * m_out.
-		 * println("<table  width='65%' border=\"5\" cellspacing=\"0\" cellpadding=\"0\""
-		 * + (cssclass != null ? " class=\"" + cssclass + "\"" : " ") + (id !=
-		 * null ? " id=\"" + id + "\"" : "") + ">");
-		 */
+		/*m_out.println("<table  width='65%' border=\"5\" cellspacing=\"0\" cellpadding=\"0\""
+				+ (cssclass != null ? " class=\"" + cssclass + "\"" : " ")
+				+ (id != null ? " id=\"" + id + "\"" : "") + ">");*/
 		m_row = 0;
 	}
 
@@ -777,20 +763,16 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 	}
 
 	private void titleRow(String label, int cq, String id) {
-		// m_out.print("<tr");
+		//m_out.print("<tr");
 		if (id != null) {
-			// m_out.print(" id=\"" + id + "\"");
+			//m_out.print(" id=\"" + id + "\"");
 		}
-		// m_out.println("><th bgcolor='#cce6ff' colspan=\"" + cq + "\"><font
-		// color='black' style='text-shadow:2px 2px white;'>" + label +
-		// "<font></th></tr>");
+		//m_out.println("><th bgcolor='#cce6ff' colspan=\"" + cq + "\"><font color='black' style='text-shadow:2px 2px white;'>" + label + "<font></th></tr>");
 		m_row = 0;
 	}
-
 	/** Starts HTML stream */
-	protected void startHtml(PrintWriter out) { // 3.1
-		out.println(
-				"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">");
+	protected void startHtml(PrintWriter out) {  //3.1
+		out.println("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">");
 		out.println("<html xmlns=\"http://www.w3.org/1999/xhtml\">");
 		out.println("<head>");
 		out.println("<title> Automation build Summary - TestNG Report</title>");
@@ -819,13 +801,9 @@ public class CustomReporterEmailBuildSummary extends CustomReporterListener {
 
 	/** Finishes HTML stream */
 	protected void endHtml(PrintWriter out) {
-		// out.println("<center> Report customized by KiwiQA
-		// </center><br/><br/>");
-		/*
-		 * out.
-		 * println("<tr bgcolor='SkyBlue'><td align='right' colspan='4'><center><b><i>Report customized by KiwiQA </i><b><center></center></b></b></center></td></tr>"
-		 * ); out.println("</body></html>");
-		 */
+		//out.println("<center> Report customized by KiwiQA </center><br/><br/>");
+		/*out.println("<tr bgcolor='SkyBlue'><td align='right' colspan='4'><center><b><i>Report customized by KiwiQA </i><b><center></center></b></b></center></td></tr>");
+		out.println("</body></html>");*/
 	}
 
 	// ~ Inner Classes --------------------------------------------------------
