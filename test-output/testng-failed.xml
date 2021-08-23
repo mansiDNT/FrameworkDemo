@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" verbose="0" name="Failed suite [Login Test Cases]" parallel="none" allow-return-values="true">
+  <parameter name="selenium.port" value="4444"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <parameter name="selenium.url" value="https://www.saucedemo.com/"/>
+  <listeners>
+    <listener class-name="com.utility.CustomReporterEmailBuildSummary"/>
+    <listener class-name="com.utility.CustomReporterforEmail"/>
+    <listener class-name="com.utility.CustomReporterBuildSummary"/>
+  </listeners>
+  <test name="TC-2. Negative Login validation.(failed)" parallel="none">
+    <classes>
+      <class name="com.index.LoginIndex">
+        <methods>
+          <include name="one"/>
+          <include name="one"/>
+          <include name="one"/>
+          <include name="one"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="login_negative"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.index.LoginIndex -->
+      <class name="com.index.AddCartIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="one"/>
+          <include name="testResults"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.index.AddCartIndex -->
+    </classes>
+  </test> <!-- TC-2. Negative Login validation.(failed) -->
+</suite> <!-- Failed suite [Login Test Cases] -->

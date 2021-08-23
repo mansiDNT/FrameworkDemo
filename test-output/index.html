@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Login_Test_Cases">
-              <span class="suite-name border-passed">Login Test Cases</span>
+              <span class="suite-name border-failed">Login Test Cases</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="hide-methods failed suite-Login_Test_Cases"> (hide)</a> <!-- hide-methods failed suite-Login_Test_Cases -->
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="show-methods failed suite-Login_Test_Cases"> (show)</a> <!-- show-methods failed suite-Login_Test_Cases -->
+                    </span>
+                    <div class="method-list-content failed suite-Login_Test_Cases">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login_negative">login_negative</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Login_Test_Cases -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -119,11 +133,6 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login_blankUserName">login_blankUserName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login_negative">login_negative</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-Login_Test_Cases -->
                   </li>
                 </ul>
@@ -136,6 +145,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Login_Test_Cases" class="panel Login_Test_Cases">
+          <div class="suite-Login_Test_Cases-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.index.LoginIndex</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login_negative">
+                  </a> <!-- login_negative -->
+                  <span class="method-name">login_negative</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;LOG IN&apos;)]&quot;}
+  (Session info: chrome=92.0.4515.159)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;DESKTOP-T134AMI&apos;, ip: &apos;192.168.1.30&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\BAPS\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59974}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b2e7e66a97aa0ed9e9022bb451378578
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;LOG IN&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at com.verificationPage.LoginVerificationPage.verifyNegativeLogin(LoginVerificationPage.java:38)
+	at com.index.LoginIndex.login_negative(LoginIndex.java:72)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Login_Test_Cases-class-failed -->
           <div class="suite-Login_Test_Cases-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -161,13 +208,6 @@
                   <a name="login_blankUserName">
                   </a> <!-- login_blankUserName -->
                   <span class="method-name">login_blankUserName</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="login_negative">
-                  </a> <!-- login_negative -->
-                  <span class="method-name">login_negative</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -302,30 +342,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login')
+data.setCell(0, 1, 'login_negative')
 data.setCell(0, 2, 'com.index.LoginIndex')
-data.setCell(0, 3, 16017);
+data.setCell(0, 3, 16023);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'addProductToCart')
 data.setCell(1, 2, 'com.index.AddCartIndex')
-data.setCell(1, 3, 11244);
+data.setCell(1, 3, 11440);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'login_negative')
+data.setCell(2, 1, 'login')
 data.setCell(2, 2, 'com.index.LoginIndex')
-data.setCell(2, 3, 6094);
+data.setCell(2, 3, 7073);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'login_blankUserName')
 data.setCell(3, 2, 'com.index.LoginIndex')
-data.setCell(3, 3, 6007);
+data.setCell(3, 3, 6042);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'login_blankPassword')
 data.setCell(4, 2, 'com.index.LoginIndex')
-data.setCell(4, 3, 5730);
+data.setCell(4, 3, 5797);
 window.suiteTableData['Login_Test_Cases']= { tableData: data, tableDiv: 'times-div-Login_Test_Cases'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 45 seconds</span>
+              <span class="suite-total-time">Total running time: 46 seconds</span>
               <div id="times-div-Login_Test_Cases">
               </div> <!-- times-div-Login_Test_Cases -->
             </div> <!-- times-div -->
@@ -352,6 +392,10 @@ return data;
                 <span class="reporter-method-output"><br>Step 2 : Enter password.<br></span>
                 <span class="reporter-method-output"><br>Step 3 : Click on Log in button.<br></span>
                 <span class="reporter-method-output"><br>Step 4 : Verify 'Login' is successful.<br></span>
+                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='D:\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
+                <span class="reporter-method-output"><br><b><i>Failure Reason:</b></i></span>
+                <span class="reporter-method-output"><br><Strong><font color=#ff0000>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'LOG IN')]"}</font></strong></span>
+                <span class="reporter-method-output"><br><b>Screenshot- </b><a href='../test-output/screenshots/TC2_23082021_12-33-54.png' target='_new'>TC2_23082021_12-33-54.png</a></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -430,98 +474,100 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.AddCartIndex</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@5167268)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@3d526ad9)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.LoginIndex</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@1cfd1875)</span>
-                <span class="method-start">257 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@e041f0c)</span>
+                <span class="method-start">258 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void com.index.LoginIndex.login() throws java.lang.Exception, org.testng.TestRunner@1cfd1875)</span>
-                <span class="method-start">270 ms</span>
+                <span class="method-name">setUp(public void com.index.LoginIndex.login() throws java.lang.Exception, org.testng.TestRunner@e041f0c)</span>
+                <span class="method-start">272 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">13537 ms</span>
+                <span class="method-start">5494 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=login status=SUCCESS method=LoginIndex.login()[pri:0, instance:com.index.LoginIndex...)</span>
-                <span class="method-start">29554 ms</span>
+                <span class="method-start">12568 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@28c0b664)</span>
-                <span class="method-start">32352 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@6a175569)</span>
+                <span class="method-start">13487 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.LoginIndex.login_negative() throws java.lang.Exception, org.testng.TestRunner@...)</span>
-                <span class="method-start">32352 ms</span>
+                <span class="method-start">13489 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">login_negative</span>
-                <span class="method-start">38961 ms</span>
+                <span class="method-start">17805 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=login_negative status=SUCCESS method=LoginIndex.login_negative()[pri:0, instance:co...)</span>
-                <span class="method-start">45055 ms</span>
+                <span class="method-name">tearDown([TestResult name=login_negative status=FAILURE method=LoginIndex.login_negative()[pri:0, instance:co...)</span>
+                <span class="method-start">33872 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@2c444798)</span>
-                <span class="method-start">45871 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@11963225)</span>
+                <span class="method-start">35276 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.LoginIndex.login_blankUserName() throws java.lang.Exception, org.testng.TestRu...)</span>
-                <span class="method-start">45872 ms</span>
+                <span class="method-start">35277 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login_blankUserName</span>
-                <span class="method-start">50270 ms</span>
+                <span class="method-start">39509 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=login_blankUserName status=SUCCESS method=LoginIndex.login_blankUserName()[pri:0, i...)</span>
-                <span class="method-start">56277 ms</span>
+                <span class="method-start">45551 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@1af7f54a)</span>
-                <span class="method-start">58013 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@3f3c966c)</span>
+                <span class="method-start">46604 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.LoginIndex.login_blankPassword() throws java.lang.Exception, org.testng.TestRu...)</span>
-                <span class="method-start">58015 ms</span>
+                <span class="method-start">46605 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login_blankPassword</span>
-                <span class="method-start">62637 ms</span>
+                <span class="method-start">50987 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=login_blankPassword status=SUCCESS method=LoginIndex.login_blankPassword()[pri:0, i...)</span>
-                <span class="method-start">68367 ms</span>
+                <span class="method-start">56784 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.AddCartIndex</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@5167268)</span>
-                <span class="method-start">69836 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@3d526ad9)</span>
+                <span class="method-start">57649 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.AddCartIndex.addProductToCart() throws java.lang.Exception, org.testng.TestRun...)</span>
-                <span class="method-start">69836 ms</span>
+                <span class="method-start">57649 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">addProductToCart</span>
-                <span class="method-start">74118 ms</span>
+                <span class="method-start">62226 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=addProductToCart status=SUCCESS method=AddCartIndex.addProductToCart()[pri:0, insta...)</span>
-                <span class="method-start">85362 ms</span>
+                <span class="method-start">73666 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">testResults</span>
-                <span class="method-start">86259 ms</span>
+                <span class="method-start">74576 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

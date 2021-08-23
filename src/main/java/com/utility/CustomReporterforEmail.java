@@ -920,7 +920,7 @@ public class CustomReporterforEmail extends CustomReporterListener {
 		// out.println("<center> Report customized by Mansi_DnTInfotech
 		// </center><br/><br/>");
 		out.println(
-				"<tr bgcolor='SkyBlue'><td align='right' colspan='4'><center><b><i>Report customized by Mansi_DnTInfotech </i><b><center></center></b></b></center></td></tr>");
+				"<tr bgcolor='SkyBlue'><td align='right' colspan='4'><center><b><i>Report customized by Hasti_DnTInfotech </i><b><center></center></b></b></center></td></tr>");
 		out.println("</body></html>");
 	}
 

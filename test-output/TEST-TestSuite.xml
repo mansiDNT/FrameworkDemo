@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="87.886" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="75.603" tests="5" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_261\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="D:\eclipse-jee-neon-3-win32-x86_64\eclipse\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8604222351240596100.tmp"/>
+    <property name="classworlds.conf" value="D:\eclipse-jee-neon-3-win32-x86_64\eclipse\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5516585212634399881.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_261\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_301/bin/server;C:/Program Files/Java/jre1.8.0_301/bin;C:/Program Files/Java/jre1.8.0_301/lib/amd64;C:\Program Files\Python39\Scripts\;C:\Program Files\Python39\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\ComposerSetup\bin;D:\platform-tools;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;D:\platform-tools\tools;D:\platform-tools\tools\bin;C:\Program Files\Java\jre1.8.0_301\bin;C:\Program Files\Git\cmd;C:\Users\BAPS\AppData\Local\Microsoft\WindowsApps;C:\Users\BAPS\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\BAPS\AppData\Roaming\Composer\vendor\bin;D:\xampp\php;C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.2\bin;;C:\Users\BAPS\AppData\Roaming\npm;C:\Users\BAPS\AppData\Local\GitHubDesktop\bin;D:\eclipse-jee-neon-3-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,9 +60,51 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="login" classname="com.index.LoginIndex" time="16.016"/>
-  <testcase name="login_negative" classname="com.index.LoginIndex" time="6.094"/>
-  <testcase name="login_blankUserName" classname="com.index.LoginIndex" time="6.005"/>
-  <testcase name="login_blankPassword" classname="com.index.LoginIndex" time="5.73"/>
-  <testcase name="addProductToCart" classname="com.index.AddCartIndex" time="11.244"/>
+  <testcase name="login" classname="com.index.LoginIndex" time="7.064"/>
+  <testcase name="login_negative" classname="com.index.LoginIndex" time="16.066">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;LOG IN&apos;)]&quot;}&#10;  (Session info: chrome=92.0.4515.159)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;&#10;System info: host: &apos;DESKTOP-T134AMI&apos;, ip: &apos;192.168.1.30&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\BAPS\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59974}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b2e7e66a97aa0ed9e9022bb451378578&#10;*** Element info: {Using=xpath, value=//button[contains(text(),&apos;LOG IN&apos;)]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'LOG IN')]"}
+  (Session info: chrome=92.0.4515.159)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-T134AMI', ip: '192.168.1.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\BAPS\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59974}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b2e7e66a97aa0ed9e9022bb451378578
+*** Element info: {Using=xpath, value=//button[contains(text(),'LOG IN')]}
+	at com.index.LoginIndex.login_negative(LoginIndex.java:72)
+</failure>
+    <system-out><![CDATA[TEST PASSED - login
+
+--------------- Test status : 1 ---------------
+======current test- TC-2. Negative Login validation.======
+Current Xml Suite is:---->Login Test Cases
+chrome
+========= Google Chrome Browser ==========
+Current Window Handle ID:--->CDwindow-8D982BAFE6ADBE5E610F611D204C8C1B
+Username is: standard_user
+Password is: secret_sauce
+Step 1 : Enter username.
+======Step 1 : Enter username.<br>======
+Step 2 : Enter password.
+======Step 2 : Enter password.<br>======
+Step 3 : Click on Log in button.
+======Step 3 : Click on Log in button.<br>======
+Step 4 : Verify 'Login' is successful.
+======Step 4 : Verify 'Login' is successful.<br>======
+]]></system-out>
+    <system-err><![CDATA[Aug 23, 2021 12:33:34 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 44815
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1629702215.534][WARNING]: This version of ChromeDriver has not been tested with Chrome version 92.
+Aug 23, 2021 12:33:35 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="login_blankUserName" classname="com.index.LoginIndex" time="6.041"/>
+  <testcase name="login_blankPassword" classname="com.index.LoginIndex" time="5.796"/>
+  <testcase name="addProductToCart" classname="com.index.AddCartIndex" time="11.439"/>
 </testsuite>
