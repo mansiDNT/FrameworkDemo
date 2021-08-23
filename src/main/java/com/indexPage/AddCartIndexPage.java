@@ -23,4 +23,6 @@ public class AddCartIndexPage extends AbstractPage {
 		Common.clickOn(driver, addToCartButton);
 		return new CartVerificationPage(driver);
 	}
+	
+	
 	}
