@@ -4,6 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AddCartIndex extends LoginIndex{
+	int stepCount = 1;
+	int extentStepCount = 1;
+
 	
 	@Test
 	public void addProductToCart() throws Exception{

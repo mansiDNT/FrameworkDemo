@@ -76,18 +76,18 @@ public class LoginIndex extends SeleniumInit {
 	@Test
 	public void login_blankUserName() throws Exception {
 		testStepsLog("Step " + (stepCount++) + " : Enter username.");
-		test1.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter username.");
+		test2.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter username.");
 		
 		loginVerificationPage = loginIndexPage.enterEmail("");
-		test1.log(LogStatus.PASS,
+		test2.log(LogStatus.PASS,
 				"Username entered correctly.Entered username is : ");
 		testStepsLog("Step " + (stepCount++) + " : Enter password.");
-		test1.log(LogStatus.PASS,
+		test2.log(LogStatus.PASS,
 				"Password entered correctly.Entered password is : " + Common.getCellValue("Sheet1", 1, 2));
 
 		loginVerificationPage = loginIndexPage.enterPassword(Common.getCellValue("Sheet1", 1, 2));
 		testStepsLog("Step " + (stepCount++) + " : Click on Log in button.");
-		test1.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Click on Log In button.");
+		test2.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Click on Log In button.");
 		loginVerificationPage = loginIndexPage.clickOnLoginButton();
 		boolean errorMessage = loginVerificationPage.verifyBlankUserName();
 		Assert.assertTrue(errorMessage, "UserName is required");

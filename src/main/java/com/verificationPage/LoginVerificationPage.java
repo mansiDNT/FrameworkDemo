@@ -48,10 +48,10 @@ Boolean bool;
 	public boolean verifyBlankUserName(){
 		Common.pause(2);
 		if(driver.findElement(By.xpath("//*[@id='login_button_container']/div/form/div[3]/h3")).isDisplayed()){
-			test1.log(LogStatus.PASS, "UserName is required");
+			test2.log(LogStatus.PASS, "UserName is required");
 		bool=true;
 		}else {
-			test1.log(LogStatus.FAIL,"Login is successful.");
+			test2.log(LogStatus.FAIL,"Login is successful.");
 			bool=false;
 		}
 		
