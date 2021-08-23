@@ -708,7 +708,6 @@ public class CustomReporterforEmail extends CustomReporterListener {
 				qty_tests += 1;
 				ITestContext overview = r.getTestContext();
 
-				// startSummaryRow(overview.getName());
 				int q = getMethodSet(overview.getPassedTests(), suite).size();
 				qty_pass_m += q;
 
@@ -758,84 +757,7 @@ public class CustomReporterforEmail extends CustomReporterListener {
 		 * m_out.println("</table>"); TheMo
 		 */
 	}
-	/*
-	 * @SuppressWarnings("unused") public void
-	 * generateSuiteSummaryReport(List<ISuite> suites) {
-	 * tableStart("testOverview", null); m_out.print("<tr>");
-	 * tableColumnStart("Test"); tableColumnStart("Methods<br/>Passed");
-	 * tableColumnStart("Scenarios<br/>Passed"); tableColumnStart("# skipped");
-	 * tableColumnStart("# failed"); tableColumnStart("Error messages");
-	 * tableColumnStart("Parameters"); tableColumnStart("Start<br/>Time");
-	 * tableColumnStart("End<br/>Time"); tableColumnStart("Total<br/>Time");
-	 * tableColumnStart("Included<br/>Groups");
-	 * tableColumnStart("Excluded<br/>Groups"); TheMo
-	 * 
-	 * m_out.println("</tr>"); Themo NumberFormat formatter = new
-	 * DecimalFormat("#,##0.0"); int qty_tests = 0; int qty_pass_m = 0; int
-	 * qty_pass_s = 0;
-	 * 
-	 * int qty_skip = 0; int qty_fail = 0; long time_start = Long.MAX_VALUE;
-	 * long time_end = Long.MIN_VALUE; m_testIndex = 1; for (ISuite suite :
-	 * suites) { if (suites.size() > 1) { titleRow(suite.getName(), 8); }
-	 * Map<String, ISuiteResult> tests = suite.getResults(); for (ISuiteResult r
-	 * : tests.values()) { qty_tests += 1; ITestContext overview =
-	 * r.getTestContext(); IResultMap irm = overview.getFailedTests();
-	 * 
-	 * //startSummaryRow(overview.getName());
-	 * 
-	 * 
-	 * int q = getMethodSet(overview.getPassedTests(), suite).size(); qty_pass_m
-	 * += q; summaryCell(q, Integer.MAX_VALUE); q =
-	 * overview.getPassedTests().size(); qty_pass_s += q; summaryCell(q,
-	 * Integer.MAX_VALUE); q = getMethodSet(overview.getSkippedTests(),
-	 * suite).size(); qty_skip += q; summaryCell(q, 0);
-	 * 
-	 * int q = getMethodSet(overview.getFailedTests(), suite).size(); qty_fail
-	 * += q; //ummaryCell(q, 0);
-	 * 
-	 * int q1 = getMethodSet(overview.getPassedTests(), suite).size(); qty_pass
-	 * += q1; // summaryCell(q1, 0); TheMo
-	 * 
-	 * // NEW // Insert error found // m_out.print("<td class=\"numi" + (true ?
-	 * "" : "_attn") + "\">"); TheMo
-	 * getShortException(overview.getFailedTests());
-	 * getShortException(overview.getSkippedTests()); TheMo //
-	 * m_out.println("</td>"); TheMo
-	 * 
-	 * // NEW // Add parameters for each test case (failed or passed) //
-	 * m_out.print("<td class=\"numi" + (true ? "" : "_attn") + "\">"); TheMo
-	 * 
-	 * // Write OS and Browser //
-	 * m_out.println(suite.getParameter("os").substring(0, 3) + // " | " // +
-	 * suite.getParameter("browser").substring(0, 3) + " | ");
-	 * 
-	 * //getParameters(overview.getFailedTests()); TheMo //
-	 * getParameters(overview.getPassedTests()); //
-	 * getParameters(overview.getSkippedTests()); // m_out.println("</td>");
-	 * TheMo
-	 * 
-	 * Date dt = new Date(); // NEW summaryCell(dt.toString(), true);
-	 * m_out.println("</td>"); summaryCell(dt.toString(), true);
-	 * m_out.println("</td>"); TheMo
-	 * 
-	 * time_start = Math.min(overview.getStartDate().getTime(), time_start);
-	 * time_end = Math.max(overview.getEndDate().getTime(), time_end);
-	 * summaryCell( formatter.format((overview.getEndDate().getTime() - overview
-	 * .getStartDate().getTime()) / 1000.) + " seconds", true);
-	 * summaryCell(overview.getIncludedGroups());
-	 * summaryCell(overview.getExcludedGroups()); m_out.println("</tr>");
-	 * m_testIndex++; TheMo } } if (qty_tests > 1) {
-	 * m_out.println("<tr class=\"total\"><td>Total</td>");
-	 * summaryCell(qty_pass_m, Integer.MAX_VALUE); summaryCell(qty_pass_s,
-	 * Integer.MAX_VALUE); summaryCell(qty_skip, 0); summaryCell(qty_fail, 0);
-	 * summaryCell(" ", true); summaryCell(" ", true); summaryCell(" ", true);
-	 * summaryCell(" ", true); summaryCell( formatter.format(((time_end -
-	 * time_start) / 1000.) / 60.) + " minutes", true);
-	 * m_out.println("<td colspan=\"3\">&nbsp;</td></tr>"); TheMo }
-	 * m_out.println("</table>"); TheMo
-	 * 
-	 * }
-	 */
+
 
 	private void summaryCell(String[] val) {
 		StringBuffer b = new StringBuffer();
