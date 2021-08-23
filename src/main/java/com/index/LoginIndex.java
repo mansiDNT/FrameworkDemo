@@ -34,7 +34,7 @@ public class LoginIndex extends SeleniumInit {
 
 		loginVerificationPage = loginIndexPage.enterPassword(Common.getCellValue("Sheet1", 1, 1));
 		test.log(LogStatus.PASS,
-				"Password entered correctly.Entered username is : " + Common.getCellValue("Sheet1", 1, 0));
+				"Password entered correctly.Entered username is : " + Common.getCellValue("Sheet1", 1, 1));
 
 		testStepsLog("Step " + (stepCount++) + " : Click on Signin button.");
 		test.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Click on Sign In button.");
@@ -101,4 +101,5 @@ public class LoginIndex extends SeleniumInit {
 		boolean errorMessage = loginVerificationPage.verifyBlankPassword();
 		Assert.assertTrue(errorMessage, "Password is required");
 	}
+	
 }
