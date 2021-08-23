@@ -77,12 +77,12 @@
       <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
     </line>
   </reporter-output>
-  <suite name="Login Test Cases" duration-ms="62458" started-at="2021-08-23T09:01:51Z" finished-at="2021-08-23T09:02:53Z">
+  <suite name="Login Test Cases" duration-ms="62351" started-at="2021-08-23T09:27:27Z" finished-at="2021-08-23T09:28:29Z">
     <groups>
     </groups>
-    <test name="TC-1. Login validation." duration-ms="12974" started-at="2021-08-23T09:01:51Z" finished-at="2021-08-23T09:02:04Z">
+    <test name="TC-1. Login validation." duration-ms="13522" started-at="2021-08-23T09:27:27Z" finished-at="2021-08-23T09:27:40Z">
       <class name="com.index.LoginIndex">
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@12843fce]" name="one" is-config="true" duration-ms="0" started-at="2021-08-23T14:31:51Z" finished-at="2021-08-23T14:31:51Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@12843fce]" name="one" is-config="true" duration-ms="0" started-at="2021-08-23T14:57:27Z" finished-at="2021-08-23T14:57:27Z">
           <params>
             <param index="0">
               <value>
@@ -93,7 +93,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- one -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@12843fce]" name="setUp" is-config="true" duration-ms="5320" started-at="2021-08-23T14:31:51Z" finished-at="2021-08-23T14:31:56Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@12843fce]" name="setUp" is-config="true" duration-ms="6311" started-at="2021-08-23T14:57:27Z" finished-at="2021-08-23T14:57:33Z">
           <params>
             <param index="0">
               <value>
@@ -115,7 +115,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.index.LoginIndex@12843fce]" name="login" duration-ms="6572" started-at="2021-08-23T14:31:56Z" finished-at="2021-08-23T14:32:03Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.index.LoginIndex@12843fce]" name="login" duration-ms="6423" started-at="2021-08-23T14:57:33Z" finished-at="2021-08-23T14:57:39Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Step 1 : Enter username.<br>]]>
@@ -131,7 +131,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@12843fce]" name="tearDown" is-config="true" duration-ms="1073" started-at="2021-08-23T14:32:03Z" finished-at="2021-08-23T14:32:04Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@12843fce]" name="tearDown" is-config="true" duration-ms="775" started-at="2021-08-23T14:57:39Z" finished-at="2021-08-23T14:57:40Z">
           <params>
             <param index="0">
               <value>
@@ -144,9 +144,20 @@
         </test-method> <!-- tearDown -->
       </class> <!-- com.index.LoginIndex -->
     </test> <!-- TC-1. Login validation. -->
-    <test name="TC-2. Negative Login validation." duration-ms="11259" started-at="2021-08-23T09:02:04Z" finished-at="2021-08-23T09:02:15Z">
+    <test name="TC-2. Negative Login validation." duration-ms="10860" started-at="2021-08-23T09:27:40Z" finished-at="2021-08-23T09:27:51Z">
       <class name="com.index.LoginIndex">
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@5afa04c]" name="setUp" is-config="true" duration-ms="4449" started-at="2021-08-23T14:32:04Z" finished-at="2021-08-23T14:32:08Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@5afa04c]" name="one" is-config="true" duration-ms="0" started-at="2021-08-23T14:57:40Z" finished-at="2021-08-23T14:57:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@28c0b664]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- one -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@5afa04c]" name="setUp" is-config="true" duration-ms="4266" started-at="2021-08-23T14:57:40Z" finished-at="2021-08-23T14:57:44Z">
           <params>
             <param index="0">
               <value>
@@ -168,18 +179,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@5afa04c]" name="one" is-config="true" duration-ms="0" started-at="2021-08-23T14:32:04Z" finished-at="2021-08-23T14:32:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@28c0b664]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- one -->
-        <test-method status="PASS" signature="login_negative()[pri:0, instance:com.index.LoginIndex@5afa04c]" name="login_negative" duration-ms="5695" started-at="2021-08-23T14:32:08Z" finished-at="2021-08-23T14:32:14Z">
+        <test-method status="PASS" signature="login_negative()[pri:0, instance:com.index.LoginIndex@5afa04c]" name="login_negative" duration-ms="5786" started-at="2021-08-23T14:57:44Z" finished-at="2021-08-23T14:57:50Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Step 1 : Enter username.<br>]]>
@@ -195,7 +195,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- login_negative -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@5afa04c]" name="tearDown" is-config="true" duration-ms="1115" started-at="2021-08-23T14:32:14Z" finished-at="2021-08-23T14:32:15Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@5afa04c]" name="tearDown" is-config="true" duration-ms="807" started-at="2021-08-23T14:57:50Z" finished-at="2021-08-23T14:57:51Z">
           <params>
             <param index="0">
               <value>
@@ -208,9 +208,9 @@
         </test-method> <!-- tearDown -->
       </class> <!-- com.index.LoginIndex -->
     </test> <!-- TC-2. Negative Login validation. -->
-    <test name="TC-3. Blank UserName validation." duration-ms="10606" started-at="2021-08-23T09:02:15Z" finished-at="2021-08-23T09:02:26Z">
+    <test name="TC-3. Blank UserName validation." duration-ms="10568" started-at="2021-08-23T09:27:51Z" finished-at="2021-08-23T09:28:02Z">
       <class name="com.index.LoginIndex">
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@1efbd816]" name="one" is-config="true" duration-ms="0" started-at="2021-08-23T14:32:15Z" finished-at="2021-08-23T14:32:15Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@1efbd816]" name="one" is-config="true" duration-ms="1" started-at="2021-08-23T14:57:51Z" finished-at="2021-08-23T14:57:51Z">
           <params>
             <param index="0">
               <value>
@@ -221,7 +221,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- one -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@1efbd816]" name="setUp" is-config="true" duration-ms="4173" started-at="2021-08-23T14:32:15Z" finished-at="2021-08-23T14:32:19Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@1efbd816]" name="setUp" is-config="true" duration-ms="4110" started-at="2021-08-23T14:57:51Z" finished-at="2021-08-23T14:57:55Z">
           <params>
             <param index="0">
               <value>
@@ -243,7 +243,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login_blankUserName()[pri:0, instance:com.index.LoginIndex@1efbd816]" name="login_blankUserName" duration-ms="5633" started-at="2021-08-23T14:32:19Z" finished-at="2021-08-23T14:32:25Z">
+        <test-method status="PASS" signature="login_blankUserName()[pri:0, instance:com.index.LoginIndex@1efbd816]" name="login_blankUserName" duration-ms="5647" started-at="2021-08-23T14:57:55Z" finished-at="2021-08-23T14:58:01Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Step 1 : Enter username.<br>]]>
@@ -256,7 +256,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- login_blankUserName -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@1efbd816]" name="tearDown" is-config="true" duration-ms="797" started-at="2021-08-23T14:32:25Z" finished-at="2021-08-23T14:32:26Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@1efbd816]" name="tearDown" is-config="true" duration-ms="809" started-at="2021-08-23T14:58:01Z" finished-at="2021-08-23T14:58:02Z">
           <params>
             <param index="0">
               <value>
@@ -269,9 +269,9 @@
         </test-method> <!-- tearDown -->
       </class> <!-- com.index.LoginIndex -->
     </test> <!-- TC-3. Blank UserName validation. -->
-    <test name="TC-4. Blank Password validation." duration-ms="10911" started-at="2021-08-23T09:02:26Z" finished-at="2021-08-23T09:02:37Z">
+    <test name="TC-4. Blank Password validation." duration-ms="10702" started-at="2021-08-23T09:28:02Z" finished-at="2021-08-23T09:28:12Z">
       <class name="com.index.LoginIndex">
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@402f32ff]" name="one" is-config="true" duration-ms="1" started-at="2021-08-23T14:32:26Z" finished-at="2021-08-23T14:32:26Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@402f32ff]" name="one" is-config="true" duration-ms="1" started-at="2021-08-23T14:58:02Z" finished-at="2021-08-23T14:58:02Z">
           <params>
             <param index="0">
               <value>
@@ -282,7 +282,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- one -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@402f32ff]" name="setUp" is-config="true" duration-ms="4177" started-at="2021-08-23T14:32:26Z" finished-at="2021-08-23T14:32:30Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@402f32ff]" name="setUp" is-config="true" duration-ms="4259" started-at="2021-08-23T14:58:02Z" finished-at="2021-08-23T14:58:06Z">
           <params>
             <param index="0">
               <value>
@@ -304,11 +304,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login_blankPassword()[pri:0, instance:com.index.LoginIndex@402f32ff]" name="login_blankPassword" duration-ms="5666" started-at="2021-08-23T14:32:30Z" finished-at="2021-08-23T14:32:36Z">
+        <test-method status="PASS" signature="login_blankPassword()[pri:0, instance:com.index.LoginIndex@402f32ff]" name="login_blankPassword" duration-ms="5611" started-at="2021-08-23T14:58:06Z" finished-at="2021-08-23T14:58:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_blankPassword -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@402f32ff]" name="tearDown" is-config="true" duration-ms="1064" started-at="2021-08-23T14:32:36Z" finished-at="2021-08-23T14:32:37Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@402f32ff]" name="tearDown" is-config="true" duration-ms="829" started-at="2021-08-23T14:58:11Z" finished-at="2021-08-23T14:58:12Z">
           <params>
             <param index="0">
               <value>
@@ -321,9 +321,9 @@
         </test-method> <!-- tearDown -->
       </class> <!-- com.index.LoginIndex -->
     </test> <!-- TC-4. Blank Password validation. -->
-    <test name="TC-5.Add to cart validation." duration-ms="16637" started-at="2021-08-23T09:02:37Z" finished-at="2021-08-23T09:02:53Z">
+    <test name="TC-5.Add to cart validation." duration-ms="16625" started-at="2021-08-23T09:28:12Z" finished-at="2021-08-23T09:28:29Z">
       <class name="com.index.AddCartIndex">
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="fetchSuiteConfiguration" is-config="true" duration-ms="273" started-at="2021-08-23T14:31:51Z" finished-at="2021-08-23T14:31:51Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="fetchSuiteConfiguration" is-config="true" duration-ms="268" started-at="2021-08-23T14:57:26Z" finished-at="2021-08-23T14:57:27Z">
           <params>
             <param index="0">
               <value>
@@ -334,7 +334,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="one" is-config="true" duration-ms="0" started-at="2021-08-23T14:32:37Z" finished-at="2021-08-23T14:32:37Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="one" is-config="true" duration-ms="1" started-at="2021-08-23T14:58:12Z" finished-at="2021-08-23T14:58:12Z">
           <params>
             <param index="0">
               <value>
@@ -345,7 +345,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- one -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="setUp" is-config="true" duration-ms="4671" started-at="2021-08-23T14:32:37Z" finished-at="2021-08-23T14:32:41Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="setUp" is-config="true" duration-ms="4575" started-at="2021-08-23T14:58:12Z" finished-at="2021-08-23T14:58:17Z">
           <params>
             <param index="0">
               <value>
@@ -367,7 +367,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addProductToCart()[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="addProductToCart" duration-ms="11189" started-at="2021-08-23T14:32:41Z" finished-at="2021-08-23T14:32:53Z">
+        <test-method status="PASS" signature="addProductToCart()[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="addProductToCart" duration-ms="11281" started-at="2021-08-23T14:58:17Z" finished-at="2021-08-23T14:58:28Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Step 1 : Enter username.<br>]]>
@@ -383,7 +383,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- addProductToCart -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="tearDown" is-config="true" duration-ms="776" started-at="2021-08-23T14:32:53Z" finished-at="2021-08-23T14:32:53Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="tearDown" is-config="true" duration-ms="767" started-at="2021-08-23T14:58:28Z" finished-at="2021-08-23T14:58:29Z">
           <params>
             <param index="0">
               <value>
@@ -394,7 +394,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="testResults()[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="testResults" is-config="true" duration-ms="260" started-at="2021-08-23T14:32:53Z" finished-at="2021-08-23T14:32:54Z">
+        <test-method status="PASS" signature="testResults()[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="testResults" is-config="true" duration-ms="288" started-at="2021-08-23T14:58:29Z" finished-at="2021-08-23T14:58:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testResults -->

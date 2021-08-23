@@ -118,7 +118,7 @@ public class SeleniumInit {
 		System.out.println("Before suite");
 		System.out.println("======" + testUrl + "=========");
 		
-		report = new ExtentReports(System.getProperty("user.dir")+"ExtentReportResults.html");
+		report = new ExtentReports(System.getProperty("user.dir")+"/Reports/ExtentReportResults.html");
 		test = getNewTest("Valid Credential");
 		test1 = getNewTest("Invalid Credential");
 		test2=getNewTest("BlankUserName");
