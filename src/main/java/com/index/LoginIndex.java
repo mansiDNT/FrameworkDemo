@@ -82,10 +82,12 @@ public class LoginIndex extends SeleniumInit {
 		test2.log(LogStatus.PASS,
 				"Username entered correctly.Entered username is : ");
 		testStepsLog("Step " + (stepCount++) + " : Enter password.");
+		test2.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter password.");
+		
+		loginVerificationPage = loginIndexPage.enterPassword(Common.getCellValue("Sheet1", 1, 2));
 		test2.log(LogStatus.PASS,
 				"Password entered correctly.Entered password is : " + Common.getCellValue("Sheet1", 1, 2));
 
-		loginVerificationPage = loginIndexPage.enterPassword(Common.getCellValue("Sheet1", 1, 2));
 		testStepsLog("Step " + (stepCount++) + " : Click on Log in button.");
 		test2.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Click on Log In button.");
 		loginVerificationPage = loginIndexPage.clickOnLoginButton();
