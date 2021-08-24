@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Login_Test_Cases">
-              <span class="suite-name border-passed">Login Test Cases</span>
+              <span class="suite-name border-skipped">Login Test Cases</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,41 +90,41 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods,  5 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Login_Test_Cases" class="hide-methods passed suite-Login_Test_Cases"> (hide)</a> <!-- hide-methods passed suite-Login_Test_Cases -->
-                      <a href="#" panel-name="suite-Login_Test_Cases" class="show-methods passed suite-Login_Test_Cases"> (show)</a> <!-- show-methods passed suite-Login_Test_Cases -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="hide-methods skipped suite-Login_Test_Cases"> (hide)</a> <!-- hide-methods skipped suite-Login_Test_Cases -->
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="show-methods skipped suite-Login_Test_Cases"> (show)</a> <!-- show-methods skipped suite-Login_Test_Cases -->
                     </span>
-                    <div class="method-list-content passed suite-Login_Test_Cases">
+                    <div class="method-list-content skipped suite-Login_Test_Cases">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.AddCartIndex" hash-for-method="addProductToCart">addProductToCart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login">login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login_blankPassword">login_blankPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login_blankUserName">login_blankUserName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.LoginIndex" hash-for-method="login_negative">login_negative</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Login_Test_Cases -->
+                    </div> <!-- method-list-content skipped suite-Login_Test_Cases -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -136,9 +136,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Login_Test_Cases" class="panel Login_Test_Cases">
-          <div class="suite-Login_Test_Cases-class-passed">
+          <div class="suite-Login_Test_Cases-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.index.LoginIndex</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -171,10 +171,10 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Login_Test_Cases-class-passed -->
-          <div class="suite-Login_Test_Cases-class-passed">
+          </div> <!-- suite-Login_Test_Cases-class-skipped -->
+          <div class="suite-Login_Test_Cases-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.index.AddCartIndex</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -186,7 +186,7 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Login_Test_Cases-class-passed -->
+          </div> <!-- suite-Login_Test_Cases-class-skipped -->
         </div> <!-- panel Login_Test_Cases -->
         <div panel-name="test-xml-Login_Test_Cases" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -200,7 +200,6 @@
   &lt;parameter name=&quot;selenium.port&quot; value=&quot;4444&quot;/&gt;
   &lt;parameter name=&quot;selenium.host&quot; value=&quot;localhost&quot;/&gt;
   &lt;parameter name=&quot;selenium.browser&quot; value=&quot;chrome&quot;/&gt;
-  &lt;parameter name=&quot;selenium.url&quot; value=&quot;https://www.saucedemo.com/&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.utility.CustomReporterEmailBuildSummary&quot;/&gt;
     &lt;listener class-name=&quot;com.utility.CustomReporterforEmail&quot;/&gt;
@@ -302,30 +301,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addProductToCart')
-data.setCell(0, 2, 'com.index.AddCartIndex')
-data.setCell(0, 3, 11281);
+data.setCell(0, 1, 'login')
+data.setCell(0, 2, 'com.index.LoginIndex')
+data.setCell(0, 3, 1);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login')
+data.setCell(1, 1, 'login_blankPassword')
 data.setCell(1, 2, 'com.index.LoginIndex')
-data.setCell(1, 3, 6423);
+data.setCell(1, 3, 1);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'login_negative')
 data.setCell(2, 2, 'com.index.LoginIndex')
-data.setCell(2, 3, 5786);
+data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'login_blankUserName')
 data.setCell(3, 2, 'com.index.LoginIndex')
-data.setCell(3, 3, 5647);
+data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'login_blankPassword')
-data.setCell(4, 2, 'com.index.LoginIndex')
-data.setCell(4, 3, 5611);
+data.setCell(4, 1, 'addProductToCart')
+data.setCell(4, 2, 'com.index.AddCartIndex')
+data.setCell(4, 3, 0);
 window.suiteTableData['Login_Test_Cases']= { tableData: data, tableDiv: 'times-div-Login_Test_Cases'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 2 ms</span>
               <div id="times-div-Login_Test_Cases">
               </div> <!-- times-div-Login_Test_Cases -->
             </div> <!-- times-div -->
@@ -339,36 +338,31 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">login</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><br>Step 1 : Enter username.<br></span>
-                <span class="reporter-method-output"><br>Step 2 : Enter password.<br></span>
-                <span class="reporter-method-output"><br>Step 3 : Click on Signin button.<br></span>
-                <span class="reporter-method-output"><br>Step 4 : Verify 'Login' is successful.<br></span>
+                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='D:\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">login_negative</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><br>Step 1 : Enter username.<br></span>
-                <span class="reporter-method-output"><br>Step 2 : Enter password.<br></span>
-                <span class="reporter-method-output"><br>Step 3 : Click on Log in button.<br></span>
-                <span class="reporter-method-output"><br>Step 4 : Verify 'Login' is successful.<br></span>
+                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='D:\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">login_blankUserName</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><br>Step 1 : Enter username.<br></span>
-                <span class="reporter-method-output"><br>Step 2 : Enter password.<br></span>
-                <span class="reporter-method-output"><br>Step 3 : Click on Log in button.<br></span>
+                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='D:\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">login_blankPassword</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='D:\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">addProductToCart</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><br>Step 1 : Enter username.<br></span>
-                <span class="reporter-method-output"><br>Step 2 : Enter password.<br></span>
-                <span class="reporter-method-output"><br>Step 3 : Click on Signin button.<br></span>
-                <span class="reporter-method-output"><br>Step 4 : Verify 'Login' is successful.<br></span>
+                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='D:\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -430,99 +424,127 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.AddCartIndex</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@5167268)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@29a0cdb)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.LoginIndex</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@1cfd1875)</span>
-                <span class="method-start">269 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@6155d082)</span>
+                <span class="method-start">245 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">init</span>
+                <span class="method-start">257 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void com.index.LoginIndex.login() throws java.lang.Exception, org.testng.TestRunner@1cfd1875)</span>
-                <span class="method-start">277 ms</span>
+                <span class="method-name">setUp(public void com.index.LoginIndex.login() throws java.lang.Exception, org.testng.TestRunner@6155d082)</span>
+                <span class="method-start">266 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">6588 ms</span>
+                <span class="method-start">6548 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=login status=SUCCESS method=LoginIndex.login()[pri:0, instance:com.index.LoginIndex...)</span>
-                <span class="method-start">13012 ms</span>
+                <span class="method-name">tearDown([TestResult name=login status=SKIP method=LoginIndex.login()[pri:0, instance:com.index.LoginIndex@3d...)</span>
+                <span class="method-start">6550 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@28c0b664)</span>
-                <span class="method-start">13829 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@3a5ecce3)</span>
+                <span class="method-start">6591 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">init</span>
+                <span class="method-start">6592 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.LoginIndex.login_negative() throws java.lang.Exception, org.testng.TestRunner@...)</span>
-                <span class="method-start">13830 ms</span>
+                <span class="method-start">6593 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login_negative</span>
-                <span class="method-start">18096 ms</span>
+                <span class="method-start">11962 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=login_negative status=SUCCESS method=LoginIndex.login_negative()[pri:0, instance:co...)</span>
-                <span class="method-start">23882 ms</span>
+                <span class="method-name">tearDown([TestResult name=login_negative status=SKIP method=LoginIndex.login_negative()[pri:0, instance:com.i...)</span>
+                <span class="method-start">11963 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@2c444798)</span>
-                <span class="method-start">24700 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@561868a0)</span>
+                <span class="method-start">11972 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">init</span>
+                <span class="method-start">11973 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.LoginIndex.login_blankUserName() throws java.lang.Exception, org.testng.TestRu...)</span>
-                <span class="method-start">24702 ms</span>
+                <span class="method-start">11974 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login_blankUserName</span>
-                <span class="method-start">28812 ms</span>
+                <span class="method-start">17303 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=login_blankUserName status=SUCCESS method=LoginIndex.login_blankUserName()[pri:0, i...)</span>
-                <span class="method-start">34459 ms</span>
+                <span class="method-name">tearDown([TestResult name=login_blankUserName status=SKIP method=LoginIndex.login_blankUserName()[pri:0, inst...)</span>
+                <span class="method-start">17303 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@1af7f54a)</span>
-                <span class="method-start">35280 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@2ea6e30c)</span>
+                <span class="method-start">17317 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">init</span>
+                <span class="method-start">17317 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.LoginIndex.login_blankPassword() throws java.lang.Exception, org.testng.TestRu...)</span>
-                <span class="method-start">35282 ms</span>
+                <span class="method-start">17317 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login_blankPassword</span>
-                <span class="method-start">39541 ms</span>
+                <span class="method-start">23688 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=login_blankPassword status=SUCCESS method=LoginIndex.login_blankPassword()[pri:0, i...)</span>
-                <span class="method-start">45152 ms</span>
+                <span class="method-name">tearDown([TestResult name=login_blankPassword status=SKIP method=LoginIndex.login_blankPassword()[pri:0, inst...)</span>
+                <span class="method-start">23689 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.AddCartIndex</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@5167268)</span>
-                <span class="method-start">45994 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@29a0cdb)</span>
+                <span class="method-start">23697 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">init</span>
+                <span class="method-start">23697 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setUp(public void com.index.AddCartIndex.addProductToCart() throws java.lang.Exception, org.testng.TestRun...)</span>
-                <span class="method-start">45996 ms</span>
+                <span class="method-start">23698 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">addProductToCart</span>
-                <span class="method-start">50571 ms</span>
+                <span class="method-start">32896 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=addProductToCart status=SUCCESS method=AddCartIndex.addProductToCart()[pri:0, insta...)</span>
-                <span class="method-start">61852 ms</span>
+                <span class="method-name">tearDown([TestResult name=addProductToCart status=SKIP method=AddCartIndex.addProductToCart()[pri:0, instance...)</span>
+                <span class="method-start">32896 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-suite after">
-                <span class="method-name">testResults</span>
-                <span class="method-start">62628 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,4 +1,30 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 63.618 sec - in TestSuite
+Tests run: 12, Failures: 6, Errors: 0, Skipped: 6, Time elapsed: 34.134 sec <<< FAILURE! - in TestSuite
+init(com.index.LoginIndex)  Time elapsed: 1.074 sec  <<< FAILURE!
+java.lang.NullPointerException
+
+init(com.index.LoginIndex)  Time elapsed: 0.049 sec  <<< FAILURE!
+java.lang.NullPointerException
+
+init(com.index.LoginIndex)  Time elapsed: 0.011 sec  <<< FAILURE!
+java.lang.NullPointerException
+
+init(com.index.LoginIndex)  Time elapsed: 0.019 sec  <<< FAILURE!
+java.lang.NullPointerException
+
+init(com.index.AddCartIndex)  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.NullPointerException
+
+setUp(com.index.AddCartIndex)  Time elapsed: 9.207 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: chrome=92.0.4515.159)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-T134AMI', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\BAPS\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63813}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e7f9cfbe47180f90ca740f5238dfe5ec
+

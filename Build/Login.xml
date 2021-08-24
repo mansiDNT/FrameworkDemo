@@ -13,7 +13,7 @@
 
 	<!-- <parameter name="selenium.url" value="https://test.enterprisesecure.com.au/payment/dashboard" 
 		/> -->
-	<parameter name="selenium.url" value="https://www.saucedemo.com/" />
+	<parameter name="selenium.url" value="https://www.saucedemo.com/" /> 
  <listeners>
 		<!--  <listener class-name="com.utility.CustomReporterListener" />  -->
 		<listener class-name="com.utility.CustomReporterEmailBuildSummary" />

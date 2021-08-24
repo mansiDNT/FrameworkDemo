@@ -1,7 +1,9 @@
 package com.index;
 
-import org.testng.Assert;
+import java.util.concurrent.TimeUnit;
 
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.init.Common;
@@ -12,6 +14,7 @@ public class LoginIndex extends SeleniumInit {
 
 	int stepCount = 1;
 	int extentStepCount = 1;
+	
 
 	@Test
 	public void login() throws Exception {
