@@ -60,15 +60,17 @@ Boolean bool;
 	public boolean verifyBlankPassword(){
 		Common.pause(2);
 		if(driver.findElement(By.xpath("//input[@id='login-button']")).isDisplayed()){
-			test1.log(LogStatus.PASS, "Password is required");
+			test3.log(LogStatus.PASS, "Password is required");
 		bool=true;
 		}else {
-			test1.log(LogStatus.FAIL,"Password has already entered.");
+			test3.log(LogStatus.FAIL,"Password has already entered.");
 			bool=false;
 		}
 		
 		return bool;
 	}
+	
+	
 	
 	public boolean verifyInvalidEmailID(String error) {
 		

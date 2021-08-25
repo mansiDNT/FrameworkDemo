@@ -1,8 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="16" total="21" passed="5">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
     <line>
-      <![CDATA[<br>current test- TC-1. Login validation.]]>
+      <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+    </line>
+    <line>
+      <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 1 : Enter username.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 2 : Enter password.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 3 : Click on Log in button.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>current test- TC-2. Blank Password validation.]]>
+    </line>
+    <line>
+      <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 1 : Enter username.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 2 : Enter password.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 3 : Click on Log in button.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>current test- TC-3. Negative Login validation.]]>
+    </line>
+    <line>
+      <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 1 : Enter username.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 2 : Enter password.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 3 : Click on Log in button.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>current test- TC-4. Login validation.]]>
     </line>
     <line>
       <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
@@ -18,45 +66,6 @@
     </line>
     <line>
       <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>current test- TC-2. Negative Login validation.]]>
-    </line>
-    <line>
-      <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
-    </line>
-    <line>
-      <![CDATA[<br>Step 1 : Enter username.<br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>Step 2 : Enter password.<br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>Step 3 : Click on Log in button.<br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>current test- TC-3. Blank UserName validation.]]>
-    </line>
-    <line>
-      <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
-    </line>
-    <line>
-      <![CDATA[<br>Step 1 : Enter username.<br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>Step 2 : Enter password.<br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>Step 3 : Click on Log in button.<br>]]>
-    </line>
-    <line>
-      <![CDATA[<br>current test- TC-4. Blank Password validation.]]>
-    </line>
-    <line>
-      <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
     </line>
     <line>
       <![CDATA[<br>current test- TC-5.Add to cart validation.]]>
@@ -77,45 +86,45 @@
       <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
     </line>
   </reporter-output>
-  <suite name="Login Test Cases" duration-ms="73266" started-at="2021-08-24T11:56:53Z" finished-at="2021-08-24T11:58:06Z">
+  <suite name="Login Test Cases" duration-ms="64613" started-at="2021-08-25T06:10:33Z" finished-at="2021-08-25T06:11:37Z">
     <groups>
     </groups>
-    <test name="TC-1. Login validation." duration-ms="18126" started-at="2021-08-24T11:56:53Z" finished-at="2021-08-24T11:57:11Z">
+    <test name="TC-1. Blank UserName validation." duration-ms="13237" started-at="2021-08-25T06:10:33Z" finished-at="2021-08-25T06:10:46Z">
       <class name="com.index.LoginIndex">
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@56ac3a89]" name="one" is-config="true" duration-ms="1" started-at="2021-08-24T17:26:53Z" finished-at="2021-08-24T17:26:53Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@12843fce]" name="one" is-config="true" duration-ms="0" started-at="2021-08-25T11:40:33Z" finished-at="2021-08-25T11:40:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3624da92]]>
+                <![CDATA[org.testng.TestRunner@4d157787]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- one -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@56ac3a89]" name="setUp" is-config="true" duration-ms="9546" started-at="2021-08-24T17:26:53Z" finished-at="2021-08-24T17:27:02Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@12843fce]" name="setUp" is-config="true" duration-ms="5696" started-at="2021-08-25T11:40:33Z" finished-at="2021-08-25T11:40:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.index.LoginIndex.login() throws java.lang.Exception]]>
+                <![CDATA[public void com.index.LoginIndex.login_blankUserName() throws java.lang.Exception]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@3624da92]]>
+                <![CDATA[org.testng.TestRunner@4d157787]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>current test- TC-1. Login validation.]]>
+              <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
             </line>
             <line>
               <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.index.LoginIndex@56ac3a89]" name="login" duration-ms="7419" started-at="2021-08-24T17:27:02Z" finished-at="2021-08-24T17:27:10Z">
+        <test-method status="PASS" signature="login_blankUserName()[pri:0, instance:com.index.LoginIndex@12843fce]" name="login_blankUserName" duration-ms="6627" started-at="2021-08-25T11:40:38Z" finished-at="2021-08-25T11:40:45Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Step 1 : Enter username.<br>]]>
@@ -124,18 +133,15 @@
               <![CDATA[<br>Step 2 : Enter password.<br>]]>
             </line>
             <line>
-              <![CDATA[<br>Step 3 : Click on Signin button.<br>]]>
-            </line>
-            <line>
-              <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
+              <![CDATA[<br>Step 3 : Click on Log in button.<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@56ac3a89]" name="tearDown" is-config="true" duration-ms="1136" started-at="2021-08-24T17:27:10Z" finished-at="2021-08-24T17:27:11Z">
+        </test-method> <!-- login_blankUserName -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@12843fce]" name="tearDown" is-config="true" duration-ms="900" started-at="2021-08-25T11:40:45Z" finished-at="2021-08-25T11:40:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=LoginIndex.login()[pri:0, instance:com.index.LoginIndex@56ac3a89] output=<br>Step 1 : Enter username.<br>]]]>
+                <![CDATA[[TestResult name=login_blankUserName status=SUCCESS method=LoginIndex.login_blankUserName()[pri:0, instance:com.index.LoginIndex@12843fce] output=<br>Step 1 : Enter username.<br>]]]>
               </value>
             </param>
           </params>
@@ -143,21 +149,71 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.index.LoginIndex -->
-    </test> <!-- TC-1. Login validation. -->
-    <test name="TC-2. Negative Login validation." duration-ms="11730" started-at="2021-08-24T11:57:11Z" finished-at="2021-08-24T11:57:22Z">
+    </test> <!-- TC-1. Blank UserName validation. -->
+    <test name="TC-2. Blank Password validation." duration-ms="11142" started-at="2021-08-25T06:10:46Z" finished-at="2021-08-25T06:10:57Z">
       <class name="com.index.LoginIndex">
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@6e1ec318]" name="one" is-config="true" duration-ms="0" started-at="2021-08-24T17:27:11Z" finished-at="2021-08-24T17:27:11Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@5afa04c]" name="one" is-config="true" duration-ms="0" started-at="2021-08-25T11:40:46Z" finished-at="2021-08-25T11:40:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2cab9998]]>
+                <![CDATA[org.testng.TestRunner@68ed96ca]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- one -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@6e1ec318]" name="setUp" is-config="true" duration-ms="5032" started-at="2021-08-24T17:27:11Z" finished-at="2021-08-24T17:27:16Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@5afa04c]" name="setUp" is-config="true" duration-ms="4425" started-at="2021-08-25T11:40:46Z" finished-at="2021-08-25T11:40:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.index.LoginIndex.login_blankPassword() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@68ed96ca]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<br>current test- TC-2. Blank Password validation.]]>
+            </line>
+            <line>
+              <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="login_blankPassword()[pri:0, instance:com.index.LoginIndex@5afa04c]" name="login_blankPassword" duration-ms="5893" started-at="2021-08-25T11:40:50Z" finished-at="2021-08-25T11:40:56Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<br>Step 1 : Enter username.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 2 : Enter password.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 3 : Click on Log in button.<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login_blankPassword -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@5afa04c]" name="tearDown" is-config="true" duration-ms="822" started-at="2021-08-25T11:40:56Z" finished-at="2021-08-25T11:40:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_blankPassword status=SUCCESS method=LoginIndex.login_blankPassword()[pri:0, instance:com.index.LoginIndex@5afa04c] output=<br>Step 1 : Enter username.<br>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.index.LoginIndex -->
+    </test> <!-- TC-2. Blank Password validation. -->
+    <test name="TC-3. Negative Login validation." duration-ms="11371" started-at="2021-08-25T06:10:57Z" finished-at="2021-08-25T06:11:08Z">
+      <class name="com.index.LoginIndex">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@1efbd816]" name="setUp" is-config="true" duration-ms="4588" started-at="2021-08-25T11:40:57Z" finished-at="2021-08-25T11:41:02Z">
           <params>
             <param index="0">
               <value>
@@ -166,20 +222,31 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@2cab9998]]>
+                <![CDATA[org.testng.TestRunner@6d1310f6]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>current test- TC-2. Negative Login validation.]]>
+              <![CDATA[<br>current test- TC-3. Negative Login validation.]]>
             </line>
             <line>
               <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login_negative()[pri:0, instance:com.index.LoginIndex@6e1ec318]" name="login_negative" duration-ms="5792" started-at="2021-08-24T17:27:16Z" finished-at="2021-08-24T17:27:22Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@1efbd816]" name="one" is-config="true" duration-ms="0" started-at="2021-08-25T11:40:57Z" finished-at="2021-08-25T11:40:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d1310f6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- one -->
+        <test-method status="PASS" signature="login_negative()[pri:0, instance:com.index.LoginIndex@1efbd816]" name="login_negative" duration-ms="5922" started-at="2021-08-25T11:41:02Z" finished-at="2021-08-25T11:41:07Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Step 1 : Enter username.<br>]]>
@@ -195,11 +262,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- login_negative -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@6e1ec318]" name="tearDown" is-config="true" duration-ms="902" started-at="2021-08-24T17:27:22Z" finished-at="2021-08-24T17:27:22Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@1efbd816]" name="tearDown" is-config="true" duration-ms="861" started-at="2021-08-25T11:41:07Z" finished-at="2021-08-25T11:41:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login_negative status=SUCCESS method=LoginIndex.login_negative()[pri:0, instance:com.index.LoginIndex@6e1ec318] output=<br>Step 1 : Enter username.<br>]]]>
+                <![CDATA[[TestResult name=login_negative status=SUCCESS method=LoginIndex.login_negative()[pri:0, instance:com.index.LoginIndex@1efbd816] output=<br>Step 1 : Enter username.<br>]]]>
               </value>
             </param>
           </params>
@@ -207,43 +274,43 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.index.LoginIndex -->
-    </test> <!-- TC-2. Negative Login validation. -->
-    <test name="TC-3. Blank UserName validation." duration-ms="11462" started-at="2021-08-24T11:57:22Z" finished-at="2021-08-24T11:57:34Z">
+    </test> <!-- TC-3. Negative Login validation. -->
+    <test name="TC-4. Login validation." duration-ms="11475" started-at="2021-08-25T06:11:08Z" finished-at="2021-08-25T06:11:20Z">
       <class name="com.index.LoginIndex">
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@31dc339b]" name="one" is-config="true" duration-ms="0" started-at="2021-08-24T17:27:22Z" finished-at="2021-08-24T17:27:22Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@402f32ff]" name="one" is-config="true" duration-ms="0" started-at="2021-08-25T11:41:08Z" finished-at="2021-08-25T11:41:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@21c64522]]>
+                <![CDATA[org.testng.TestRunner@3228d990]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- one -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@31dc339b]" name="setUp" is-config="true" duration-ms="4825" started-at="2021-08-24T17:27:22Z" finished-at="2021-08-24T17:27:27Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@402f32ff]" name="setUp" is-config="true" duration-ms="4492" started-at="2021-08-25T11:41:08Z" finished-at="2021-08-25T11:41:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.index.LoginIndex.login_blankUserName() throws java.lang.Exception]]>
+                <![CDATA[public void com.index.LoginIndex.login() throws java.lang.Exception]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@21c64522]]>
+                <![CDATA[org.testng.TestRunner@3228d990]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>current test- TC-3. Blank UserName validation.]]>
+              <![CDATA[<br>current test- TC-4. Login validation.]]>
             </line>
             <line>
               <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login_blankUserName()[pri:0, instance:com.index.LoginIndex@31dc339b]" name="login_blankUserName" duration-ms="5698" started-at="2021-08-24T17:27:27Z" finished-at="2021-08-24T17:27:33Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.index.LoginIndex@402f32ff]" name="login" duration-ms="6111" started-at="2021-08-25T11:41:13Z" finished-at="2021-08-25T11:41:19Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Step 1 : Enter username.<br>]]>
@@ -252,15 +319,18 @@
               <![CDATA[<br>Step 2 : Enter password.<br>]]>
             </line>
             <line>
-              <![CDATA[<br>Step 3 : Click on Log in button.<br>]]>
+              <![CDATA[<br>Step 3 : Click on Signin button.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- login_blankUserName -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@31dc339b]" name="tearDown" is-config="true" duration-ms="935" started-at="2021-08-24T17:27:33Z" finished-at="2021-08-24T17:27:34Z">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@402f32ff]" name="tearDown" is-config="true" duration-ms="870" started-at="2021-08-25T11:41:19Z" finished-at="2021-08-25T11:41:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login_blankUserName status=SUCCESS method=LoginIndex.login_blankUserName()[pri:0, instance:com.index.LoginIndex@31dc339b] output=<br>Step 1 : Enter username.<br>]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=LoginIndex.login()[pri:0, instance:com.index.LoginIndex@402f32ff] output=<br>Step 1 : Enter username.<br>]]]>
               </value>
             </param>
           </params>
@@ -268,73 +338,32 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.index.LoginIndex -->
-    </test> <!-- TC-3. Blank UserName validation. -->
-    <test name="TC-4. Blank Password validation." duration-ms="12587" started-at="2021-08-24T11:57:34Z" finished-at="2021-08-24T11:57:47Z">
-      <class name="com.index.LoginIndex">
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@4e1d422d]" name="one" is-config="true" duration-ms="1" started-at="2021-08-24T17:27:34Z" finished-at="2021-08-24T17:27:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4b6166aa]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- one -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@4e1d422d]" name="setUp" is-config="true" duration-ms="4388" started-at="2021-08-24T17:27:34Z" finished-at="2021-08-24T17:27:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.index.LoginIndex.login_blankPassword() throws java.lang.Exception]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@4b6166aa]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[<br>current test- TC-4. Blank Password validation.]]>
-            </line>
-            <line>
-              <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login_blankPassword()[pri:0, instance:com.index.LoginIndex@4e1d422d]" name="login_blankPassword" duration-ms="5704" started-at="2021-08-24T17:27:38Z" finished-at="2021-08-24T17:27:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login_blankPassword -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@4e1d422d]" name="tearDown" is-config="true" duration-ms="2487" started-at="2021-08-24T17:27:44Z" finished-at="2021-08-24T17:27:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=login_blankPassword status=SUCCESS method=LoginIndex.login_blankPassword()[pri:0, instance:com.index.LoginIndex@4e1d422d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.index.LoginIndex -->
-    </test> <!-- TC-4. Blank Password validation. -->
-    <test name="TC-5.Add to cart validation." duration-ms="19264" started-at="2021-08-24T11:57:47Z" finished-at="2021-08-24T11:58:06Z">
+    </test> <!-- TC-4. Login validation. -->
+    <test name="TC-5.Add to cart validation." duration-ms="17331" started-at="2021-08-25T06:11:20Z" finished-at="2021-08-25T06:11:37Z">
       <class name="com.index.AddCartIndex">
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@2ac273d3]" name="fetchSuiteConfiguration" is-config="true" duration-ms="516" started-at="2021-08-24T17:26:52Z" finished-at="2021-08-24T17:26:53Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="fetchSuiteConfiguration" is-config="true" duration-ms="244" started-at="2021-08-25T11:40:32Z" finished-at="2021-08-25T11:40:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@30ed9c6c]]>
+                <![CDATA[org.testng.TestRunner@436390f4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@2ac273d3]" name="setUp" is-config="true" duration-ms="7039" started-at="2021-08-24T17:27:47Z" finished-at="2021-08-24T17:27:54Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="one" is-config="true" duration-ms="0" started-at="2021-08-25T11:41:20Z" finished-at="2021-08-25T11:41:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@436390f4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- one -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="setUp" is-config="true" duration-ms="5079" started-at="2021-08-25T11:41:20Z" finished-at="2021-08-25T11:41:25Z">
           <params>
             <param index="0">
               <value>
@@ -343,7 +372,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@30ed9c6c]]>
+                <![CDATA[org.testng.TestRunner@436390f4]]>
               </value>
             </param>
           </params>
@@ -356,18 +385,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@2ac273d3]" name="one" is-config="true" duration-ms="0" started-at="2021-08-24T17:27:47Z" finished-at="2021-08-24T17:27:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@30ed9c6c]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- one -->
-        <test-method status="PASS" signature="addProductToCart()[pri:0, instance:com.index.AddCartIndex@2ac273d3]" name="addProductToCart" duration-ms="11322" started-at="2021-08-24T17:27:54Z" finished-at="2021-08-24T17:28:05Z">
+        <test-method status="PASS" signature="addProductToCart()[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="addProductToCart" duration-ms="11379" started-at="2021-08-25T11:41:25Z" finished-at="2021-08-25T11:41:36Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Step 1 : Enter username.<br>]]>
@@ -383,18 +401,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- addProductToCart -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.AddCartIndex@2ac273d3]" name="tearDown" is-config="true" duration-ms="900" started-at="2021-08-24T17:28:05Z" finished-at="2021-08-24T17:28:06Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="tearDown" is-config="true" duration-ms="873" started-at="2021-08-25T11:41:36Z" finished-at="2021-08-25T11:41:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addProductToCart status=SUCCESS method=AddCartIndex.addProductToCart()[pri:0, instance:com.index.AddCartIndex@2ac273d3] output=<br>Step 1 : Enter username.<br>]]]>
+                <![CDATA[[TestResult name=addProductToCart status=SUCCESS method=AddCartIndex.addProductToCart()[pri:0, instance:com.index.AddCartIndex@50c87b21] output=<br>Step 1 : Enter username.<br>]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="testResults()[pri:0, instance:com.index.AddCartIndex@2ac273d3]" name="testResults" is-config="true" duration-ms="298" started-at="2021-08-24T17:28:06Z" finished-at="2021-08-24T17:28:06Z">
+        <test-method status="PASS" signature="testResults()[pri:0, instance:com.index.AddCartIndex@50c87b21]" name="testResults" is-config="true" duration-ms="304" started-at="2021-08-25T11:41:37Z" finished-at="2021-08-25T11:41:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testResults -->

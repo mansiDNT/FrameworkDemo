@@ -40,7 +40,7 @@ public class LoginIndex extends SeleniumInit {
 				"Password entered correctly.Entered username is : " + Common.getCellValue("Sheet1", 1, 1));
 
 		testStepsLog("Step " + (stepCount++) + " : Click on Signin button.");
-		test.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Click on Sign In button.");
+		test.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Click on Log In button.");
 		loginVerificationPage = loginIndexPage.clickOnLoginButton();
 
 		testStepsLog("Step " + (stepCount++) + " : Verify 'Login' is successful.");
@@ -100,8 +100,23 @@ public class LoginIndex extends SeleniumInit {
 
 	@Test
 	public void login_blankPassword() throws Exception {
+		testStepsLog("Step " + (stepCount++) + " : Enter username.");
+		test3.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter username.");
+		
 		loginVerificationPage = loginIndexPage.enterEmail(Common.getCellValue("Sheet1", 1, 0));
+		test3.log(LogStatus.PASS,
+				"Username entered correctly.Entered username is : "+Common.getCellValue("Sheet1", 1, 0));
+		testStepsLog("Step " + (stepCount++) + " : Enter password.");
+		test3.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter password.");
+		
 		loginVerificationPage = loginIndexPage.enterPassword("");
+		test3.log(LogStatus.PASS,
+				"Password entered correctly.Entered password is : ");
+		
+		testStepsLog("Step " + (stepCount++) + " : Click on Log in button.");
+		test3.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Click on Log In button.");
+		
+
 		loginVerificationPage = loginIndexPage.clickOnLoginButton();
 		boolean errorMessage = loginVerificationPage.verifyBlankPassword();
 		Assert.assertTrue(errorMessage, "Password is required");

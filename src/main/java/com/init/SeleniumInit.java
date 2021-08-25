@@ -91,7 +91,7 @@ public class SeleniumInit {
 	public static Properties config_properties = new Properties();
 	
 	public static ExtentTest test;
-	public static ExtentTest test1,test2;
+	public static ExtentTest test1,test2,test3;
 	static ExtentReports report;
 	
 	public  LoginIndexPage loginIndexPage;
@@ -122,6 +122,7 @@ public class SeleniumInit {
 		test = getNewTest("Valid Credential");
 		test1 = getNewTest("Invalid Credential");
 		test2=getNewTest("BlankUserName");
+		test3=getNewTest("BlankPassword");
 		//report.config().reportName("Final Report");
 
 	}
@@ -143,6 +144,7 @@ public class SeleniumInit {
 		report.endTest(test);
 		report.endTest(test1);
 		report.endTest(test2);
+		report.endTest(test3);
 		report.flush();
 		
 	}

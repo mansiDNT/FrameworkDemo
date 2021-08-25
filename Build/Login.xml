@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Login Test Cases" verbose="10" parallel="none" thread-count="4" allow-return-values="true" preserve-order="true">
+<suite name="Login Test Cases" verbose="10" parallel="none" thread-count="1" allow-return-values="true" preserve-order="true">
 
 	<!-- Put IP of localhost/Grid Hub machine -->
 	<parameter name="selenium.host" value="localhost" />
@@ -27,27 +27,10 @@
 
  </listeners>  
 
-	<test name="TC-1. Login validation.">		
-		<classes>
-			<class name="com.index.LoginIndex">
-				<methods>
-					<include name="login" />
-				</methods>
-			</class>
-		</classes>
-	</test>  
 	
-	<test name="TC-2. Negative Login validation.">		
-		<classes>
-			<class name="com.index.LoginIndex">
-				<methods>
-					<include name="login_negative" />
-				</methods>
-			</class>
-		</classes>
-	</test>  
 	
-	<test name="TC-3. Blank UserName validation.">		
+	
+	<test name="TC-1. Blank UserName validation.">		
 		<classes>
 			<class name="com.index.LoginIndex">
 				<methods>
@@ -57,7 +40,7 @@
 		</classes>
 	</test>  
 	
-	<test name="TC-4. Blank Password validation.">		
+	<test name="TC-2. Blank Password validation.">		
 		<classes>
 			<class name="com.index.LoginIndex">
 				<methods>
@@ -65,7 +48,27 @@
 				</methods>
 			</class>
 		</classes>
+	</test> 
+	
+	<test name="TC-3. Negative Login validation.">		
+		<classes>
+			<class name="com.index.LoginIndex">
+				<methods>
+					<include name="login_negative" />
+				</methods>
+			</class>
+		</classes>
 	</test>  
+	
+	<test name="TC-4. Login validation.">		
+		<classes>
+			<class name="com.index.LoginIndex">
+				<methods>
+					<include name="login" />
+				</methods>
+			</class>
+		</classes>
+	</test>   
 	
 	<test name="TC-5.Add to cart validation.">		
 		<classes>
