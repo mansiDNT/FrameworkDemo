@@ -21,7 +21,6 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-
 import org.apache.commons.lang.exception.ExceptionUtils;
 
 import org.openqa.selenium.WebDriver;
@@ -47,7 +46,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
-
 import com.indexPage.AddCartIndexPage;
 import com.indexPage.LoginIndexPage;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -57,31 +55,30 @@ import com.verificationPage.LoginVerificationPage;
 
 public class SeleniumInit {
 
-	
 	public static int note_data = 0;
 	public static String suiteName = "";
 	public static String testName = "";
 
 	/* Minimum requirement for test configuration */
 
-	public  static String testUrl; // Test url
-	protected  static String seleniumHub; // Selenium hub IP
+	public static String testUrl; // Test url
+	protected static String seleniumHub; // Selenium hub IP
 	protected static String seleniumHubPort; // Selenium hub port
-	protected static  String targetBrowser; // Target browser
+	protected static String targetBrowser; // Target browser
 	protected static String test_data_folder_path = null;
-	protected static String screenshot_folder_path = null; // Path to screenshot folder
+	protected static String screenshot_folder_path = null; // Path to screenshot
+															// folder
 	protected static String downloads_folder_path = null;
 	public static String currentWindowHandle = "";// Get Current Window handle
 	public static String browserName = "";
 	public static String osName = "";
 	public static String browserVersion = "";
-	public static  String userDir = System.getProperty("user.dir");
+	public static String userDir = System.getProperty("user.dir");
 	public static String comonTemplateName = "";
 	public static String constant_grfpTemplateName = "";
-	public static HashMap<String,String> globalMap=new HashMap<String,String>();
-	public static ArrayList<String> arrayList=new ArrayList<String>();
+	public static HashMap<String, String> globalMap = new HashMap<String, String>();
+	public static ArrayList<String> arrayList = new ArrayList<String>();
 
-	
 	public String currentTest; // current running test
 
 	protected static Logger logger = Logger.getLogger("testing");
@@ -89,14 +86,14 @@ public class SeleniumInit {
 
 	InputStream input = null;
 	public static Properties config_properties = new Properties();
-	
+
 	public static ExtentTest test;
-	public static ExtentTest test1,test2,test3,test4;
+	public static ExtentTest test1, test2, test3, test4;
 	static ExtentReports report;
-	
-	public  LoginIndexPage loginIndexPage;
-	public  LoginVerificationPage loginVerificationPage;
-	
+
+	public LoginIndexPage loginIndexPage;
+	public LoginVerificationPage loginVerificationPage;
+
 	public AddCartIndexPage addCartIndexPage;
 	public CartVerificationPage cartVerificationPage;
 
@@ -105,50 +102,41 @@ public class SeleniumInit {
 	 * 
 	 * @param testContext
 	 */
-	
 
-	
 	@BeforeSuite(alwaysRun = true)
-	 protected void fetchSuiteConfiguration(ITestContext testContext) {
-		
+	protected void fetchSuiteConfiguration(ITestContext testContext) {
 
 		// Pass the URL to be tested
 		testUrl = testContext.getCurrentXmlTest().getParameter("selenium.url");
-		
+
 		System.out.println("Before suite");
 		System.out.println("======" + testUrl + "=========");
-		
-		report = new ExtentReports(System.getProperty("user.dir")+"/Reports/ExtentReportResults.html");
+
+		report = new ExtentReports(System.getProperty("user.dir") + "/Reports/ExtentReportResults.html");
 		test = getNewTest("Valid Credential");
 		test1 = getNewTest("Invalid Credential");
-		test2=getNewTest("BlankUserName");
-		test3=getNewTest("BlankPassword");
-		test4=getNewTest("AddToCart");
-		//report.config().reportName("Final Report");
+		test2 = getNewTest("BlankUserName");
+		test3 = getNewTest("BlankPassword");
+		test4 = getNewTest("AddToCart");
+		// report.config().reportName("Final Report");
 
 	}
-	
 
-	
-	
 	private ExtentTest getNewTest(String testName) {
 		return report.startTest(testName);
 	}
 
-
 	@AfterSuite
-	public void testResults()
-	{
-		
-		
-		
+	public void testResults() {
+
 		report.endTest(test);
 		report.endTest(test1);
 		report.endTest(test2);
 		report.endTest(test3);
 		report.flush();
-		
+
 	}
+
 	/**
 	 * WebDriver initialization
 	 * 
@@ -158,22 +146,21 @@ public class SeleniumInit {
 	 */
 
 	@BeforeTest
-	public void one(ITestContext testContext)
-	{
+	public void one(ITestContext testContext) {
 		seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
 		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 	}
-	
-		
-		@BeforeMethod(alwaysRun = true)
-		public void setUp(Method method, ITestContext testContext) throws IOException, InterruptedException {
-			
-	    targetBrowser = testContext.getCurrentXmlTest().getParameter("selenium.browser");
-		currentTest = testContext.getCurrentXmlTest().getName(); // get Name of current test.
-		
-		log("current test- " +currentTest);
 
-		
+	@BeforeMethod(alwaysRun = true)
+	public void setUp(Method method, ITestContext testContext) throws IOException, InterruptedException {
+
+		targetBrowser = testContext.getCurrentXmlTest().getParameter("selenium.browser");
+		currentTest = testContext.getCurrentXmlTest().getName(); // get Name of
+																	// current
+																	// test.
+
+		log("current test- " + currentTest);
+
 		String SCREENSHOT_FOLDER_NAME = "screenshots";
 		String TESTDATA_FOLDER_NAME = "test_data";
 		String DOWNLOADS_FOLDER_NAME = "downloads";
@@ -181,11 +168,11 @@ public class SeleniumInit {
 		test_data_folder_path = new File(TESTDATA_FOLDER_NAME).getAbsolutePath();
 		screenshot_folder_path = new File(SCREENSHOT_FOLDER_NAME).getAbsolutePath();
 		downloads_folder_path = new File(DOWNLOADS_FOLDER_NAME).getAbsolutePath();
-		
-		//load the properties file from test_data folder
+
+		// load the properties file from test_data folder
 		FileReader reader;
 		try {
-			reader = new FileReader(test_data_folder_path + File.separator + "config.properties");	
+			reader = new FileReader(test_data_folder_path + File.separator + "config.properties");
 			config_properties.load(reader);
 		} catch (FileNotFoundException e) {
 			System.out.println("Unable to find the config properties file");
@@ -195,63 +182,62 @@ public class SeleniumInit {
 			System.out.println("There was a problem in loading the config properties file");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			
-		} 
-		
+
+		}
+
 		suiteName = testContext.getSuite().getName();
 		Common.log("Current Xml Suite is:---->" + suiteName);
-		
-			DesiredCapabilities capability = null;
-			System.out.println(targetBrowser);
-		
-			try {
-				URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
-			
+
+		DesiredCapabilities capability = null;
+		System.out.println(targetBrowser);
+
+		try {
+			URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
+
 			if (targetBrowser == null || targetBrowser.contains("firefox")) {
 
 				File file = new File(userDir + "//lib//geckodriver.exe");
 				System.setProperty("webdriver.gecko.driver", file.getAbsolutePath());
 
 				FirefoxProfile profile = new FirefoxProfile();
-				profile.setPreference("browser.download.folderList",2);
-				profile.setPreference("browser.download.manager.showWhenStarting",false);
-				profile.setPreference("browser.download.dir",downloads_folder_path);
+				profile.setPreference("browser.download.folderList", 2);
+				profile.setPreference("browser.download.manager.showWhenStarting", false);
+				profile.setPreference("browser.download.dir", downloads_folder_path);
 				profile.setPreference("browser.helperApps.neverAsk.saveToDisk",
-		"text/csv,application/x-msexcel,application/excel,application/x-excel,application/vnd.ms-excel,image/png,image/jpeg,text/html,text/plain,application/msword,application/xml,application/octet-stream");
+						"text/csv,application/x-msexcel,application/excel,application/x-excel,application/vnd.ms-excel,image/png,image/jpeg,text/html,text/plain,application/msword,application/xml,application/octet-stream");
 				profile.setPreference("browser.helperApps.neverAsk.openFile",
 						"text/csv,application/x-msexcel,application/excel,application/x-excel,application/vnd.ms-excel,image/png,image/jpeg,text/html,text/plain,application/msword,application/xml,application/octet-stream");
 				capability = DesiredCapabilities.firefox();
 				capability.setCapability("marionette", true);
 				capability.setJavascriptEnabled(true);
-				
+
 				capability.setCapability(FirefoxDriver.PROFILE, profile);
 
 				browserName = capability.getBrowserName();
 				osName = System.getProperty("os.name");
 				browserVersion = capability.getVersion().toString();
-				
 
-				//driver = new RemoteWebDriver(remote_grid, capability);
-				 this.driver = new FirefoxDriver(capability);
+				// driver = new RemoteWebDriver(remote_grid, capability);
+				this.driver = new FirefoxDriver(capability);
 
 				System.out.println("=========" + " Mozilla Firefox Browser " + "==========");
 
 			} else if (targetBrowser.contains("chrome")) {
 
 				capability = DesiredCapabilities.chrome();
-				
+
 				File file = new File(userDir + "//lib//chromedriver.exe");
-				
+
 				System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-				
+
 				HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 				chromePrefs.put("profile.default_content_settings.popups", 0);
 				chromePrefs.put("download.default_directory", downloads_folder_path);
-				
+
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("disable-infobars");
 				options.setExperimentalOption("prefs", chromePrefs);
-				
+
 				capability.setJavascriptEnabled(true);
 				capability.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 				capability.setCapability(ChromeOptions.CAPABILITY, options);
@@ -260,8 +246,7 @@ public class SeleniumInit {
 				browserName = capability.getBrowserName();
 				osName = capability.getPlatform().name();
 				browserVersion = capability.getVersion();
-				
-			
+
 				this.driver = new ChromeDriver(capability);
 
 				System.out.println("=========" + " Google Chrome Browser " + "==========");
@@ -284,7 +269,7 @@ public class SeleniumInit {
 				browserVersion = capability.getVersion();
 
 				log(browserVersion);
-				
+
 				this.driver = new InternetExplorerDriver(capability);
 
 				System.out.println("=========" + " Internet Explorer Browser " + "==========");
@@ -304,30 +289,31 @@ public class SeleniumInit {
 
 				System.out.println("=========" + " Safari Browser " + "==========");
 
-			} 
-			} catch (MalformedURLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-			driver.get(testUrl);
-
-			driver.manage().window().maximize();
-
-			Common.waitForPageLoaded(driver);
-			
-
-			currentWindowHandle = driver.getWindowHandle();
-
-			System.out.println("Current Window Handle ID:--->" + currentWindowHandle);
-			loginIndexPage = new LoginIndexPage(driver);
-			loginVerificationPage = new LoginVerificationPage(driver);
-			
-			addCartIndexPage=new AddCartIndexPage(driver);
-			cartVerificationPage=new CartVerificationPage(driver);
-			
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		driver.get(testUrl);
+
+		driver.manage().window().maximize();
+
+		Common.waitForPageLoaded(driver);
+
+		currentWindowHandle = driver.getWindowHandle();
+
+		System.out.println("Current Window Handle ID:--->" + currentWindowHandle);
+		loginIndexPage = new LoginIndexPage(driver);
+		loginVerificationPage = new LoginVerificationPage(driver);
+
+		addCartIndexPage = new AddCartIndexPage(driver);
+		cartVerificationPage = new CartVerificationPage(driver);
+
+	}
+
 	/**
 	 * Log For Failure Test Exception.
 	 * 
@@ -349,7 +335,7 @@ public class SeleniumInit {
 
 				// Getting first line of the stack trace
 				String str = ExceptionUtils.getStackTrace(exception);
-						//tackTrace(exception, true)[0];
+				// tackTrace(exception, true)[0];
 				@SuppressWarnings("resource")
 				Scanner scanner = new Scanner(str);
 				String firstLine = scanner.nextLine();
@@ -358,45 +344,39 @@ public class SeleniumInit {
 		}
 	}
 
-	
-	
 	/**
 	 * After Method
 	 * 
 	 * @param testResult
 	 */
-	 public static int passed_count = 0;
-	    public static int failed_count = 0;
-		public static int skipped_count = 0;
- 
+	public static int passed_count = 0;
+	public static int failed_count = 0;
+	public static int skipped_count = 0;
+
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult testResult) {
-		
-		
+
 		ITestContext ex = testResult.getTestContext();
 
-		if(testResult.getStatus() == ITestResult.SUCCESS)
-	    {
+		if (testResult.getStatus() == ITestResult.SUCCESS) {
 			passed_count++;
-	       
-	    }
 
-	    else if(testResult.getStatus() == ITestResult.FAILURE)
-	    {
-	    	failed_count++;  
+		}
 
-	    }
+		else if (testResult.getStatus() == ITestResult.FAILURE) {
+			failed_count++;
 
-	     else if(testResult.getStatus() == ITestResult.SKIP )
-	     {	 
-	    	 skipped_count++;
+		}
 
-	     }
+		else if (testResult.getStatus() == ITestResult.SKIP) {
+			skipped_count++;
+
+		}
 		try {
 			testName = testResult.getName();
 			if (!testResult.isSuccess()) {
 
-				//Common.saveScreenshot(driver, currentTest);
+				// Common.saveScreenshot(driver, currentTest);
 				// Print test result to Jenkins Console
 				System.out.println();
 				System.out.println("TEST FAILED - " + testName);
@@ -404,7 +384,7 @@ public class SeleniumInit {
 				System.out.println("ERROR MESSAGE: " + testResult.getThrowable());
 				System.out.println("\n");
 				Reporter.setCurrentTestResult(testResult);
-				
+
 				Reporter.log("<br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='"
 						+ userDir + "\\report-imgs\\fail.png' alt='fail' height='15' width='15'/>");
 				getShortException(ex.getFailedTests());
@@ -440,8 +420,8 @@ public class SeleniumInit {
 	}
 
 	/**
-	 * This method is killing the IE instance once test is completed. After killing
-	 * IE instance it's also clear and kill the IE Server driver.
+	 * This method is killing the IE instance once test is completed. After
+	 * killing IE instance it's also clear and kill the IE Server driver.
 	 * 
 	 */
 	public void killIEServer() {
@@ -472,17 +452,16 @@ public class SeleniumInit {
 	 */
 
 	public void log(String msg) {
-		
+
 		System.out.println("======" + msg + "======");
 		Reporter.log("<br>" + msg);
 	}
 
-	public void failedLog(String msg)
-	{
+	public void failedLog(String msg) {
 		System.out.println("<strong>======" + msg + "======</strong>");
 		Reporter.log("<font color=#FF0000>--Failed- </font>" + "<strong>======" + msg + "======</strong>");
 	}
-	
+
 	public void testCaselog(String msg) {
 		System.out.println("<strong>======" + msg + "======</strong>");
 		Reporter.log("<br></br>" + "<strong>======" + msg + "======</strong>");
@@ -524,16 +503,11 @@ public class SeleniumInit {
 
 	}
 
-	public static void timeTakenForStepLog(Instant start, Instant end)
-	{
+	public static void timeTakenForStepLog(Instant start, Instant end) {
 		String duration = Duration.between(start, end).toString();
 		duration = duration.replaceAll("PT", "");
 		System.out.println("<b>Time taken for step- </b>" + duration);
 		Reporter.log("<br><b>Time taken for step- </b>" + duration);
 	}
-	
 
-
-
-	
 }

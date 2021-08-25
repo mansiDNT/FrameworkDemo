@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="10" name="Failed suite [Login Test Cases]" allow-return-values="true">
+  <parameter name="selenium.port" value="4444"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <listeners>
+    <listener class-name="com.utility.CustomReporterEmailBuildSummary"/>
+    <listener class-name="com.utility.CustomReporterforEmail"/>
+    <listener class-name="com.utility.CustomReporterBuildSummary"/>
+  </listeners>
+  <test name="TC-1. Blank UserName validation.(failed)">
+    <classes>
+      <class name="com.index.AddCartIndex">
+        <methods>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="one"/>
+          <include name="login_blankUserName"/>
+          <include name="testResults"/>
+          <include name="init"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="login_blankPassword"/>
+          <include name="login"/>
+          <include name="addProductToCart"/>
+          <include name="login_negative"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- com.index.AddCartIndex -->
+    </classes>
+  </test> <!-- TC-1. Blank UserName validation.(failed) -->
+</suite> <!-- Failed suite [Login Test Cases] -->

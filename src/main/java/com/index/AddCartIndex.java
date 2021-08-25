@@ -1,19 +1,21 @@
 package com.index;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import com.init.Common;
 import com.init.SeleniumInit;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class AddCartIndex extends SeleniumInit{
+public class AddCartIndex extends LoginIndex{
 	int stepCount = 1;
 	int extentStepCount = 1;
 
 	
 	@Test
 	public void addProductToCart() throws Exception{
+		
 		testStepsLog("Step " + (stepCount++) + " : Enter username.");
 		test4.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter username.");
 
@@ -39,7 +41,9 @@ public class AddCartIndex extends SeleniumInit{
 		cartVerificationPage=addCartIndexPage.clickOnAddToCart();
 		boolean errormessage=cartVerificationPage.verifyCartCount();
 		Assert.assertTrue(errormessage, "Product is added to cart.");
+		
 	
 	}
+	
 
 }
