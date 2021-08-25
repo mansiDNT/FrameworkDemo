@@ -21,10 +21,10 @@ public class CartVerificationPage extends AbstractPage {
 		Common.pause(2);
 		WebElement var = driver.findElement(By.xpath("//span[contains(text(),'1')]"));
 		if(null!=var && var.isDisplayed()){
-		test.log(LogStatus.PASS, "Product added to cart successfully.");
+		test4.log(LogStatus.PASS, "Product added to cart successfully.");
 		bool=true;
 		}else {
-			test.log(LogStatus.FAIL,"Product is not added.");
+			test4.log(LogStatus.FAIL,"Product is not added.");
 			bool=false;
 		}
 		return bool;

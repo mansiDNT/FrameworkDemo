@@ -91,7 +91,7 @@ public class SeleniumInit {
 	public static Properties config_properties = new Properties();
 	
 	public static ExtentTest test;
-	public static ExtentTest test1,test2,test3;
+	public static ExtentTest test1,test2,test3,test4;
 	static ExtentReports report;
 	
 	public  LoginIndexPage loginIndexPage;
@@ -123,6 +123,7 @@ public class SeleniumInit {
 		test1 = getNewTest("Invalid Credential");
 		test2=getNewTest("BlankUserName");
 		test3=getNewTest("BlankPassword");
+		test4=getNewTest("AddToCart");
 		//report.config().reportName("Final Report");
 
 	}

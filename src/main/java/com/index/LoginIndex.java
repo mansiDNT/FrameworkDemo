@@ -21,9 +21,7 @@ public class LoginIndex extends SeleniumInit {
 		System.out.println("Username is:" + Common.getCellValue("Sheet1", 1, 0));
 		System.out.println("Password is : " + Common.getCellValue("Sheet1", 1, 1));
 
-		System.out.println(Common.getCellValue("Sheet1", 1, 0));
-		System.out.println(Common.getCellValue("Sheet1", 1, 1));
-
+		
 		// login button disabled
 		testStepsLog("Step " + (stepCount++) + " : Enter username.");
 		test.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter username.");
