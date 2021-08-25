@@ -50,7 +50,7 @@ Boolean bool;
 			test2.log(LogStatus.PASS, "UserName is required");
 		bool=true;
 		}else {
-			test2.log(LogStatus.FAIL,"Login is successful.");
+			test2.log(LogStatus.FAIL,"Username is already entered.");
 			bool=false;
 		}
 		
@@ -59,7 +59,7 @@ Boolean bool;
 	
 	public boolean verifyBlankPassword(){
 		Common.pause(2);
-		if(driver.findElement(By.xpath("//input[@id='login-button']")).isDisplayed()){
+		if(driver.findElement(By.xpath("//*[@id='login_button_container']/div/form/div[3]/h3/button")).isDisplayed()){
 			test3.log(LogStatus.PASS, "Password is required");
 		bool=true;
 		}else {
