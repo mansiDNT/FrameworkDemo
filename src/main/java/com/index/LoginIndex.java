@@ -116,6 +116,4 @@ public class LoginIndex extends SeleniumInit {
 		Assert.assertTrue(errorMessage, "Password is required");
 	}
 	
-	
-
 }

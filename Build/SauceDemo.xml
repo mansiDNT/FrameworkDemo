@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Login Test Cases" verbose="10" allow-return-values="true"
+<suite name="SauceDemoAutomation" verbose="10" allow-return-values="true"
 	preserve-order="true">
 
 	<!-- Put IP of localhost/Grid Hub machine -->
@@ -28,19 +27,17 @@
 
 	</listeners>
 
-
-
-
-	<test name="TC-1. Blank UserName validation.">
+	<test name="Login">
 
 		<classes>
-			<class name="com.index.LoginIndex">
-			</class>
+			<class name="com.index.LoginIndex" />
+
 		</classes>
-
+	</test>
+	<test name="Add To Cart">
 		<classes>
-			<class name="com.index.AddCartIndex">
-			</class>
+			<class name="com.index.AddCartIndex" />
+
 		</classes>
 	</test>
 

@@ -1,101 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="5" failed="0" ignored="0" total="5" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
     <line>
-      <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+      <![CDATA[<br>current test- SauceDemoAutomation]]>
     </line>
     <line>
       <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
     </line>
     <line>
-      <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+      <![CDATA[<br>Step 1 : Enter username.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 2 : Enter password.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 3 : Click on Signin button.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>current test- SauceDemoAutomation]]>
     </line>
     <line>
       <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
     </line>
     <line>
-      <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+      <![CDATA[<br>Step 1 : Enter username.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 2 : Enter password.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 3 : Click on Signin button.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>current test- SauceDemoAutomation]]>
     </line>
     <line>
       <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
     </line>
     <line>
-      <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+      <![CDATA[<br>Step 5 : Enter username.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 6 : Enter password.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 7 : Click on Log in button.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>current test- SauceDemoAutomation]]>
     </line>
     <line>
       <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
     </line>
     <line>
-      <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+      <![CDATA[<br>Step 8 : Enter username.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 9 : Enter password.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 10 : Click on Log in button.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>current test- SauceDemoAutomation]]>
     </line>
     <line>
       <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 11 : Enter username.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 12 : Enter password.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 13 : Click on Log in button.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 14 : Verify 'Login' is successful.<br>]]>
     </line>
   </reporter-output>
-  <suite name="Login Test Cases" duration-ms="41635" started-at="2021-08-25T10:46:27Z" finished-at="2021-08-25T10:47:09Z">
+  <suite name="Login Test Cases" duration-ms="62032" started-at="2021-08-25T11:51:09Z" finished-at="2021-08-25T11:52:11Z">
     <groups>
     </groups>
-    <test name="TC-1. Blank UserName validation." duration-ms="41635" started-at="2021-08-25T10:46:27Z" finished-at="2021-08-25T10:47:09Z">
+    <test name="SauceDemoAutomation" duration-ms="62032" started-at="2021-08-25T11:51:09Z" finished-at="2021-08-25T11:52:11Z">
       <class name="com.index.AddCartIndex">
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="fetchSuiteConfiguration" is-config="true" duration-ms="271" started-at="2021-08-25T16:16:27Z" finished-at="2021-08-25T16:16:27Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="fetchSuiteConfiguration" is-config="true" duration-ms="284" started-at="2021-08-25T17:21:09Z" finished-at="2021-08-25T17:21:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6f3c660a]]>
+                <![CDATA[org.testng.TestRunner@b672aa8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="one" is-config="true" duration-ms="1" started-at="2021-08-25T16:16:27Z" finished-at="2021-08-25T16:16:27Z">
+        <test-method status="PASS" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="one" is-config="true" duration-ms="1" started-at="2021-08-25T17:21:09Z" finished-at="2021-08-25T17:21:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6f3c660a]]>
+                <![CDATA[org.testng.TestRunner@b672aa8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- one -->
-        <test-method status="FAIL" signature="init()[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="init" is-config="true" duration-ms="0" started-at="2021-08-25T16:16:27Z" finished-at="2021-08-25T16:16:27Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.index.LoginIndex.init(LoginIndex.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:166)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="setUp" is-config="true" duration-ms="2577" started-at="2021-08-25T16:16:28Z" finished-at="2021-08-25T16:16:30Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="setUp" is-config="true" duration-ms="5599" started-at="2021-08-25T17:21:09Z" finished-at="2021-08-25T17:21:15Z">
           <params>
             <param index="0">
               <value>
@@ -104,56 +122,47 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6f3c660a]]>
+                <![CDATA[org.testng.TestRunner@b672aa8]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+              <![CDATA[<br>current test- SauceDemoAutomation]]>
             </line>
             <line>
               <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="addProductToCart()[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="addProductToCart" duration-ms="0" started-at="2021-08-25T16:16:30Z" finished-at="2021-08-25T16:16:30Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.index.LoginIndex.init(LoginIndex.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:166)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="addProductToCart()[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="addProductToCart" duration-ms="11693" started-at="2021-08-25T17:21:15Z" finished-at="2021-08-25T17:21:27Z">
           <reporter-output>
+            <line>
+              <![CDATA[<br>Step 1 : Enter username.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 2 : Enter password.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 3 : Click on Signin button.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- addProductToCart -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="setUp" is-config="true" duration-ms="3495" started-at="2021-08-25T16:16:30Z" finished-at="2021-08-25T16:16:34Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="tearDown" is-config="true" duration-ms="896" started-at="2021-08-25T17:21:27Z" finished-at="2021-08-25T17:21:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addProductToCart status=SUCCESS method=AddCartIndex.addProductToCart()[pri:0, instance:com.index.AddCartIndex@31a5c39e] output=<br>Step 1 : Enter username.<br>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="setUp" is-config="true" duration-ms="4208" started-at="2021-08-25T17:21:28Z" finished-at="2021-08-25T17:21:32Z">
           <params>
             <param index="0">
               <value>
@@ -162,56 +171,47 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6f3c660a]]>
+                <![CDATA[org.testng.TestRunner@b672aa8]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+              <![CDATA[<br>current test- SauceDemoAutomation]]>
             </line>
             <line>
               <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="login()[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="login" duration-ms="0" started-at="2021-08-25T16:16:34Z" finished-at="2021-08-25T16:16:34Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.index.LoginIndex.init(LoginIndex.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:166)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="login" duration-ms="6025" started-at="2021-08-25T17:21:32Z" finished-at="2021-08-25T17:21:38Z">
           <reporter-output>
+            <line>
+              <![CDATA[<br>Step 1 : Enter username.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 2 : Enter password.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 3 : Click on Signin button.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="setUp" is-config="true" duration-ms="4133" started-at="2021-08-25T16:16:34Z" finished-at="2021-08-25T16:16:38Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="tearDown" is-config="true" duration-ms="1092" started-at="2021-08-25T17:21:38Z" finished-at="2021-08-25T17:21:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=LoginIndex.login()[pri:0, instance:com.index.AddCartIndex@31a5c39e] output=<br>Step 1 : Enter username.<br>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="setUp" is-config="true" duration-ms="4411" started-at="2021-08-25T17:21:39Z" finished-at="2021-08-25T17:21:43Z">
           <params>
             <param index="0">
               <value>
@@ -220,56 +220,44 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6f3c660a]]>
+                <![CDATA[org.testng.TestRunner@b672aa8]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+              <![CDATA[<br>current test- SauceDemoAutomation]]>
             </line>
             <line>
               <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="login_blankPassword()[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="login_blankPassword" duration-ms="0" started-at="2021-08-25T16:16:38Z" finished-at="2021-08-25T16:16:38Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.index.LoginIndex.init(LoginIndex.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:166)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="login_blankPassword()[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="login_blankPassword" duration-ms="5696" started-at="2021-08-25T17:21:43Z" finished-at="2021-08-25T17:21:49Z">
           <reporter-output>
+            <line>
+              <![CDATA[<br>Step 5 : Enter username.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 6 : Enter password.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 7 : Click on Log in button.<br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- login_blankPassword -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="setUp" is-config="true" duration-ms="3735" started-at="2021-08-25T16:16:38Z" finished-at="2021-08-25T16:16:41Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="tearDown" is-config="true" duration-ms="840" started-at="2021-08-25T17:21:49Z" finished-at="2021-08-25T17:21:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_blankPassword status=SUCCESS method=LoginIndex.login_blankPassword()[pri:0, instance:com.index.AddCartIndex@31a5c39e] output=<br>Step 5 : Enter username.<br>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="setUp" is-config="true" duration-ms="4370" started-at="2021-08-25T17:21:50Z" finished-at="2021-08-25T17:21:54Z">
           <params>
             <param index="0">
               <value>
@@ -278,56 +266,44 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6f3c660a]]>
+                <![CDATA[org.testng.TestRunner@b672aa8]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+              <![CDATA[<br>current test- SauceDemoAutomation]]>
             </line>
             <line>
               <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="login_blankUserName()[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="login_blankUserName" duration-ms="0" started-at="2021-08-25T16:16:41Z" finished-at="2021-08-25T16:16:41Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.index.LoginIndex.init(LoginIndex.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:166)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="login_blankUserName()[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="login_blankUserName" duration-ms="5617" started-at="2021-08-25T17:21:54Z" finished-at="2021-08-25T17:22:00Z">
           <reporter-output>
+            <line>
+              <![CDATA[<br>Step 8 : Enter username.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 9 : Enter password.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 10 : Click on Log in button.<br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- login_blankUserName -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="setUp" is-config="true" duration-ms="27629" started-at="2021-08-25T16:16:41Z" finished-at="2021-08-25T16:17:09Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="tearDown" is-config="true" duration-ms="838" started-at="2021-08-25T17:22:00Z" finished-at="2021-08-25T17:22:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_blankUserName status=SUCCESS method=LoginIndex.login_blankUserName()[pri:0, instance:com.index.AddCartIndex@31a5c39e] output=<br>Step 8 : Enter username.<br>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="setUp" is-config="true" duration-ms="4039" started-at="2021-08-25T17:22:01Z" finished-at="2021-08-25T17:22:05Z">
           <params>
             <param index="0">
               <value>
@@ -336,64 +312,51 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6f3c660a]]>
+                <![CDATA[org.testng.TestRunner@b672aa8]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br>current test- TC-1. Blank UserName validation.]]>
+              <![CDATA[<br>current test- SauceDemoAutomation]]>
             </line>
             <line>
               <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="login_negative()[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="login_negative" duration-ms="0" started-at="2021-08-25T16:17:09Z" finished-at="2021-08-25T16:17:09Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.index.LoginIndex.init(LoginIndex.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:166)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="login_negative()[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="login_negative" duration-ms="5817" started-at="2021-08-25T17:22:05Z" finished-at="2021-08-25T17:22:11Z">
           <reporter-output>
+            <line>
+              <![CDATA[<br>Step 11 : Enter username.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 12 : Enter password.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 13 : Click on Log in button.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 14 : Verify 'Login' is successful.<br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- login_negative -->
-        <test-method status="SKIP" signature="closebrowser()[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="closebrowser" is-config="true" duration-ms="0" started-at="2021-08-25T16:17:09Z" finished-at="2021-08-25T16:17:09Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="tearDown" is-config="true" duration-ms="857" started-at="2021-08-25T17:22:11Z" finished-at="2021-08-25T17:22:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_negative status=SUCCESS method=LoginIndex.login_negative()[pri:0, instance:com.index.AddCartIndex@31a5c39e] output=<br>Step 11 : Enter username.<br>]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closebrowser -->
-        <test-method status="SKIP" signature="testResults()[pri:0, instance:com.index.AddCartIndex@1e397ed7]" name="testResults" is-config="true" duration-ms="0" started-at="2021-08-25T16:17:09Z" finished-at="2021-08-25T16:17:09Z">
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="testResults()[pri:0, instance:com.index.AddCartIndex@31a5c39e]" name="testResults" is-config="true" duration-ms="301" started-at="2021-08-25T17:22:12Z" finished-at="2021-08-25T17:22:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testResults -->
       </class> <!-- com.index.AddCartIndex -->
-    </test> <!-- TC-1. Blank UserName validation. -->
+    </test> <!-- SauceDemoAutomation -->
   </suite> <!-- Login Test Cases -->
 </testng-results>
