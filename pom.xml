@@ -148,7 +148,7 @@
 						<!-- <suiteXmlFile>Build\Login.xml</suiteXmlFile>  -->
  						<!-- <suiteXmlFile>Build\Template.xml</suiteXmlFile> --> 
  						<!-- <suiteXmlFile>Build\Login.xml</suiteXmlFile> --> 
- 						 <suiteXmlFile>Build\Login.xml</suiteXmlFile>
+ 						 <suiteXmlFile>Build\SauceDemo.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<reportsDirectory>test-output</reportsDirectory>
 					<properties>
