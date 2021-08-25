@@ -2,9 +2,10 @@
 
 <html>
   <head>
+  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -48,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Login_Test_Cases">
-                    <span>D:\FrameworkDemo\Build\Login.xml</span>
+                    <span>D:\FrameworkDemo\Build\SauceDemo.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -190,13 +191,13 @@
         </div> <!-- panel Login_Test_Cases -->
         <div panel-name="test-xml-Login_Test_Cases" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\FrameworkDemo\Build\Login.xml</span>
+            <span class="header-content">D:\FrameworkDemo\Build\SauceDemo.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;Login Test Cases&quot; parallel=&quot;none&quot; allow-return-values=&quot;true&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; verbose=&quot;10&quot; name=&quot;Login Test Cases&quot; allow-return-values=&quot;true&quot;&gt;
   &lt;parameter name=&quot;selenium.port&quot; value=&quot;4444&quot;/&gt;
   &lt;parameter name=&quot;selenium.host&quot; value=&quot;localhost&quot;/&gt;
   &lt;parameter name=&quot;selenium.browser&quot; value=&quot;chrome&quot;/&gt;
@@ -302,30 +303,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login_blankUserName')
-data.setCell(0, 2, 'com.index.LoginIndex')
-data.setCell(0, 3, 15442);
+data.setCell(0, 1, 'addProductToCart')
+data.setCell(0, 2, 'com.index.AddCartIndex')
+data.setCell(0, 3, 11173);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'addProductToCart')
-data.setCell(1, 2, 'com.index.AddCartIndex')
-data.setCell(1, 3, 11208);
+data.setCell(1, 1, 'login_blankUserName')
+data.setCell(1, 2, 'com.index.LoginIndex')
+data.setCell(1, 3, 6203);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'login')
 data.setCell(2, 2, 'com.index.LoginIndex')
-data.setCell(2, 3, 5962);
+data.setCell(2, 3, 5966);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'login_negative')
+data.setCell(3, 1, 'login_blankPassword')
 data.setCell(3, 2, 'com.index.LoginIndex')
-data.setCell(3, 3, 5861);
+data.setCell(3, 3, 5755);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'login_blankPassword')
+data.setCell(4, 1, 'login_negative')
 data.setCell(4, 2, 'com.index.LoginIndex')
-data.setCell(4, 3, 5665);
+data.setCell(4, 3, 5739);
 window.suiteTableData['Login_Test_Cases']= { tableData: data, tableDiv: 'times-div-Login_Test_Cases'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 44 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-Login_Test_Cases">
               </div> <!-- times-div-Login_Test_Cases -->
             </div> <!-- times-div -->
@@ -425,98 +426,98 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.AddCartIndex</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@5851bd4f)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@7ef2d7a6)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.LoginIndex</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@7cd1ac19)</span>
-                <span class="method-start">270 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@18a3962d)</span>
+                <span class="method-start">277 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.LoginIndex.login_blankUserName() throws java.lang.Exception, org.testng.TestRu...)</span>
-                <span class="method-start">270 ms</span>
+                <span class="method-start">293 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login_blankUserName</span>
-                <span class="method-start">20482 ms</span>
+                <span class="method-start">6739 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=login_blankUserName status=SUCCESS method=LoginIndex.login_blankUserName()[pri:0, i...)</span>
-                <span class="method-start">35924 ms</span>
+                <span class="method-start">12942 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@2f40a43)</span>
-                <span class="method-start">36879 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@5b6813df)</span>
+                <span class="method-start">12973 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.LoginIndex.login_blankPassword() throws java.lang.Exception, org.testng.TestRu...)</span>
-                <span class="method-start">36879 ms</span>
+                <span class="method-start">12973 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login_blankPassword</span>
-                <span class="method-start">43253 ms</span>
+                <span class="method-start">20938 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=login_blankPassword status=SUCCESS method=LoginIndex.login_blankPassword()[pri:0, i...)</span>
-                <span class="method-start">48918 ms</span>
+                <span class="method-start">26695 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@3caa4757)</span>
-                <span class="method-start">49763 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@40dd3977)</span>
+                <span class="method-start">26702 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.LoginIndex.login_negative() throws java.lang.Exception, org.testng.TestRunner@...)</span>
-                <span class="method-start">49763 ms</span>
+                <span class="method-start">26703 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login_negative</span>
-                <span class="method-start">54885 ms</span>
+                <span class="method-start">35366 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=login_negative status=SUCCESS method=LoginIndex.login_negative()[pri:0, instance:co...)</span>
-                <span class="method-start">60746 ms</span>
+                <span class="method-start">41106 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@69c43e48)</span>
-                <span class="method-start">61567 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@21c64522)</span>
+                <span class="method-start">41115 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void com.index.LoginIndex.login() throws java.lang.Exception, org.testng.TestRunner@69c43e48)</span>
-                <span class="method-start">61567 ms</span>
+                <span class="method-name">setUp(public void com.index.LoginIndex.login() throws java.lang.Exception, org.testng.TestRunner@21c64522)</span>
+                <span class="method-start">41115 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">66608 ms</span>
+                <span class="method-start">48168 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=login status=SUCCESS method=LoginIndex.login()[pri:0, instance:com.index.LoginIndex...)</span>
-                <span class="method-start">72571 ms</span>
+                <span class="method-start">54134 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.AddCartIndex</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@5851bd4f)</span>
-                <span class="method-start">73414 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@7ef2d7a6)</span>
+                <span class="method-start">54149 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.AddCartIndex.addProductToCart() throws java.lang.Exception, org.testng.TestRun...)</span>
-                <span class="method-start">73416 ms</span>
+                <span class="method-start">54149 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">addProductToCart</span>
-                <span class="method-start">78298 ms</span>
+                <span class="method-start">63065 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=addProductToCart status=SUCCESS method=AddCartIndex.addProductToCart()[pri:0, insta...)</span>
-                <span class="method-start">89506 ms</span>
+                <span class="method-start">74238 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">testResults</span>
-                <span class="method-start">91928 ms</span>
+                <span class="method-start">74245 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
