@@ -22,8 +22,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import org.apache.commons.lang.exception.ExceptionUtils;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -46,11 +47,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
-import com.indexPage.AddCartIndexPage;
 import com.indexPage.LoginIndexPage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-import com.verificationPage.CartVerificationPage;
+
 import com.verificationPage.LoginVerificationPage;
 
 public class SeleniumInit {
@@ -94,9 +94,7 @@ public class SeleniumInit {
 	public LoginIndexPage loginIndexPage;
 	public LoginVerificationPage loginVerificationPage;
 
-	public AddCartIndexPage addCartIndexPage;
-	public CartVerificationPage cartVerificationPage;
-
+	
 	/**
 	 * Fetches suite-configuration from XML suite file.
 	 * 
@@ -107,7 +105,7 @@ public class SeleniumInit {
 	protected void fetchSuiteConfiguration(ITestContext testContext) {
 
 		// Pass the URL to be tested
-		testUrl = testContext.getCurrentXmlTest().getParameter("selenium.url");
+	    testUrl = testContext.getCurrentXmlTest().getParameter("selenium.url");
 
 		System.out.println("Before suite");
 		System.out.println("======" + testUrl + "=========");
@@ -150,6 +148,8 @@ public class SeleniumInit {
 		seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
 		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 	}
+	
+
 
 	@BeforeMethod(alwaysRun = true)
 	public void setUp(Method method, ITestContext testContext) throws IOException, InterruptedException {
@@ -309,10 +309,18 @@ public class SeleniumInit {
 		loginIndexPage = new LoginIndexPage(driver);
 		loginVerificationPage = new LoginVerificationPage(driver);
 
-		addCartIndexPage = new AddCartIndexPage(driver);
-		cartVerificationPage = new CartVerificationPage(driver);
-
+		
 	}
+	
+	public void acceptCookie() throws Exception{
+		WebElement cookiee = driver.findElement(By.id("hs-eu-confirmation-button"));
+		
+		if(cookiee.isDisplayed()){
+			cookiee.click();
+		}
+		
+	}
+
 
 	/**
 	 * Log For Failure Test Exception.
@@ -396,6 +404,7 @@ public class SeleniumInit {
 			}
 			System.out.println("--------------- Test status : " + testResult.getStatus() + " ---------------");
 
+			
 			driver.manage().deleteAllCookies();
 			driver.close();
 			driver.quit();

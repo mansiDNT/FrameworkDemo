@@ -16,7 +16,7 @@ public class LoginIndexPage extends AbstractPage {
 		// TODO Auto-generated constructor stub
 	}
 
-	@FindBy(id = "user-name")
+	@FindBy(id = "user_login")
 	WebElement email_field;
 
 	public LoginVerificationPage enterEmail(String username) {
@@ -24,7 +24,7 @@ public class LoginIndexPage extends AbstractPage {
 		return new LoginVerificationPage(driver);
 	}
 
-	@FindBy(id = "password")
+	@FindBy(id = "user_pass")
 	WebElement password_field;
 
 	public LoginVerificationPage enterPassword(String password) {
@@ -32,8 +32,10 @@ public class LoginIndexPage extends AbstractPage {
 
 		return new LoginVerificationPage(driver);
 	}
-
-	@FindBy(xpath = "//input[@id='login-button']")
+	
+	
+	
+	@FindBy(xpath = "//*[@id='wp-submit']")
 	WebElement login_button;
 
 	public LoginVerificationPage clickOnLoginButton() {

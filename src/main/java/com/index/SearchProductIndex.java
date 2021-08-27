@@ -1,29 +1,21 @@
 package com.index;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import com.init.Common;
 import com.init.SeleniumInit;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class LoginIndex extends SeleniumInit {
-
+public class SearchProductIndex extends SeleniumInit {
 	int stepCount = 1;
 	int extentStepCount = 1;
-	
-	
-	
+
 	@Test
-	public void login() throws Exception {
+	public void searchIndex() throws Exception {
 		acceptCookie();
 
 		System.out.println("Username is:" + Common.getCellValue("Sheet1", 1, 0));
@@ -51,6 +43,42 @@ public class LoginIndex extends SeleniumInit {
 		testStepsLog("Step " + (stepCount++) + " : Verify 'Login' is successful.");
 		boolean errorMessage = loginVerificationPage.verifySuccessfulLogin();
 		Assert.assertTrue(errorMessage, "Login is  successful.");
+
+		driver.get("https://apptest.avasam.com/seeker.html#/productssearchproduct");
+
+		WebElement btnSupplier = driver.findElement(By.xpath("//*[@id='single-button']"));
+		btnSupplier.click();
+
+		WebElement checkGB = driver.findElement(By.xpath("//span[contains(text(),'GB1007040')]"));
+		Common.clickOn(driver, checkGB);
+		
+	    Common.pause(2);
+	    
+	    WebElement search=driver.findElement(By.xpath("//input[@id='text']"));
+	    search.sendKeys("20 Fragranced Incense Sticks With Holder - Lavender NLW");
+	    search.sendKeys(Keys.chord(Keys.ENTER));
+	    
+	    Common.pause(2);
+	    
+	    WebElement firstElement=driver.findElement(By.xpath("//*[@id='scroll-to']/div/div/div/div[4]"));
+	    Common.mouseHover(driver, firstElement);
+	    
+	    Common.pause(4);
+	    
+	    WebElement btnSourceproduct=driver.findElement(By.xpath("(//button[@type='button'])[8]"));
+	    Common.clickOn(driver, btnSourceproduct);
+	    
+	    Common.pause(2);
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	  
+	 
+	    
 
 	}
 

@@ -429,6 +429,7 @@ public class Common {
         }
     }
 	
+	
 	/**
 	 * Takes screenshot and adds it to TestNG report.
 	 * 
@@ -724,7 +725,7 @@ public class Common {
 	
 	public static void mouseHover(WebDriver driver, WebElement element) {
 		Actions builder = new Actions(driver);
-		builder.moveToElement(element).build().perform();
+		builder.moveToElement(element).perform();
 	}
 	
 	public static void waitForElement(WebDriver driver,WebElement webelement) {

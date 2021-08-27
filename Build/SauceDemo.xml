@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="SauceDemoAutomation" verbose="10" allow-return-values="true"
-	preserve-order="true">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SauceDemoAutomation" preserve-order="true">
 
 	<!-- Put IP of localhost/Grid Hub machine -->
 	<parameter name="selenium.host" value="localhost" />
@@ -13,7 +13,8 @@
 	<parameter name="selenium.browser" value="chrome" />
 
 
-	<parameter name="selenium.url" value="https://www.saucedemo.com/" />
+	<parameter name="selenium.url" value="https://apptest.avasam.com/" />
+
 	<listeners>
 		<!-- <listener class-name="com.utility.CustomReporterListener" /> -->
 		<listener class-name="com.utility.CustomReporterEmailBuildSummary" />
@@ -27,16 +28,11 @@
 
 	</listeners>
 
-	<test name="Login">
+	<test name="Avasam">
 
 		<classes>
 			<class name="com.index.LoginIndex" />
-
-		</classes>
-	</test>
-	<test name="Add To Cart">
-		<classes>
-			<class name="com.index.AddCartIndex" />
+			 <class name="com.index.SearchProductIndex" /> 
 
 		</classes>
 	</test>
