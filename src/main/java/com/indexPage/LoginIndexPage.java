@@ -8,6 +8,7 @@ import com.init.AbstractPage;
 import com.init.Common;
 import com.verificationPage.LoginVerificationPage;
 
+
 public class LoginIndexPage extends AbstractPage {
 
 	public LoginIndexPage(WebDriver driver) {
@@ -35,7 +36,7 @@ public class LoginIndexPage extends AbstractPage {
 	
 	
 	
-	@FindBy(xpath = "//*[@id='wp-submit']")
+	@FindBy(xpath = "//input[@id='wp-submit']")
 	WebElement login_button;
 
 	public LoginVerificationPage clickOnLoginButton() {
@@ -43,5 +44,15 @@ public class LoginIndexPage extends AbstractPage {
 		Common.clickOn(driver, login_button);
 		return new LoginVerificationPage(driver);
 	}
+	
+	@FindBy(xpath = "//span[contains(text(),'Search products')]")
+	WebElement searchProduct;
+
+	public LoginVerificationPage clickOnSearchProduct() {
+		Common.pause(5);
+		Common.clickOn(driver, searchProduct);
+		return new LoginVerificationPage(driver);
+	}
+
 
 }

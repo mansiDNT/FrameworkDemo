@@ -19,7 +19,7 @@ public abstract class AbstractPage extends SeleniumInit {
 	public AbstractPage(WebDriver driver) {
 
 		
-		this.driver = driver;
+		SeleniumInit.driver = driver;
 		
 		ElementLocatorFactory finder = new AjaxElementLocatorFactory(driver,
 				DRIVER_WAIT);

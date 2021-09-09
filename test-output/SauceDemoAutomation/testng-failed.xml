@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [SauceDemoAutomation]">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [SauceDemoAutomation]">
   <parameter name="selenium.port" value="4444"/>
   <parameter name="selenium.host" value="localhost"/>
   <parameter name="selenium.browser" value="chrome"/>
@@ -11,28 +11,24 @@
     <listener class-name="com.utility.CustomReporterBuildSummary"/>
   </listeners>
   <test name="Avasam(failed)">
+    <parameter name="selenium.browser" value="chrome"/>
+    <parameter name="selenium.url" value="https://apptest.avasam.com/"/>
     <classes>
-      <class name="com.index.SearchProductIndex">
-        <methods>
-          <include name="fetchSuiteConfiguration"/>
-          <include name="one"/>
-          <include name="searchIndex"/>
-          <include name="testResults"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.index.SearchProductIndex -->
       <class name="com.index.LoginIndex">
         <methods>
           <include name="fetchSuiteConfiguration"/>
-          <include name="one"/>
-          <include name="testResults"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="login"/>
         </methods>
       </class> <!-- com.index.LoginIndex -->
+      <class name="com.index.SearchProductIndex">
+        <methods>
+          <include name="searchIndex"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.index.SearchProductIndex -->
     </classes>
   </test> <!-- Avasam(failed) -->
 </suite> <!-- Failed suite [SauceDemoAutomation] -->

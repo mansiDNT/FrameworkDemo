@@ -7,7 +7,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.file.Paths;
 import java.security.SecureRandom;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -21,11 +20,8 @@ import java.util.Random;
 import java.util.SimpleTimeZone;
 import java.util.TimeZone;
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.RandomStringUtils;
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -44,7 +40,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -56,23 +51,21 @@ import org.testng.Reporter;
  */
 public class Common {
 
-	public static  String userDir = System.getProperty("user.dir");
-	 
+	public static String userDir = System.getProperty("user.dir");
+
 	protected static Wait<WebDriver> wait;
 	public static String alerttext;
-	
-	public static Instant getCurrentTime()
-	{
+
+	public static Instant getCurrentTime() {
 		return Instant.now();
 	}
-	
-	public static void getURL(WebDriver driver, String url)
-	{
-		
+
+	public static void getURL(WebDriver driver, String url) {
+
 		driver.get(url);
-		
+
 	}
-	
+
 	/**
 	 * Find web-element for given locator.
 	 * 
@@ -151,40 +144,36 @@ public class Common {
 		}
 		return null;
 	}
-	
+
 	public static void jsClick(WebDriver driver, WebElement element) {
 		highlightElement(driver, element);
-		System.out.println("============Apply NOw:::::::::Test::::::"+element.getText());
-		((JavascriptExecutor) driver).executeScript(
-				"return arguments[0].click();", element);
+		System.out.println("============Apply NOw:::::::::Test::::::" + element.getText());
+		((JavascriptExecutor) driver).executeScript("return arguments[0].click();", element);
 		// this.waitForAjax("0");
 	}
-	
-	public static void scrollToElement(WebDriver driver, WebElement element)
-	{
+
+	public static void scrollToElement(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
 	}
-	
-	public static void scrollToElementTillTrue(WebDriver driver, WebElement element)
-	{
+
+	public static void scrollToElementTillTrue(WebDriver driver, WebElement element) {
 		pause(2);
 		try {
-		JavascriptExecutor executor=(JavascriptExecutor) driver;
-		executor.executeScript("arguments[0].scrollIntoView(true);",element);
-		pause(8);
-		}catch(Exception e) {
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			executor.executeScript("arguments[0].scrollIntoView(true);", element);
+			pause(8);
+		} catch (Exception e) {
 			System.out.println("e");
 		}
 	}
-	
-	public static void scrollScreen(WebDriver driver)
-	{
+
+	public static void scrollScreen(WebDriver driver) {
 		try {
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,250)", "");
-		}catch(Exception e) {
-			
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("window.scrollBy(0,250)", "");
+		} catch (Exception e) {
+
 		}
 	}
 
@@ -236,22 +225,26 @@ public class Common {
 		}
 
 	}
-	
+
 	public static void scrollToTop(WebDriver driver) {
-		
-	((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0);");
+
+		((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0);");
 	}
-	
+
 	public static void enterDataIn(WebDriver driver, WebElement element, String search_phrase) {
 		element.clear();
 		element.sendKeys(search_phrase);
 	}
-	
+
 	public static void type(WebDriver driver, WebElement element, String data) {
 		element.clear();
 		element.sendKeys(data);
 	}
-	
+
+	public static void pressEnterKey(WebDriver driver,WebElement element,CharSequence key){
+		Common.pause(1);
+		element.sendKeys(key);
+	}
 	public static void clickOn(WebDriver driver, WebElement element) {
 		highlightElement(driver, element);
 		Common.pause(1);
@@ -277,14 +270,13 @@ public class Common {
 		((JavascriptExecutor) driver).executeScript("arguments[0].style.border = '0px'", element);
 	}
 
-	public static void refreshPage(WebDriver driver)
-	{
+	public static void refreshPage(WebDriver driver) {
 		Instant start = Common.getCurrentTime();
 		driver.navigate().refresh();
 		Instant end = Common.getCurrentTime();
 		SeleniumInit.timeTakenForStepLog(start, end);
 	}
-	
+
 	public static void waitForPageLoaded(WebDriver driver) {
 		ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
 			public Boolean apply(WebDriver driver) {
@@ -311,22 +303,19 @@ public class Common {
 			return false;
 		}
 	}
-	
-	public static boolean waitforElementClickable(WebDriver driver,WebElement element,  int timeoutInSeconds)
-	{
-		try{
-		WebDriverWait wait= new WebDriverWait(driver, timeoutInSeconds);
-		wait.until(ExpectedConditions.elementToBeClickable(element));
-		highlightElement(driver, element);
-		return true;
-		}
-		catch(TimeoutException | NoSuchElementException e )
-		{
+
+	public static boolean waitforElementClickable(WebDriver driver, WebElement element, int timeoutInSeconds) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			highlightElement(driver, element);
+			return true;
+		} catch (TimeoutException | NoSuchElementException e) {
 			System.out.println(e);
 			return false;
 		}
 	}
-	
+
 	public static boolean invisibilityOfElementLocated(WebDriver driver, By locator, int timeoutInSeconds) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
@@ -351,34 +340,31 @@ public class Common {
 		}
 	}
 
-	public static void navigateBack(WebDriver driver)
-	{
+	public static void navigateBack(WebDriver driver) {
 		driver.navigate().back();
 	}
+
 	public static void switchToSecondTab(WebDriver driver) {
-		
+
 		Common.pause(5);
-		for(String handle: driver.getWindowHandles())
-		{
-			if(!handle.equals(driver.getWindowHandle()))
-			{
+		for (String handle : driver.getWindowHandles()) {
+			if (!handle.equals(driver.getWindowHandle())) {
 				driver.switchTo().window(handle);
 			}
 		}
 	}
-	
-	public static void SwitchtoTab(WebDriver driver,int tabNumber)
-	 {
-	  ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-	  driver.switchTo().window(tabs.get(tabNumber));
-	 }
-	
-    public static void switchToFirstTab(WebDriver driver) {
-		
+
+	public static void SwitchtoTab(WebDriver driver, int tabNumber) {
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(tabNumber));
+	}
+
+	public static void switchToFirstTab(WebDriver driver) {
+
 		Common.pause(5);
-		ArrayList<String> handles = new ArrayList<String> (driver.getWindowHandles());
+		ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(handles.get(0));
-		
+
 	}
 
 	/**
@@ -396,40 +382,36 @@ public class Common {
 		return sd.format(date);
 	}
 
-	public static String getTodaysDate()
-	{
+	public static String getTodaysDate() {
 		Date date = new Date();
 		SimpleDateFormat sd = new SimpleDateFormat("ddMMYYYY");
 		return sd.format(date);
 	}
-	
-	public static String getDayBeforeYesterday()
-	{
+
+	public static String getDayBeforeYesterday() {
 		SimpleDateFormat sd = new SimpleDateFormat("ddMMYYYY");
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, -2);
 		return sd.format(cal.getTime());
-		
+
 	}
-	
-	public static void deleteDirectory(File file)
-    {
-        // store all the paths of files and folders present
-        // inside directory
-        for (File subfile : file.listFiles()) {
-  
-            // if it is a subfolder,e.g Rohan and Ritik,
-            // recursiley call function to empty subfolder
-            if (subfile.isDirectory()) {
-                deleteDirectory(subfile);
-            }
-  
-            // delete files and empty subfolders
-            subfile.delete();
-        }
-    }
-	
-	
+
+	public static void deleteDirectory(File file) {
+		// store all the paths of files and folders present
+		// inside directory
+		for (File subfile : file.listFiles()) {
+
+			// if it is a subfolder,e.g Rohan and Ritik,
+			// recursiley call function to empty subfolder
+			if (subfile.isDirectory()) {
+				deleteDirectory(subfile);
+			}
+
+			// delete files and empty subfolders
+			subfile.delete();
+		}
+	}
+
 	/**
 	 * Takes screenshot and adds it to TestNG report.
 	 * 
@@ -437,34 +419,30 @@ public class Common {
 	 *            WebDriver instance.
 	 */
 	public static void makeScreenshot(WebDriver driver, String screenshotName) {
-	
-		
+
 		// TODO code application logic here
-        // File (or directory) to be moved
+		// File (or directory) to be moved
 		// store file path
-        String filepath = userDir + "\\test-output\\screenshots";
-        File file = new File(filepath);
-  
-        // call deleteDirectory function to delete
-        // sub directory and files
-        deleteDirectory(file);
-  
-        // delete main GFG folder
-        file.delete();
-		
+		String filepath = userDir + "\\test-output\\screenshots";
+		File file = new File(filepath);
+
+		// call deleteDirectory function to delete
+		// sub directory and files
+		deleteDirectory(file);
+
+		// delete main GFG folder
+		file.delete();
+
 		WebDriver augmentedDriver = new Augmenter().augment(driver);
 
 		/* Take a screenshot */
 		File screenshot = ((TakesScreenshot) augmentedDriver).getScreenshotAs(OutputType.FILE);
-		
+
 		String nameWithExtention = screenshotName + ".png";
 
 		/* Copy screenshot to specific folder */
 		try {
-			/*
-			 * String reportFolder = "target" + File.separator +
-			 * "fail safe-reports" + File.separator + "firefox" + File.separator;
-			 */
+
 			String reportFolder = "test-output" + File.separator;
 			String screenshotsFolder = "screenshots";
 			File screenshotFolder = new File(reportFolder + screenshotsFolder);
@@ -477,40 +455,33 @@ public class Common {
 			log("Failed to capture screenshot: " + e.getMessage());
 		}
 		log("<br><b>Screenshot- </b>" + getScreenshotLink(nameWithExtention, nameWithExtention)); // add
-																		// screenshot
-																		// link
-																		// to
-																		// the
-																		// report
 	}
-	
-	public static double roundTo2DecimalPlaces(double value)
-	{
-		return Math.round(value * 100.0)/100.0;
+
+	public static double roundTo2DecimalPlaces(double value) {
+		return Math.round(value * 100.0) / 100.0;
 	}
-	
-	public static String doubleToStringUpto2DecimalPlaces(double value)
-	{
+
+	public static String doubleToStringUpto2DecimalPlaces(double value) {
 		DecimalFormat format = new DecimalFormat("#0.00");
 		return format.format(value);
 	}
 
-	public  static File getLatestFilefromDir(){
-	    File dir = new File(SeleniumInit.downloads_folder_path);
-	    File[] files = dir.listFiles();
-	    if (files == null || files.length == 0) {
-	        return null;
-	    }
-	
-	    File lastModifiedFile = files[0];
-	    for (int i = 1; i < files.length; i++) {
-	       if (lastModifiedFile.lastModified() < files[i].lastModified()) {
-	           lastModifiedFile = files[i];
-	       }
-	    }
-	    return lastModifiedFile;
+	public static File getLatestFilefromDir() {
+		File dir = new File(SeleniumInit.downloads_folder_path);
+		File[] files = dir.listFiles();
+		if (files == null || files.length == 0) {
+			return null;
+		}
+
+		File lastModifiedFile = files[0];
+		for (int i = 1; i < files.length; i++) {
+			if (lastModifiedFile.lastModified() < files[i].lastModified()) {
+				lastModifiedFile = files[i];
+			}
+		}
+		return lastModifiedFile;
 	}
-	    
+
 	/**
 	 * Log given message to Reporter output.
 	 * 
@@ -561,7 +532,7 @@ public class Common {
 		int randomInt = randomGenerator.nextInt(length);
 		return (randomInt + 1);
 	}
-	
+
 	public static int[] randomNumericValuesGenerate(int length, int count) {
 
 		Random randomGenerator = new Random();
@@ -575,16 +546,16 @@ public class Common {
 		int length = randomNumericValueGenerate(10);
 		String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 		SecureRandom rnd = new SecureRandom();
-		StringBuilder sb = new StringBuilder( length );
-		   for( int i = 0; i < length; i++ ) 
-		      sb.append( AB.charAt( rnd.nextInt(AB.length()) ) );
-		   return sb.toString();
+		StringBuilder sb = new StringBuilder(length);
+		for (int i = 0; i < length; i++)
+			sb.append(AB.charAt(rnd.nextInt(AB.length())));
+		return sb.toString();
 	}
-	
-	public static String getUUID()
-	{
-		return UUID.randomUUID().toString();		
+
+	public static String getUUID() {
+		return UUID.randomUUID().toString();
 	}
+
 	/**
 	 * Select Random String From Combobox.
 	 * 
@@ -593,7 +564,8 @@ public class Common {
 	 * @return selected random string
 	 * @throws InterruptedException
 	 */
-	public static String selectRandomOptionFromCombo(WebDriver driver, WebElement selectCombo) throws InterruptedException {
+	public static String selectRandomOptionFromCombo(WebDriver driver, WebElement selectCombo)
+			throws InterruptedException {
 		String selectedOption = "";
 		Thread.sleep(2);
 		List<WebElement> getAllOption = selectCombo.findElements(By.xpath("option"));
@@ -624,31 +596,29 @@ public class Common {
 		Select select = new Select(element);
 		select.selectByVisibleText(value);
 	}
-	
-	public static void setScriptProperty(String key, String value)
-	{
-		
+
+	public static void setScriptProperty(String key, String value) {
+
 		FileInputStream input = null;
 		OutputStream output = null;
-		
+
 		try {
 			input = new FileInputStream(SeleniumInit.test_data_folder_path + File.separator + "script.properties");
 			Properties prop = new Properties();
 			prop.load(input);
-			input.close();	
-			
+			input.close();
+
 			output = new FileOutputStream(SeleniumInit.test_data_folder_path + File.separator + "script.properties");
 			// set the properties value
 			prop.setProperty(key, value);
 			// save properties to project root folder
 			prop.store(output, null);
 			output.close();
-			
-			
+
 		} catch (IOException io) {
 			io.printStackTrace();
-		} 
-		
+		}
+
 		finally {
 			if (output != null) {
 				try {
@@ -657,11 +627,10 @@ public class Common {
 					e.printStackTrace();
 				}
 			}
+		}
 	}
-	}
-	
-	public static String getScriptProperty(String key)
-	{
+
+	public static String getScriptProperty(String key) {
 		Properties prop = new Properties();
 		InputStream input = null;
 		String value = "VALUE NOT OBTAINED";
@@ -673,8 +642,8 @@ public class Common {
 			prop.load(input);
 
 			// get the property value and print it out
-			  value = prop.getProperty(key);
-			
+			value = prop.getProperty(key);
+
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		} finally {
@@ -686,18 +655,16 @@ public class Common {
 				}
 			}
 		}
-		
+
 		return value;
 
-	  }
-	
-	
-	public static String getRandomColorCode()
-	{
+	}
+
+	public static String getRandomColorCode() {
 		Random random = new Random();
-        int nextInt = random.nextInt(256*256*256);
-        String colorCode = String.format("#%06x", nextInt);
-        return colorCode;
+		int nextInt = random.nextInt(256 * 256 * 256);
+		String colorCode = String.format("#%06x", nextInt);
+		return colorCode;
 	}
 
 	public static int getNumberFromString(String input_string) {
@@ -705,58 +672,60 @@ public class Common {
 		return Integer.parseInt(input_string);
 	}
 
-	public static long getLongNumberFromString(String input_string)
-	{
+	public static long getLongNumberFromString(String input_string) {
 		input_string = input_string.replaceAll("[^0-9]", "");
 		return Long.parseLong(input_string);
 	}
-	public static double getDoubleFromString(String input_string)
-	{
+
+	public static double getDoubleFromString(String input_string) {
 		input_string = input_string.replaceAll("[^0-9.]", "");
 		return Double.parseDouble(input_string);
 	}
-	
-	public static void saveScreenshot(WebDriver driver, String testName)
-	{
+
+	public static void saveScreenshot(WebDriver driver, String testName) {
 		String test_case_number = Integer.toString(Common.getNumberFromString(testName));
-		String screenshotName = "TC" + test_case_number +  "_" + Common.getCurrentTimeStampString();
+		String screenshotName = "TC" + test_case_number + "_" + Common.getCurrentTimeStampString();
 		Common.makeScreenshot(driver, screenshotName);
 	}
-	
+
 	public static void mouseHover(WebDriver driver, WebElement element) {
 		Actions builder = new Actions(driver);
 		builder.moveToElement(element).perform();
 	}
-	
-	public static void waitForElement(WebDriver driver,WebElement webelement) {
-		  (new WebDriverWait(driver, 35)).until(ExpectedConditions
-		    .visibilityOf(webelement));
-		 }
-	
-	public static void clickableElement(WebElement webelement, WebDriver driver) 
-	{
-		//long starttime=System.currentTimeMillis();
+
+	public static void waitForElement(WebDriver driver, WebElement webelement) {
+		(new WebDriverWait(driver, 35)).until(ExpectedConditions.visibilityOf(webelement));
+	}
+
+	public static void clickableElement(WebElement webelement, WebDriver driver) {
+		// long starttime=System.currentTimeMillis();
 		(new WebDriverWait(driver, 60)).until(ExpectedConditions.elementToBeClickable(webelement));
-		//long endtime=System.currentTimeMillis()-starttime;
-		/*SeleniumInit.ExplicitWait=SeleniumInit.ExplicitWait+endtime;
-		System.out.println(" clickable Element (By element) wait --> "+SeleniumInit.ExplicitWait);*/
+		// long endtime=System.currentTimeMillis()-starttime;
+		/*
+		 * SeleniumInit.ExplicitWait=SeleniumInit.ExplicitWait+endtime;
+		 * System.out.println(" clickable Element (By element) wait --> "
+		 * +SeleniumInit.ExplicitWait);
+		 */
 	}
-	
-	public static void PresenceOfElement(By locator, WebDriver driver) 
-	{
-		//long starttime=System.currentTimeMillis();
+
+	public static void PresenceOfElement(By locator, WebDriver driver) {
+		// long starttime=System.currentTimeMillis();
 		(new WebDriverWait(driver, 60)).until(ExpectedConditions.presenceOfElementLocated(locator));
-		//long endtime=System.currentTimeMillis()-starttime;
-		/*SeleniumInit.ExplicitWait=SeleniumInit.ExplicitWait+endtime;
-		System.out.println(" Presence of Element wait --> "+SeleniumInit.ExplicitWait);*/
+		// long endtime=System.currentTimeMillis()-starttime;
+		/*
+		 * SeleniumInit.ExplicitWait=SeleniumInit.ExplicitWait+endtime;
+		 * System.out.println(" Presence of Element wait --> "+SeleniumInit.
+		 * ExplicitWait);
+		 */
 	}
-	
+
 	public static XSSFSheet ExcelWSheet;
 	public static XSSFWorkbook ExcelWBook;
 	public static XSSFCell Cell;
 	public static XSSFRow Row;
+
 	// Data provider
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "deprecation" })
 	public static <UnicodeString> UnicodeString getCellData(int RowNum, int ColNum) throws Exception {
 		try {
 			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
@@ -773,10 +742,9 @@ public class Common {
 			throw (e);
 		}
 	}
-	
-	public static String getCellValue(String sheet,int i , int j)
-	{
-		String ser=null;
+
+	public static String getCellValue(String sheet, int i, int j) {
+		String ser = null;
 		try {
 			FileInputStream ExcelFile = new FileInputStream(userDir + "\\test_data\\Credentials.xlsx");
 			ExcelWBook = new XSSFWorkbook(ExcelFile);

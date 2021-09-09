@@ -1,16 +1,7 @@
 package com.index;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.openqa.selenium.By;
 import com.init.Common;
 import com.init.SeleniumInit;
 import com.relevantcodes.extentreports.LogStatus;
@@ -19,11 +10,10 @@ public class LoginIndex extends SeleniumInit {
 
 	int stepCount = 1;
 	int extentStepCount = 1;
-	
-	
-	
+
 	@Test
 	public void login() throws Exception {
+
 		acceptCookie();
 
 		System.out.println("Username is:" + Common.getCellValue("Sheet1", 1, 0));
@@ -51,6 +41,8 @@ public class LoginIndex extends SeleniumInit {
 		testStepsLog("Step " + (stepCount++) + " : Verify 'Login' is successful.");
 		boolean errorMessage = loginVerificationPage.verifySuccessfulLogin();
 		Assert.assertTrue(errorMessage, "Login is  successful.");
+		
+		
 
 	}
 

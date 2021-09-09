@@ -1,4 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.541 sec - in TestSuite
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 1, Time elapsed: 28.107 sec <<< FAILURE! - in TestSuite
+searchProduct(com.index.SearchProductIndex)  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.index.SearchProductIndex.searchProduct(SearchProductIndex.java:21)
+
+verifysourcedProduct(com.index.SearchProductIndex)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.index.SearchProductIndex.verifysourcedProduct(SearchProductIndex.java:55)
+
+tearDown(com.index.LoginIndex)  Time elapsed: 4.059 sec  <<< FAILURE!
+java.lang.NullPointerException
+

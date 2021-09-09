@@ -30,11 +30,13 @@
 			<artifactId>poi</artifactId>
 			<version>${version.poi}</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<version>20180813</version>
+			<version>20210307</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -145,7 +147,7 @@
 					<!-- <testFailureIgnore>true</testFailureIgnore> <forkMode>never</forkMode> -->
 					<suiteXmlFiles>
 						<suiteXmlFile>Build\SauceDemo.xml</suiteXmlFile>
-						
+
 					</suiteXmlFiles>
 					<reportsDirectory>test-output</reportsDirectory>
 					<properties>

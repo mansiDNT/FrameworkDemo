@@ -60,6 +60,7 @@ public class CustomReporterBuildSummary extends CustomReporterListener {
 	public static String id1="";
 	public static int g=0;
 
+	@SuppressWarnings("unused")
 	private Scanner scanner;
 	
 	int passCount=0;

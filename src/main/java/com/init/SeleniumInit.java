@@ -42,16 +42,18 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.indexPage.LoginIndexPage;
+import com.indexPage.SearchProductIndexPage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
 import com.verificationPage.LoginVerificationPage;
+import com.verificationPage.SearchProductVerificationPage;
 
 public class SeleniumInit {
 
@@ -82,19 +84,20 @@ public class SeleniumInit {
 	public String currentTest; // current running test
 
 	protected static Logger logger = Logger.getLogger("testing");
-	public WebDriver driver;
+	public static WebDriver driver,driver1;
 
 	InputStream input = null;
 	public static Properties config_properties = new Properties();
 
 	public static ExtentTest test;
-	public static ExtentTest test1, test2, test3, test4;
+	public static ExtentTest test1;
 	static ExtentReports report;
 
 	public LoginIndexPage loginIndexPage;
 	public LoginVerificationPage loginVerificationPage;
+	public SearchProductIndexPage searchProductIndexPage;
+	public SearchProductVerificationPage searchProductVerificationPage;
 
-	
 	/**
 	 * Fetches suite-configuration from XML suite file.
 	 * 
@@ -105,17 +108,15 @@ public class SeleniumInit {
 	protected void fetchSuiteConfiguration(ITestContext testContext) {
 
 		// Pass the URL to be tested
-	    testUrl = testContext.getCurrentXmlTest().getParameter("selenium.url");
+		testUrl = testContext.getCurrentXmlTest().getParameter("selenium.url");
 
 		System.out.println("Before suite");
 		System.out.println("======" + testUrl + "=========");
 
 		report = new ExtentReports(System.getProperty("user.dir") + "/Reports/ExtentReportResults.html");
 		test = getNewTest("Valid Credential");
-		test1 = getNewTest("Invalid Credential");
-		test2 = getNewTest("BlankUserName");
-		test3 = getNewTest("BlankPassword");
-		test4 = getNewTest("AddToCart");
+		test1 = getNewTest("Search Product");
+
 		// report.config().reportName("Final Report");
 
 	}
@@ -129,8 +130,6 @@ public class SeleniumInit {
 
 		report.endTest(test);
 		report.endTest(test1);
-		report.endTest(test2);
-		report.endTest(test3);
 		report.flush();
 
 	}
@@ -143,16 +142,14 @@ public class SeleniumInit {
 	 * @throws InterruptedException
 	 */
 
-	@BeforeTest
+	@BeforeSuite
 	public void one(ITestContext testContext) {
 		seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
 		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 	}
-	
 
-
-	@BeforeMethod(alwaysRun = true)
-	public void setUp(Method method, ITestContext testContext) throws IOException, InterruptedException {
+	@BeforeTest(alwaysRun = true)
+	public void setUp(ITestContext testContext) throws IOException, InterruptedException {
 
 		targetBrowser = testContext.getCurrentXmlTest().getParameter("selenium.browser");
 		currentTest = testContext.getCurrentXmlTest().getName(); // get Name of
@@ -218,7 +215,7 @@ public class SeleniumInit {
 				browserVersion = capability.getVersion().toString();
 
 				// driver = new RemoteWebDriver(remote_grid, capability);
-				this.driver = new FirefoxDriver(capability);
+				SeleniumInit.driver = new FirefoxDriver(capability);
 
 				System.out.println("=========" + " Mozilla Firefox Browser " + "==========");
 
@@ -247,7 +244,7 @@ public class SeleniumInit {
 				osName = capability.getPlatform().name();
 				browserVersion = capability.getVersion();
 
-				this.driver = new ChromeDriver(capability);
+				SeleniumInit.driver = new ChromeDriver(capability);
 
 				System.out.println("=========" + " Google Chrome Browser " + "==========");
 
@@ -270,7 +267,7 @@ public class SeleniumInit {
 
 				log(browserVersion);
 
-				this.driver = new InternetExplorerDriver(capability);
+				SeleniumInit.driver = new InternetExplorerDriver(capability);
 
 				System.out.println("=========" + " Internet Explorer Browser " + "==========");
 
@@ -285,12 +282,12 @@ public class SeleniumInit {
 				osName = capability.getPlatform().name();
 				browserVersion = capability.getVersion();
 
-				this.driver = new SafariDriver(capability);
+				SeleniumInit.driver = new SafariDriver(capability);
 
 				System.out.println("=========" + " Safari Browser " + "==========");
 
 			}
-		} catch (MalformedURLException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -306,21 +303,23 @@ public class SeleniumInit {
 		currentWindowHandle = driver.getWindowHandle();
 
 		System.out.println("Current Window Handle ID:--->" + currentWindowHandle);
+
 		loginIndexPage = new LoginIndexPage(driver);
 		loginVerificationPage = new LoginVerificationPage(driver);
 
-		
-	}
-	
-	public void acceptCookie() throws Exception{
-		WebElement cookiee = driver.findElement(By.id("hs-eu-confirmation-button"));
-		
-		if(cookiee.isDisplayed()){
-			cookiee.click();
-		}
-		
+		searchProductIndexPage = new SearchProductIndexPage(driver);
+		searchProductVerificationPage = new SearchProductVerificationPage(driver);
+
 	}
 
+	public void acceptCookie() throws Exception {
+		WebElement cookiee = driver.findElement(By.id("hs-eu-confirmation-button"));
+
+		if (cookiee.isDisplayed()) {
+			cookiee.click();
+		}
+
+	}
 
 	/**
 	 * Log For Failure Test Exception.
@@ -344,7 +343,7 @@ public class SeleniumInit {
 				// Getting first line of the stack trace
 				String str = ExceptionUtils.getStackTrace(exception);
 				// tackTrace(exception, true)[0];
-				@SuppressWarnings("resource")
+
 				Scanner scanner = new Scanner(str);
 				String firstLine = scanner.nextLine();
 				log("<Strong><font color=#ff0000>" + firstLine + "</font></strong>");
@@ -353,7 +352,7 @@ public class SeleniumInit {
 	}
 
 	/**
-	 * After Method
+	 * After Test
 	 * 
 	 * @param testResult
 	 */
@@ -361,14 +360,18 @@ public class SeleniumInit {
 	public static int failed_count = 0;
 	public static int skipped_count = 0;
 
-	@AfterMethod(alwaysRun = true)
-	public void tearDown(ITestResult testResult) {
+	@AfterTest(alwaysRun = true)
+	public void tearDown() throws Exception {
+		driver.manage().deleteAllCookies();
+		driver.close();
+		driver.quit();
 
+		ITestResult testResult = null;
+		// System.out.println("entered into tearDown");
 		ITestContext ex = testResult.getTestContext();
 
 		if (testResult.getStatus() == ITestResult.SUCCESS) {
 			passed_count++;
-
 		}
 
 		else if (testResult.getStatus() == ITestResult.FAILURE) {
@@ -404,10 +407,9 @@ public class SeleniumInit {
 			}
 			System.out.println("--------------- Test status : " + testResult.getStatus() + " ---------------");
 
-			
-			driver.manage().deleteAllCookies();
-			driver.close();
-			driver.quit();
+			// driver.manage().deleteAllCookies();
+			// driver.close();
+			// driver.quit();
 
 		} catch (Exception throwable) {
 			System.out.println("message from tear down" + throwable);

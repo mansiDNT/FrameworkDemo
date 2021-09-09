@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="SauceDemoAutomation" preserve-order="true">
+<suite name="Avasam_Automation" verbose="1" preserve-order="true">
 
 	<!-- Put IP of localhost/Grid Hub machine -->
 	<parameter name="selenium.host" value="localhost" />
@@ -16,25 +17,28 @@
 	<parameter name="selenium.url" value="https://apptest.avasam.com/" />
 
 	<listeners>
-		<!-- <listener class-name="com.utility.CustomReporterListener" /> -->
+
 		<listener class-name="com.utility.CustomReporterEmailBuildSummary" />
 		<listener class-name="com.utility.CustomReporterforEmail" />
 		<listener class-name="com.utility.CustomReporterBuildSummary" />
-		<!-- <listener class-name="com.utility.CustomReporterTestpassDetails" /> 
-			<listener class-name="com.utility.CustomReporterTestFailureDetails" /> <listener 
-			class-name="com.utility.CustomReporterTestskipDetails" /> <listener class-name="com.utility.CustomReporterTestDetails" 
-			/> -->
-		<!-- <listener class-name="com.utility.CustomReporterByMansi" />" -->
-
 	</listeners>
 
 	<test name="Avasam">
-
 		<classes>
-			<class name="com.index.LoginIndex" />
-			 <class name="com.index.SearchProductIndex" /> 
+			<class name="com.index.LoginIndex">
 
+				<methods>
+					<include name="login"></include>
+				</methods>
+			</class>
+			<class name="com.index.SearchProductIndex">
+				<methods>
+					<include name="searchProduct"></include>
+					<include name="verifysourcedProduct"></include>
+				</methods>
+			</class>
 		</classes>
 	</test>
+
 
 </suite>
