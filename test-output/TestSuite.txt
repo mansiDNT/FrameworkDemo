@@ -1,15 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 3, Errors: 0, Skipped: 1, Time elapsed: 28.107 sec <<< FAILURE! - in TestSuite
-searchProduct(com.index.SearchProductIndex)  Time elapsed: 0.009 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at com.index.SearchProductIndex.searchProduct(SearchProductIndex.java:21)
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 61.501 sec <<< FAILURE! - in TestSuite
+searchProduct(com.index.SearchProductIndex)  Time elapsed: 26.576 sec  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=91.0.4472.77)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-T134AMI', ip: '192.168.1.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\BAPS\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54839}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4e36024dde50b0f7e2aae4cbd93bd2b9
+	at com.index.SearchProductIndex.searchProduct(SearchProductIndex.java:41)
 
-verifysourcedProduct(com.index.SearchProductIndex)  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at com.index.SearchProductIndex.verifysourcedProduct(SearchProductIndex.java:55)
-
-tearDown(com.index.LoginIndex)  Time elapsed: 4.059 sec  <<< FAILURE!
+tearDown(com.index.LoginIndex)  Time elapsed: 7.997 sec  <<< FAILURE!
 java.lang.NullPointerException
 

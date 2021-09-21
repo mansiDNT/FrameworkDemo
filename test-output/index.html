@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Avasam_Automation">
-              <span class="suite-name border-failed">Avasam_Automation</span>
+              <span class="suite-name border-passed">Avasam_Automation</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Avasam_Automation" class="hide-methods failed suite-Avasam_Automation"> (hide)</a> <!-- hide-methods failed suite-Avasam_Automation -->
-                      <a href="#" panel-name="suite-Avasam_Automation" class="show-methods failed suite-Avasam_Automation"> (show)</a> <!-- show-methods failed suite-Avasam_Automation -->
-                    </span>
-                    <div class="method-list-content failed suite-Avasam_Automation">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Avasam_Automation" title="com.index.SearchProductIndex" hash-for-method="searchProduct">searchProduct</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Avasam_Automation" title="com.index.SearchProductIndex" hash-for-method="verifysourcedProduct">verifysourcedProduct</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Avasam_Automation -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,6 +103,16 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Avasam_Automation" title="com.index.LoginIndex" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Avasam_Automation" title="com.index.SearchProductIndex" hash-for-method="searchProduct">searchProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Avasam_Automation" title="com.index.SearchProductIndex" hash-for-method="verifysourcedProduct">verifysourcedProduct</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Avasam_Automation -->
@@ -136,36 +127,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Avasam_Automation" class="panel Avasam_Automation">
-          <div class="suite-Avasam_Automation-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.index.SearchProductIndex</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchProduct">
-                  </a> <!-- searchProduct -->
-                  <span class="method-name">searchProduct</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.index.SearchProductIndex.searchProduct(SearchProductIndex.java:22)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifysourcedProduct">
-                  </a> <!-- verifysourcedProduct -->
-                  <span class="method-name">verifysourcedProduct</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.index.SearchProductIndex.verifysourcedProduct(SearchProductIndex.java:57)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Avasam_Automation-class-failed -->
           <div class="suite-Avasam_Automation-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -177,6 +138,28 @@
                   <a name="login">
                   </a> <!-- login -->
                   <span class="method-name">login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Avasam_Automation-class-passed -->
+          <div class="suite-Avasam_Automation-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.index.SearchProductIndex</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchProduct">
+                  </a> <!-- searchProduct -->
+                  <span class="method-name">searchProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifysourcedProduct">
+                  </a> <!-- verifysourcedProduct -->
+                  <span class="method-name">verifysourcedProduct</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -254,22 +237,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login')
-data.setCell(0, 2, 'com.index.LoginIndex')
-data.setCell(0, 3, 14542);
+data.setCell(0, 1, 'searchProduct')
+data.setCell(0, 2, 'com.index.SearchProductIndex')
+data.setCell(0, 3, 21440);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'searchProduct')
-data.setCell(1, 2, 'com.index.SearchProductIndex')
-data.setCell(1, 3, 13);
+data.setCell(1, 1, 'login')
+data.setCell(1, 2, 'com.index.LoginIndex')
+data.setCell(1, 3, 19721);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifysourcedProduct')
 data.setCell(2, 2, 'com.index.SearchProductIndex')
-data.setCell(2, 3, 1);
+data.setCell(2, 3, 5397);
 window.suiteTableData['Avasam_Automation']= { tableData: data, tableDiv: 'times-div-Avasam_Automation'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 46 seconds</span>
               <div id="times-div-Avasam_Automation">
               </div> <!-- times-div-Avasam_Automation -->
             </div> <!-- times-div -->
@@ -293,6 +276,7 @@ return data;
               <span class="reporter-method-name">searchProduct</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"><br>Step 1 : Click on Search Product<br></span>
+                <span class="reporter-method-output"><br>Step 2 : Search Product title<br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -327,35 +311,43 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.LoginIndex</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@45be7cd5)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@70e659aa)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
-                <span class="method-name">one(org.testng.TestRunner@45be7cd5)</span>
-                <span class="method-start">624 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@70e659aa)</span>
+                <span class="method-start">717 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <span class="method-name">setUp(org.testng.TestRunner@45be7cd5)</span>
-                <span class="method-start">627 ms</span>
+                <span class="method-name">setUp(org.testng.TestRunner@70e659aa)</span>
+                <span class="method-start">722 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">initV</span>
+                <span class="method-start">11525 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">11871 ms</span>
+                <span class="method-start">11678 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.SearchProductIndex</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initV</span>
+                <span class="method-start">31399 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">searchProduct</span>
-                <span class="method-start">26416 ms</span>
+                <span class="method-start">31407 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initV</span>
+                <span class="method-start">52847 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifysourcedProduct</span>
-                <span class="method-start">26432 ms</span>
+                <span class="method-start">52847 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -364,8 +356,12 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">26434 ms</span>
+                <span class="method-start">58247 ms</span>
               </div> <!-- configuration-test after -->
+              <div class="configuration-suite after">
+                <span class="method-name">testResults</span>
+                <span class="method-start">61465 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

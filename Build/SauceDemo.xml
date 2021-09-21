@@ -17,7 +17,6 @@
 	<parameter name="selenium.url" value="https://apptest.avasam.com/" />
 
 	<listeners>
-
 		<listener class-name="com.utility.CustomReporterEmailBuildSummary" />
 		<listener class-name="com.utility.CustomReporterforEmail" />
 		<listener class-name="com.utility.CustomReporterBuildSummary" />

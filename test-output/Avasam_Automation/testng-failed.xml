@@ -25,22 +25,4 @@
       </class> <!-- com.index.SearchProductIndex -->
     </classes>
   </test> <!-- Avasam -->
-  <test name="Avasam(failed)">
-    <classes>
-      <class name="com.index.LoginIndex">
-        <methods>
-          <include name="fetchSuiteConfiguration"/>
-          <include name="one"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.index.LoginIndex -->
-      <class name="com.index.SearchProductIndex">
-        <methods>
-          <include name="verifysourcedProduct"/>
-          <include name="searchProduct"/>
-        </methods>
-      </class> <!-- com.index.SearchProductIndex -->
-    </classes>
-  </test> <!-- Avasam(failed) -->
 </suite> <!-- Failed suite [Avasam_Automation] -->

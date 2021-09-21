@@ -42,7 +42,7 @@ public class SearchProductIndexPage extends AbstractPage {
 		return new SearchProductVerificationPage(driver);
 	}
 
-	@FindBy(xpath = "//button[@type='button'])[8]")
+	@FindBy(xpath = "//body/main[1]/div[1]/div[1]/div[1]/ui-view[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[5]/div[2]/button[1]")
 	WebElement btnsearchProduct;
 
 	public SearchProductVerificationPage clickOnBtnSearchProduct() {

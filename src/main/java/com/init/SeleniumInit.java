@@ -5,10 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -40,7 +36,6 @@ import org.testng.IResultMap;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -84,14 +79,14 @@ public class SeleniumInit {
 	public String currentTest; // current running test
 
 	protected static Logger logger = Logger.getLogger("testing");
-	public static WebDriver driver,driver1;
+	public static WebDriver driver;
 
 	InputStream input = null;
 	public static Properties config_properties = new Properties();
 
 	public static ExtentTest test;
 	public static ExtentTest test1;
-	static ExtentReports report;
+	public static ExtentReports report;
 
 	public LoginIndexPage loginIndexPage;
 	public LoginVerificationPage loginVerificationPage;
@@ -110,7 +105,6 @@ public class SeleniumInit {
 		// Pass the URL to be tested
 		testUrl = testContext.getCurrentXmlTest().getParameter("selenium.url");
 
-		System.out.println("Before suite");
 		System.out.println("======" + testUrl + "=========");
 
 		report = new ExtentReports(System.getProperty("user.dir") + "/Reports/ExtentReportResults.html");
@@ -125,7 +119,7 @@ public class SeleniumInit {
 		return report.startTest(testName);
 	}
 
-	@AfterSuite
+	@AfterSuite(alwaysRun = true)
 	public void testResults() {
 
 		report.endTest(test);
@@ -148,6 +142,7 @@ public class SeleniumInit {
 		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 	}
 
+	@SuppressWarnings("deprecation")
 	@BeforeTest(alwaysRun = true)
 	public void setUp(ITestContext testContext) throws IOException, InterruptedException {
 
@@ -189,7 +184,8 @@ public class SeleniumInit {
 		System.out.println(targetBrowser);
 
 		try {
-			URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
+			// URL remote_grid = new URL("http://" + seleniumHub + ":" +
+			// seleniumHubPort + "/wd/hub");
 
 			if (targetBrowser == null || targetBrowser.contains("firefox")) {
 
@@ -304,6 +300,10 @@ public class SeleniumInit {
 
 		System.out.println("Current Window Handle ID:--->" + currentWindowHandle);
 
+	}
+
+	@BeforeMethod(alwaysRun = true)
+	public void initV() {
 		loginIndexPage = new LoginIndexPage(driver);
 		loginVerificationPage = new LoginVerificationPage(driver);
 
@@ -344,6 +344,7 @@ public class SeleniumInit {
 				String str = ExceptionUtils.getStackTrace(exception);
 				// tackTrace(exception, true)[0];
 
+				@SuppressWarnings("resource")
 				Scanner scanner = new Scanner(str);
 				String firstLine = scanner.nextLine();
 				log("<Strong><font color=#ff0000>" + firstLine + "</font></strong>");
@@ -361,13 +362,15 @@ public class SeleniumInit {
 	public static int skipped_count = 0;
 
 	@AfterTest(alwaysRun = true)
-	public void tearDown() throws Exception {
+
+	public void tearDown() throws NullPointerException {
 		driver.manage().deleteAllCookies();
 		driver.close();
 		driver.quit();
 
 		ITestResult testResult = null;
 		// System.out.println("entered into tearDown");
+
 		ITestContext ex = testResult.getTestContext();
 
 		if (testResult.getStatus() == ITestResult.SUCCESS) {

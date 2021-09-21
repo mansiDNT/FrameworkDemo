@@ -30,7 +30,6 @@ public class LoginVerificationPage extends AbstractPage {
 				test.log(LogStatus.PASS, "Login is successful.");
 				bool = true;
 			}
-			
 
 		}
 
