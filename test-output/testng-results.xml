@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="1" failed="1" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<br>current test- TC-1. Login validation.]]>
+    </line>
+    <line>
+      <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 1 : Enter username.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step2 : Enter password.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 3 : Click on Signin button.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>current test- TC-2. Negative Login validation.]]>
+    </line>
+    <line>
+      <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 1 : Enter username.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 2 : Enter password.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 3 : Click on Signin button.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
+    </line>
+    <line>
+      <![CDATA[<br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='C:\Users\BAPS\eclipse-workspace\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/>]]>
+    </line>
+    <line>
+      <![CDATA[<br><b><i>Failure Reason:</b></i>]]>
+    </line>
+    <line>
+      <![CDATA[<br><Strong><font color=#ff0000>java.lang.AssertionError: Login is not successful. expected [true] but found [false]</font></strong>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2021-10-13T15:05:50 IST" name="Login Test Cases" finished-at="2021-10-13T15:06:39 IST" duration-ms="49275">
+    <groups>
+    </groups>
+    <test started-at="2021-10-13T15:05:50 IST" name="TC-1. Login validation." finished-at="2021-10-13T15:06:18 IST" duration-ms="27676">
+      <class name="com.index.LoginIndex">
+        <test-method is-config="true" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@533bda92]" started-at="2021-10-13T15:05:50 IST" name="one" finished-at="2021-10-13T15:05:50 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@429f7919]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- one -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@533bda92]" started-at="2021-10-13T15:05:50 IST" name="setUp" finished-at="2021-10-13T15:06:00 IST" duration-ms="10224" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.index.LoginIndex.login() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@429f7919]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<br>current test- TC-1. Login validation.]]>
+            </line>
+            <line>
+              <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="login()[pri:0, instance:com.index.LoginIndex@533bda92]" started-at="2021-10-13T15:06:00 IST" name="login" finished-at="2021-10-13T15:06:16 IST" duration-ms="15310" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<br>Step 1 : Enter username.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step2 : Enter password.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 3 : Click on Signin button.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@533bda92]" started-at="2021-10-13T15:06:16 IST" name="tearDown" finished-at="2021-10-13T15:06:18 IST" duration-ms="2079" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=LoginIndex.login()[pri:0, instance:com.index.LoginIndex@533bda92] output=<br>Step 1 : Enter username.<br>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.index.LoginIndex -->
+    </test> <!-- TC-1. Login validation. -->
+    <test started-at="2021-10-13T15:06:18 IST" name="TC-2. Negative Login validation." finished-at="2021-10-13T15:06:39 IST" duration-ms="21484">
+      <class name="com.index.LoginIndex">
+        <test-method is-config="true" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@4b8d604b]" started-at="2021-10-13T15:05:50 IST" name="fetchSuiteConfiguration" finished-at="2021-10-13T15:05:50 IST" duration-ms="323" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@446626a7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchSuiteConfiguration -->
+        <test-method is-config="true" signature="one(org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@4b8d604b]" started-at="2021-10-13T15:06:18 IST" name="one" finished-at="2021-10-13T15:06:18 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@446626a7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- one -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:com.index.LoginIndex@4b8d604b]" started-at="2021-10-13T15:06:18 IST" name="setUp" finished-at="2021-10-13T15:06:27 IST" duration-ms="8911" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.index.LoginIndex.login_negative() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@446626a7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<br>current test- TC-2. Negative Login validation.]]>
+            </line>
+            <line>
+              <![CDATA[Current Xml Suite is:---->Login Test Cases]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="login_negative()[pri:0, instance:com.index.LoginIndex@4b8d604b]" started-at="2021-10-13T15:06:27 IST" name="login_negative" finished-at="2021-10-13T15:06:39 IST" duration-ms="12118" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Login is not successful. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Login is not successful. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at com.index.LoginIndex.login_negative(LoginIndex.java:74)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[<br>Step 1 : Enter username.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 2 : Enter password.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 3 : Click on Signin button.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Step 4 : Verify 'Login' is successful.<br>]]>
+            </line>
+            <line>
+              <![CDATA[<br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='C:\Users\BAPS\eclipse-workspace\FrameworkDemo\report-imgs\fail.png' alt='fail' height='15' width='15'/>]]>
+            </line>
+            <line>
+              <![CDATA[<br><b><i>Failure Reason:</b></i>]]>
+            </line>
+            <line>
+              <![CDATA[<br><Strong><font color=#ff0000>java.lang.AssertionError: Login is not successful. expected [true] but found [false]</font></strong>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login_negative -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.index.LoginIndex@4b8d604b]" started-at="2021-10-13T15:06:39 IST" name="tearDown" finished-at="2021-10-13T15:06:39 IST" duration-ms="435" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_negative status=FAILURE method=LoginIndex.login_negative()[pri:0, instance:com.index.LoginIndex@4b8d604b] output=<br>Step 1 : Enter username.<br>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="testResults()[pri:0, instance:com.index.LoginIndex@4b8d604b]" started-at="2021-10-13T15:06:39 IST" name="testResults" finished-at="2021-10-13T15:06:41 IST" duration-ms="1272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResults -->
+      </class> <!-- com.index.LoginIndex -->
+    </test> <!-- TC-2. Negative Login validation. -->
+  </suite> <!-- Login Test Cases -->
+</testng-results>
