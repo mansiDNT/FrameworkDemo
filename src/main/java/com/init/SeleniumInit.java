@@ -304,7 +304,7 @@ public class SeleniumInit {
 
 			} else if (targetBrowser.contains("safari")) {
 
-				/*capability = DesiredCapabilities.safari();
+				capability = DesiredCapabilities.safari();
 
 				capability.setJavascriptEnabled(true);
 				capability.setBrowserName("safari");
@@ -313,7 +313,9 @@ public class SeleniumInit {
 				osName = capability.getPlatform().name();
 				browserVersion = capability.getVersion();
 
-				this.driver = new SafariDriver(capability);*/
+				this.driver = new SafariDriver(capability);
+				
+				/*
 			    final String AUTOMATE_USERNAME = "mansidelhiwala_KNRX4S";
 
                 final String AUTOMATE_ACCESS_KEY = "rmnN3SCypjmPsKykq4Kc";
@@ -342,7 +344,7 @@ public class SeleniumInit {
                   caps.setCapability("browserstack.debug", "true");
                   caps.setCapability("browserstack.console", "info");
 
-                   this.driver = new RemoteWebDriver(new URL(URL), caps);
+                   this.driver = new RemoteWebDriver(new URL(URL), caps);*/
 
 				System.out.println("=========" + " Safari Browser " + "==========");
 
