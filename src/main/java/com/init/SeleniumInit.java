@@ -48,9 +48,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.indexPage.AnLoginIndexPage;
+import com.indexPage.AnOrdersIndexPage;
+import com.indexPage.AnSearchtabIndexPage;
 import com.indexPage.LoginIndexPage;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
+import com.verificationPage.AnLoginVerificationPage;
+import com.verificationPage.AnOrdersVerificationPage;
+import com.verificationPage.AnSearchtabVerificationPage;
 import com.verificationPage.LoginVerificationPage;
 
 public class SeleniumInit {
@@ -88,17 +95,18 @@ public class SeleniumInit {
 	InputStream input = null;
 	public static Properties config_properties = new Properties();
 	
-	public static ExtentTest test;
-	public static ExtentTest test1;
+	public static ExtentTest extentTest;
+	public static ExtentTest extentTest1;
 	static ExtentReports report;
+	
 	
 	/* Page's declaration */
 
 //	public  TemplateIndexPage templateIndexPage;
 //	public  TemplateVerificationPage templateVerificationPage;
 //	
-	public  LoginIndexPage loginIndexPage;
-	public  LoginVerificationPage loginVerificationPage;
+	public  AnSearchtabIndexPage loginIndexPage;
+	public  AnSearchtabVerificationPage loginVerificationPage;
 //	
 //	public  DashboardIndexPage dashboardIndexPage;
 //	public  DashboardVerificationPage dashboardVerificationPage;
@@ -123,9 +131,9 @@ public class SeleniumInit {
 		System.out.println("Before suite");
 		System.out.println("======" + testUrl + "=========");
 		
-		report = new ExtentReports(System.getProperty("user.dir")+"ExtentReportResults.html");
-		test = getNewTest("Postive Scenario");
-		test1 = getNewTest("Negative Scenario");
+		report = new ExtentReports();
+		ExtentSparkReporter reporter = new ExtentSparkReporter(System.getProperty("user.dir") + "\\test-output\\Reports\\ExtentReportResults_"+ Common.getTodaysDate()+".html");
+		report.attachReporter(reporter);
 		//report.config().reportName("Final Report");
 
 	}
@@ -140,7 +148,7 @@ public class SeleniumInit {
 	
 	
 	private ExtentTest getNewTest(String testName) {
-		return report.startTest(testName);
+		return report.createTest(testName);
 	}
 
 
@@ -152,8 +160,7 @@ public class SeleniumInit {
 		//System.out.println("The passed tests - " + passed_count);
 		//System.out.println("The failed tests - " + failed_count);
 		//System.out.println("The skipped tests - " + skipped_count);
-		report.endTest(test);
-		report.endTest(test1);
+		
 		report.flush();
 		
 	}
@@ -336,8 +343,8 @@ public class SeleniumInit {
 //			templateIndexPage = new TemplateIndexPage(driver);
 //			templateVerificationPage = new TemplateVerificationPage(driver);
 //			
-			loginIndexPage = new LoginIndexPage(driver);
-			loginVerificationPage = new LoginVerificationPage(driver);
+			loginIndexPage = new AnSearchtabIndexPage(driver);
+			loginVerificationPage = new AnSearchtabVerificationPage(driver);
 //			
 //			dashboardIndexPage = new DashboardIndexPage(driver);
 //			dashboardVerificationPage = new DashboardVerificationPage(driver);

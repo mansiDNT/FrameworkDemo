@@ -412,7 +412,7 @@ public class Common {
 		
 	}
 	
-	public static void deleteDirectory(File file)
+	/*public static void deleteDirectory(File file)
     {
         // store all the paths of files and folders present
         // inside directory
@@ -427,7 +427,7 @@ public class Common {
             // delete files and empty subfolders
             subfile.delete();
         }
-    }
+    }*/
 	
 	/**
 	 * Takes screenshot and adds it to TestNG report.
@@ -446,10 +446,10 @@ public class Common {
   
         // call deleteDirectory function to delete
         // subdirectory and files
-        deleteDirectory(file);
+      //  deleteDirectory(file);
   
         // delete main GFG folder
-        file.delete();
+       // file.delete();
 		
 		WebDriver augmentedDriver = new Augmenter().augment(driver);
 
@@ -777,7 +777,7 @@ public class Common {
 	{
 		String ser=null;
 		try {
-			FileInputStream ExcelFile = new FileInputStream(userDir + "\\test_data\\Credentials.xlsx");
+			FileInputStream ExcelFile = new FileInputStream(userDir + "\\test_data\\Logindata.xlsx");
 			ExcelWBook = new XSSFWorkbook(ExcelFile);
 			ExcelWSheet = ExcelWBook.getSheet(sheet);
 			ser = getCellData(i, j);
@@ -792,5 +792,10 @@ public class Common {
 			e.printStackTrace();
 		}
 		return ser;
+	}
+
+	public static String getExceptionMessage(Exception e) {
+	
+		return null;
 	}
 }
