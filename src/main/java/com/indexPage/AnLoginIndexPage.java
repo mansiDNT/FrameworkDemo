@@ -18,38 +18,47 @@ public class AnLoginIndexPage extends AbstractPage{
 	
 	@FindBy(id="nav-link-accountList-nav-line-1")
 	WebElement gotosignin;
-	public AnLoginVerificationPage clickOngoto()
-	{
-		Common.clickOn(driver, gotosignin);
-		//gotosignin.click();
-		return new AnLoginVerificationPage(driver);
-	}
 	
 	@FindBy(id="ap_email")
 	WebElement mobilenum;
-	public AnLoginVerificationPage enternum(String username)
+	
+	@FindBy(id="continue")
+	WebElement contbuttn;
+	
+	@FindBy(id="ap_password")
+	WebElement password;
+	
+	@FindBy(id="signInSubmit")
+	WebElement signin;
+	
+	
+	public AnLoginVerificationPage clickOnHellosignin()
+	{
+		Common.clickOn(driver, gotosignin);
+		return new AnLoginVerificationPage(driver);
+	}
+	
+	
+	public AnLoginVerificationPage enterMobilenum(String username)
 	{
 		Common.enterDataIn(driver, mobilenum, username);
 		return new AnLoginVerificationPage(driver);
 	}
 	
-	@FindBy(id="continue")
-	WebElement contbuttn;
+	
 	public AnLoginVerificationPage clickOncontinue()
 	{
 		Common.clickOn(driver, contbuttn);
 		return new AnLoginVerificationPage(driver);
 	}
-	@FindBy(id="ap_password")
-	WebElement password;
+	
 	public AnLoginVerificationPage enterpassword(String username)
 	{
 		Common.enterDataIn(driver, password, username);
 		return new AnLoginVerificationPage(driver);
 	}
 	
-	@FindBy(id="signInSubmit")
-	WebElement signin;
+	
 	public AnLoginVerificationPage clickOnsignin()
 	{
 		Common.clickOn(driver, signin);

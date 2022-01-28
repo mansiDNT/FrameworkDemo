@@ -19,27 +19,26 @@ public void login() throws Exception
 	
 	testStepsLog("Step " + (stepCount++) + " : Click on Hello sign in.");
 	extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Hello sign in.");
-	loginVerificationPage = loginIndexPage.clickOnHellosignin();
+	AnloginVerificationPage = AnloginIndexPage.clickOnHellosignin();
 	
-	testStepsLog("Step " + (stepCount++
-			) + " : Enter mobile number.");
+	testStepsLog("Step " + (stepCount++) + " : Enter mobile number.");
 	extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter mobile number.");
-	loginVerificationPage = loginIndexPage.enterMobilenum("9972024124"); 
+	AnloginVerificationPage = AnloginIndexPage.enterMobilenum("9972024124"); 
 	extentTest.log(Status.PASS, "Mobile number entered correctly" );
 	
 	testStepsLog("Step " + (stepCount++) + " : Click on Continue button.");
 	extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Continue button.");
-	loginVerificationPage = loginIndexPage.clickOncontinue();
+	AnloginVerificationPage = AnloginIndexPage.clickOncontinue();
 	
 	testStepsLog("Step " + (stepCount++) + " : Enter Password.");
 	extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter Password.");
-	loginVerificationPage = loginIndexPage.enterpassword("ama@2022");
+	AnloginVerificationPage = AnloginIndexPage.enterpassword("ama@2022");
 	extentTest.log(Status.PASS, "Password entered correctly" );
 	
 	testStepsLog("Step " + (stepCount++) + " : Click on Sign in button.");
 	extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Sign in button.");
-	loginVerificationPage = loginIndexPage.clickOnsignin();
-	boolean errorMessage= loginVerificationPage.verifySuccessfulLogin();
+	AnloginVerificationPage = AnloginIndexPage.clickOnsignin();
+	boolean errorMessage= AnloginVerificationPage.verifySuccessfulLogin();
 	Assert.assertTrue(errorMessage,"Login is not successful.");
 
 }
@@ -49,27 +48,27 @@ public void login_negative() throws Exception
 {
 	testStepsLog("Step " + (stepCount++) + " : Click on Hello sign in.");
 	extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Hello sign in.");
-	loginVerificationPage = loginIndexPage.clickOnHellosignin();
+	AnloginVerificationPage = AnloginIndexPage.clickOnHellosignin();
 	
 	testStepsLog("Step " + (stepCount++
 			) + " : Enter mobile number.");
 	extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter mobile number.");
-	loginVerificationPage = loginIndexPage.enterMobilenum("9972024124"); 
+	AnloginVerificationPage = AnloginIndexPage.enterMobilenum("9972024124"); 
 	extentTest.log(Status.PASS, "Mobile number entered correctly" );
 	
 	testStepsLog("Step " + (stepCount++) + " : Click on Continue button.");
 	extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Continue button.");
-	loginVerificationPage = loginIndexPage.clickOncontinue();
+	AnloginVerificationPage = AnloginIndexPage.clickOncontinue();
 	
 	testStepsLog("Step " + (stepCount++) + " : Enter Password.");
 	extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter Password.");
-	loginVerificationPage = loginIndexPage.enterpassword("ama@2022");
+	AnloginVerificationPage = AnloginIndexPage.enterpassword("ama@2022");
 	extentTest.log(Status.PASS, "Password entered correctly" );
 	
 	testStepsLog("Step " + (stepCount++) + " : Click on Sign in button.");
 	extentTest1.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Sign in button.");
-	loginVerificationPage = loginIndexPage.clickOnsignin();
-	boolean errorMessage= loginVerificationPage.verifyNegativeLogin();
+	AnloginVerificationPage = AnloginIndexPage.clickOnsignin();
+	boolean errorMessage= AnloginVerificationPage.verifyNegativeLogin();
 	Assert.assertTrue(errorMessage,"Login is not successful.");
 
 }

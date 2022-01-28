@@ -3,9 +3,9 @@ import org.testng.Assert;
 
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.init.Common;
 import com.init.SeleniumInit;
-import com.relevantcodes.extentreports.LogStatus;
 
 
 public class LoginIndex extends SeleniumInit {
@@ -23,20 +23,20 @@ public class LoginIndex extends SeleniumInit {
 		
 		//login button disabled
 		testStepsLog("Step " + (stepCount++) + " : Enter username.");
-		test.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter username.");
+		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter username.");
 	//	loginVerificationPage = loginIndexPage.enterEmail((Common.getCellValue("Sheet1",1,0)).toString());
 		loginVerificationPage = loginIndexPage.enterEmail("qbankadmin");
-		test.log(LogStatus.PASS, "Username entered correctly.Entered username is : " +Common.getCellValue("Sheet1",1,0));
+		extentTest.log(Status.PASS, "Username entered correctly.Entered username is : " +Common.getCellValue("Sheet1",1,0));
 		
 		testStepsLog("Step " + (stepCount++) + " : Enter password.");
-		test.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter password.");
+		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter password.");
 	//	loginVerificationPage = loginIndexPage.enterPassword((Common.getCellValue("Sheet1",1,0)).toString());
 	//	loginVerificationPage = loginIndexPage.enterEmail((Common.getCellValue("Sheet1",1,0)).toString());
 		loginVerificationPage = loginIndexPage.enterPassword("pass123");
-		test.log(LogStatus.PASS, "Password entered correctly.Entered username is : " +Common.getCellValue("Sheet1",1,0));
+		extentTest.log(Status.PASS, "Password entered correctly.Entered username is : " +Common.getCellValue("Sheet1",1,0));
 		
 		testStepsLog("Step " + (stepCount++) + " : Click on Signin button.");
-		test.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Click on Sign In button.");
+		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Sign In button.");
 		loginVerificationPage = loginIndexPage.clickOnLoginButton();
 		
 		testStepsLog("Step " + (stepCount++) + " : Verify 'Login' is successful.");
@@ -54,19 +54,19 @@ public class LoginIndex extends SeleniumInit {
 		
 		//login button disabled
 		testStepsLog("Step " + (stepCount++) + " : Enter username.");
-		test1.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter username.");
+		extentTest1.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter username.");
 		//loginVerificationPage = loginIndexPage.enterEmail(Common.getCellValue("Sheet1",1,0));
 		loginVerificationPage = loginIndexPage.enterEmail("qbankadmin");
-		test1.log(LogStatus.PASS, "Username entered correctly.Entered username is : " +Common.getCellValue("Sheet1",1,0));
+		extentTest1.log(Status.PASS, "Username entered correctly.Entered username is : " +Common.getCellValue("Sheet1",1,0));
 		
 		testStepsLog("Step " + (stepCount++) + " : Enter password.");
-		test1.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Enter password.");
+		extentTest1.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter password.");
 	//	loginVerificationPage = loginIndexPage.enterPassword(Common.getCellValue("Sheet1",1,0));
 		loginVerificationPage = loginIndexPage.enterPassword("pass123");
-		test1.log(LogStatus.PASS, "Password entered correctly.Entered username is : " +Common.getCellValue("Sheet1",1,0));
+		extentTest1.log(Status.PASS, "Password entered correctly.Entered username is : " +Common.getCellValue("Sheet1",1,0));
 		
 		testStepsLog("Step " + (stepCount++) + " : Click on Signin button.");
-		test1.log(LogStatus.PASS, "Step " + (extentStepCount++) + " : Click on Sign In button.");
+		extentTest1.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Sign In button.");
 		loginVerificationPage = loginIndexPage.clickOnLoginButton();
 		
 		testStepsLog("Step " + (stepCount++) + " : Verify 'Login' is successful.");

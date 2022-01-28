@@ -16,48 +16,50 @@ public class AnSearchtabIndex extends SeleniumInit{
 	@Test
 	public void Searchtab() throws Exception
 	{
+		System.out.println((Common.getCellValue("Sheet1",1,0)));
+		
 		
 		testStepsLog("Step " + (stepCount++) + " : Click on Hello sign in.");
 		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Hello sign in.");
-		loginVerificationPage = loginIndexPage.clickOnHellosignin();
+		AnsearchtabVerificationPage = AnsearchtabIndexPage.clickOnHellosignin();
 		
-		testStepsLog("Step " + (stepCount++
-				) + " : Enter mobile number.");
+		testStepsLog("Step " + (stepCount++) + " : Enter mobile number.");
 		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter mobile number.");
-		loginVerificationPage = loginIndexPage.enterMobilenum("9972024124"); 
+		AnsearchtabVerificationPage = AnsearchtabIndexPage.enterMobilenum((Common.getCellValue("Sheet1",1,0)));
+		//AnsearchtabVerificationPage = AnsearchtabIndexPage.enterMobilenum("9972024124"); 
 		extentTest.log(Status.PASS, "Mobile number entered correctly" );
 		
 		testStepsLog("Step " + (stepCount++) + " : Click on Continue button.");
 		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Continue button.");
-		loginVerificationPage = loginIndexPage.clickOncontinue();
+		AnsearchtabVerificationPage = AnsearchtabIndexPage.clickOncontinue();
 		
 		testStepsLog("Step " + (stepCount++) + " : Enter Password.");
 		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter Password.");
-		loginVerificationPage = loginIndexPage.enterpassword("ama@2022");
+		AnsearchtabVerificationPage = AnsearchtabIndexPage.enterpassword("ama@2022");
 		extentTest.log(Status.PASS, "Password entered correctly" );
 		
 		testStepsLog("Step " + (stepCount++) + " : Click on Sign in button.");
 		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Sign in button.");
-		loginVerificationPage = loginIndexPage.clickOnsignin();
-		boolean errorMessage= loginVerificationPage.verifySuccessfulLogin();
+		AnsearchtabVerificationPage = AnsearchtabIndexPage.clickOnsignin();
+		boolean errorMessage= AnsearchtabVerificationPage.verifySuccessfulLogin();
 		Assert.assertTrue(errorMessage,"Login is not successful.");
 		
 		testStepsLog("Step " + (stepCount++) + " : Click on Orders.");
 		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Orders.");
-		loginVerificationPage = loginIndexPage.clickOnorders();
-		boolean errorMessag= loginVerificationPage.SuccessfulOrders();
+		AnsearchtabVerificationPage = AnsearchtabIndexPage.clickOnorders();
+		boolean errorMessag= AnsearchtabVerificationPage.SuccessfulOrders();
 		Assert.assertTrue(errorMessag,"Orders history not working");
 		
 		testStepsLog("Step " + (stepCount++) + " : Enter Search item.");
 		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter Search item.");
-		loginVerificationPage = loginIndexPage.searchtab("suit");
+		AnsearchtabVerificationPage = AnsearchtabIndexPage.searchtab("suit");
 		extentTest.log(Status.PASS, "Search item entered correctly" );
 		
 		
-		testStepsLog("Step " + (stepCount++) + " : Click on Orders.");
-		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on Orders.");
-		loginVerificationPage = loginIndexPage.clickonSearchOrder();
-		boolean errorMsg= loginVerificationPage.Searchtab();
+		testStepsLog("Step " + (stepCount++) + " : Click on SearchOrders.");
+		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Click on SearchOrders.");
+		AnsearchtabVerificationPage = AnsearchtabIndexPage.clickonSearchOrder();
+		boolean errorMsg= AnsearchtabVerificationPage.Searchtab();
 		Assert.assertTrue(errorMsg,"Search Order button not working.");
 	
 	}

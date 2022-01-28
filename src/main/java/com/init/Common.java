@@ -441,7 +441,7 @@ public class Common {
 		// TODO code application logic here
         // File (or directory) to be moved
 		// store file path
-        String filepath = "C:\\Users\\MANSI\\eclipse-workspace\\FrameworkDemo\\test-output\\screenshots";
+        String filepath = "C:\\Users\\User\\eclipse-workspace\\Demo\\test-output\\screenshots";
         File file = new File(filepath);
   
         // call deleteDirectory function to delete

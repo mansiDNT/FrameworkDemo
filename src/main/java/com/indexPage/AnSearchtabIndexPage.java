@@ -46,8 +46,7 @@ public class AnSearchtabIndexPage extends AbstractPage{
 		try {
 		Common.waitForPageLoaded(driver);
 		Common.visibilityOfElementLocated(driver, By.id("nav-link-accountList-nav-line-1"), DRIVER_WAIT);
-		gotosignin.click();
-		//Common.clickOn(driver, gotosignin);
+		Common.clickOn(driver, gotosignin);
 		}catch(Exception e) {
 		extentTest.log(Status.FAIL, "Failure Message:- Hello sign in is not working.");
 		Assert.fail(Common.getExceptionMessage(e));	
@@ -57,14 +56,14 @@ public class AnSearchtabIndexPage extends AbstractPage{
 	}
 	
 	
-	public AnSearchtabVerificationPage enterMobilenum(String username)
+	public AnSearchtabVerificationPage enterMobilenum(String mobilenumber)
 	{
 		try {
 			Common.waitForPageLoaded(driver);
 			Common.visibilityOfElementLocated(driver, By.id("ap_email"), DRIVER_WAIT);
-			Common.enterDataIn(driver, mobilenum, username);
+			Common.enterDataIn(driver, mobilenum, mobilenumber);
 			}catch(Exception e) {
-			extentTest.log(Status.FAIL, "Failure Message:- Username is not working.");
+			extentTest.log(Status.FAIL, "Failure Message:- mobilenumber field is not working.");
 			Assert.fail(Common.getExceptionMessage(e));	
 			}
 		
@@ -86,12 +85,12 @@ public class AnSearchtabIndexPage extends AbstractPage{
 	}
 	
 	
-	public AnSearchtabVerificationPage enterpassword(String username)
+	public AnSearchtabVerificationPage enterpassword(String Password)
 	{
 		try {
 			Common.waitForPageLoaded(driver);
 			Common.visibilityOfElementLocated(driver, By.id("ap_password"), DRIVER_WAIT);
-			Common.enterDataIn(driver, password, username);
+			Common.enterDataIn(driver, password, Password);
 			}catch(Exception e) {
 			extentTest.log(Status.FAIL, "Failure Message:- Password is not working.");
 			Assert.fail(Common.getExceptionMessage(e));	

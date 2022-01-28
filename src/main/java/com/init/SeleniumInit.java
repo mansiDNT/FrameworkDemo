@@ -105,8 +105,17 @@ public class SeleniumInit {
 //	public  TemplateIndexPage templateIndexPage;
 //	public  TemplateVerificationPage templateVerificationPage;
 //	
-	public  AnSearchtabIndexPage loginIndexPage;
-	public  AnSearchtabVerificationPage loginVerificationPage;
+	public  LoginIndexPage loginIndexPage;
+	public  LoginVerificationPage loginVerificationPage;
+	
+	public  AnLoginIndexPage AnloginIndexPage;
+	public  AnLoginVerificationPage AnloginVerificationPage;
+	
+	public  AnOrdersIndexPage AnordersIndexPage;
+	public  AnOrdersVerificationPage AnordersVerificationPage;
+	
+	public  AnSearchtabIndexPage AnsearchtabIndexPage;
+	public  AnSearchtabVerificationPage AnsearchtabVerificationPage;
 //	
 //	public  DashboardIndexPage dashboardIndexPage;
 //	public  DashboardVerificationPage dashboardVerificationPage;
@@ -184,7 +193,7 @@ public class SeleniumInit {
 			
 	    targetBrowser = testContext.getCurrentXmlTest().getParameter("selenium.browser");
 		currentTest = testContext.getCurrentXmlTest().getName(); // get Name of current test.
-		
+		extentTest = getNewTest(currentTest);
 		log("current test- " +currentTest);
 
 		
@@ -343,8 +352,17 @@ public class SeleniumInit {
 //			templateIndexPage = new TemplateIndexPage(driver);
 //			templateVerificationPage = new TemplateVerificationPage(driver);
 //			
-			loginIndexPage = new AnSearchtabIndexPage(driver);
-			loginVerificationPage = new AnSearchtabVerificationPage(driver);
+			loginIndexPage = new LoginIndexPage(driver);
+			loginVerificationPage = new LoginVerificationPage(driver);
+			
+			AnloginIndexPage = new AnLoginIndexPage(driver);
+			AnloginVerificationPage = new AnLoginVerificationPage(driver);
+			
+			AnordersIndexPage = new AnOrdersIndexPage(driver);
+			AnordersVerificationPage = new AnOrdersVerificationPage(driver);
+			
+			AnsearchtabIndexPage = new AnSearchtabIndexPage(driver);
+			AnsearchtabVerificationPage = new AnSearchtabVerificationPage(driver);
 //			
 //			dashboardIndexPage = new DashboardIndexPage(driver);
 //			dashboardVerificationPage = new DashboardVerificationPage(driver);

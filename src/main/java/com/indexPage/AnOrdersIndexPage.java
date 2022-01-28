@@ -17,60 +17,56 @@ public class AnOrdersIndexPage extends AbstractPage{
 	
 	@FindBy(id="nav-link-accountList-nav-line-1")
 	WebElement gotosignin;
-	public AnOrdersVerificationPage clickOngoto()
+	
+	@FindBy(id="ap_email")
+	WebElement mobilenum;
+	
+	@FindBy(id="continue")
+	WebElement contbuttn;
+	
+	@FindBy(id="ap_password")
+	WebElement password;
+	
+	@FindBy(id="signInSubmit")
+	WebElement signin;
+	
+	@FindBy(id="nav-orders")
+	WebElement orders;
+	
+	public AnOrdersVerificationPage clickOnHellosignin()
 	{
 		Common.clickOn(driver, gotosignin);
 		//gotosignin.click();
 		return new AnOrdersVerificationPage(driver);
 	}
 	
-	@FindBy(id="ap_email")
-	WebElement mobilenum;
-	public AnOrdersVerificationPage enternum(String username)
+	public AnOrdersVerificationPage enterMobilenum(String username)
 	{
 		Common.enterDataIn(driver, mobilenum, username);
 		return new AnOrdersVerificationPage(driver);
 	}
 	
-	@FindBy(id="continue")
-	WebElement contbuttn;
 	public AnOrdersVerificationPage clickOncontinue()
 	{
 		Common.clickOn(driver, contbuttn);
 		return new AnOrdersVerificationPage(driver);
 	}
 	
-	@FindBy(id="ap_password")
-	WebElement password;
 	public AnOrdersVerificationPage enterpassword(String username)
 	{
 		Common.enterDataIn(driver, password, username);
 		return new AnOrdersVerificationPage(driver);
 	}
 	
-	@FindBy(id="signInSubmit")
-	WebElement signin;
 	public AnOrdersVerificationPage clickOnsignin()
 	{
 		Common.clickOn(driver, signin);
 		return new AnOrdersVerificationPage(driver);
 	}	
-
 	
-	@FindBy(id="nav-orders")
-	WebElement orders;
 	public AnOrdersVerificationPage clickOnorders()
 	{
 		Common.clickOn(driver, orders);
 		return new AnOrdersVerificationPage(driver);
 	}
-	
-	/*@FindBy(className="a-link-normal item")
-	WebElement cancelledorders;
-	public AnOrdersVerificationPage checkcancelled()
-	{
-		Common.clickOn(driver, cancelledorders);
-		return new AnOrdersVerificationPage(driver);
-	}*/
-	
 }

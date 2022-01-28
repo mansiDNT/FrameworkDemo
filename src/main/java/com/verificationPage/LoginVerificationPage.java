@@ -5,10 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.aventstack.extentreports.Status;
 import com.google.errorprone.annotations.Var;
 import com.init.AbstractPage;
 import com.init.Common;
-import com.relevantcodes.extentreports.LogStatus;
+
 
 
 public class LoginVerificationPage extends AbstractPage{
@@ -23,10 +24,10 @@ Boolean bool;
 		Common.pause(2);
 		WebElement var = driver.findElement(By.xpath("//div[@class='qb-logodark']"));
 		if(null!=var && var.isDisplayed()){
-		test.log(LogStatus.PASS, "Login is successful.");
+		extentTest.log(Status.PASS, "Login is successful.");
 		bool=true;
 		}else {
-			test.log(LogStatus.FAIL,"Login not successful.");
+			extentTest.log(Status.FAIL,"Login not successful.");
 			bool=false;
 		}
 		return bool;
@@ -36,10 +37,10 @@ Boolean bool;
 		
 		Common.pause(2);
 		if(driver.findElement(By.xpath("//div[@class='qb-logodark']")).isDisplayed()){
-			test1.log(LogStatus.FAIL, "Login not successful.");
+			extentTest1.log(Status.FAIL, "Login not successful.");
 		bool=false;
 		}else {
-			test1.log(LogStatus.PASS,"Login is successful.");
+			extentTest1.log(Status.PASS,"Login is successful.");
 			bool=true;
 		}
 		return bool;
