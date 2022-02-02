@@ -39,6 +39,7 @@ public class AnSearchtabIndexPage extends AbstractPage{
 	WebElement search;
 	
 	@FindBy(className="a-button-input")
+	//@FindBy(className="a-button a-button-search search-order-input")
 	WebElement searchorder;
 	
 	public AnSearchtabVerificationPage clickOnHellosignin()
@@ -149,7 +150,7 @@ public class AnSearchtabIndexPage extends AbstractPage{
 	{
 		try {
 			Common.waitForPageLoaded(driver);
-			Common.visibilityOfElementLocated(driver, By.id("a-button-input"), DRIVER_WAIT);
+			Common.visibilityOfElementLocated(driver, By.className("a-button-input"), DRIVER_WAIT);
 			Common.clickOn(driver, searchorder);
 			}catch(Exception e) {
 			extentTest.log(Status.FAIL, "Failure Message:- Search order button is not working.");

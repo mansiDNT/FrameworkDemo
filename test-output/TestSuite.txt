@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 28.813 sec <<< FAILURE! - in TestSuite
-login(com.index.LoginIndex)  Time elapsed: 3.273 sec  <<< FAILURE!
-java.lang.NoClassDefFoundError: org/openxmlformats/schemas/drawingml/x2006/main/ThemeDocument
-	at com.index.LoginIndex.login(LoginIndex.java:18)
-Caused by: java.lang.ClassNotFoundException: org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument
-	at com.index.LoginIndex.login(LoginIndex.java:18)
-
-login_negative(com.index.LoginIndex)  Time elapsed: 0.025 sec  <<< FAILURE!
-java.lang.NoClassDefFoundError: org/openxmlformats/schemas/drawingml/x2006/main/ThemeDocument
-	at com.index.LoginIndex.login_negative(LoginIndex.java:51)
-Caused by: java.lang.ClassNotFoundException: org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument
-	at com.index.LoginIndex.login_negative(LoginIndex.java:51)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 157.812 sec - in TestSuite

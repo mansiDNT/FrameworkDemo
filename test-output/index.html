@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Login_Test_Cases">
-              <span class="suite-name border-failed">Login Test Cases</span>
+              <span class="suite-name border-passed">Login Test Cases</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Login_Test_Cases">
-                    <span>C:\Users\User\eclipse-workspace\Demo\Build\AnSearchtab.xml</span>
+                    <span>F:\FrameworkDemo\Build\AnSearchtab.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Login_Test_Cases" class="hide-methods failed suite-Login_Test_Cases"> (hide)</a> <!-- hide-methods failed suite-Login_Test_Cases -->
-                      <a href="#" panel-name="suite-Login_Test_Cases" class="show-methods failed suite-Login_Test_Cases"> (show)</a> <!-- show-methods failed suite-Login_Test_Cases -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="hide-methods passed suite-Login_Test_Cases"> (hide)</a> <!-- hide-methods passed suite-Login_Test_Cases -->
+                      <a href="#" panel-name="suite-Login_Test_Cases" class="show-methods passed suite-Login_Test_Cases"> (show)</a> <!-- show-methods passed suite-Login_Test_Cases -->
                     </span>
-                    <div class="method-list-content failed suite-Login_Test_Cases">
+                    <div class="method-list-content passed suite-Login_Test_Cases">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Login_Test_Cases" title="com.index.AnSearchtabIndex" hash-for-method="Searchtab">Searchtab</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Login_Test_Cases -->
+                    </div> <!-- method-list-content passed suite-Login_Test_Cases -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Login_Test_Cases" class="panel Login_Test_Cases">
-          <div class="suite-Login_Test_Cases-class-failed">
+          <div class="suite-Login_Test_Cases-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.index.AnSearchtabIndex</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,43 +128,14 @@
                   <a name="Searchtab">
                   </a> <!-- Searchtab -->
                   <span class="method-name">Searchtab</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.index.AnSearchtabIndex.Searchtab(AnSearchtabIndex.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Login_Test_Cases-class-failed -->
+          </div> <!-- suite-Login_Test_Cases-class-passed -->
         </div> <!-- panel Login_Test_Cases -->
         <div panel-name="test-xml-Login_Test_Cases" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\User\eclipse-workspace\Demo\Build\AnSearchtab.xml</span>
+            <span class="header-content">F:\FrameworkDemo\Build\AnSearchtab.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -230,12 +201,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Searchtab')
 data.setCell(0, 2, 'com.index.AnSearchtabIndex')
-data.setCell(0, 3, 9);
+data.setCell(0, 3, 49664);
 window.suiteTableData['Login_Test_Cases']= { tableData: data, tableDiv: 'times-div-Login_Test_Cases'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 ms</span>
+              <span class="suite-total-time">Total running time: 49 seconds</span>
               <div id="times-div-Login_Test_Cases">
               </div> <!-- times-div-Login_Test_Cases -->
             </div> <!-- times-div -->
@@ -250,10 +221,13 @@ return data;
               <span class="reporter-method-name">Searchtab</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"><br>Step 1 : Click on Hello sign in.<br></span>
-                <span class="reporter-method-output"><br></br><Strong><font color=#ff0000>Fail                  </font></strong><img src='C:\Users\User\eclipse-workspace\Demo\report-imgs\fail.png' alt='fail' height='15' width='15'/></span>
-                <span class="reporter-method-output"><br><b><i>Failure Reason:</b></i></span>
-                <span class="reporter-method-output"><br><Strong><font color=#ff0000>java.lang.NullPointerException</font></strong></span>
-                <span class="reporter-method-output"><br><b>Screenshot- </b><a href='../test-output/screenshots/TC1_05012022_12-45-10.png' target='_new'>TC1_05012022_12-45-10.png</a></span>
+                <span class="reporter-method-output"><br>Step 2 : Enter mobile number.<br></span>
+                <span class="reporter-method-output"><br>Step 3 : Click on Continue button.<br></span>
+                <span class="reporter-method-output"><br>Step 4 : Enter Password.<br></span>
+                <span class="reporter-method-output"><br>Step 5 : Click on Sign in button.<br></span>
+                <span class="reporter-method-output"><br>Step 6 : Click on Orders.<br></span>
+                <span class="reporter-method-output"><br>Step 7 : Enter Search item.<br></span>
+                <span class="reporter-method-output"><br>Step 8 : Click on SearchOrders.<br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -273,30 +247,28 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.index.AnSearchtabIndex</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@26ceffa8)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@6fa590ba)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <span class="method-name">one(org.testng.TestRunner@26ceffa8)</span>
-                <span class="method-start">326 ms</span>
+                <span class="method-name">one(org.testng.TestRunner@6fa590ba)</span>
+                <span class="method-start">266 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.index.AnSearchtabIndex.Searchtab() throws java.lang.Exception, org.testng.TestRunner...)</span>
-                <span class="method-start">338 ms</span>
+                <span class="method-start">272 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Searchtab</span>
-                <span class="method-start">12132 ms</span>
+                <span class="method-start">13513 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=Searchtab status=FAILURE method=AnSearchtabIndex.Searchtab()[pri:0, instance:com.in...)</span>
-                <span class="method-start">12146 ms</span>
+                <span class="method-name">tearDown([TestResult name=Searchtab status=SUCCESS method=AnSearchtabIndex.Searchtab()[pri:0, instance:com.in...)</span>
+                <span class="method-start">63177 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">testResults</span>
-                <span class="method-start">15666 ms</span>
+                <span class="method-start">66165 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

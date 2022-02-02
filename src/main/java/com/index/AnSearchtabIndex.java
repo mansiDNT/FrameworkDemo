@@ -35,7 +35,8 @@ public class AnSearchtabIndex extends SeleniumInit{
 		
 		testStepsLog("Step " + (stepCount++) + " : Enter Password.");
 		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter Password.");
-		AnsearchtabVerificationPage = AnsearchtabIndexPage.enterpassword("ama@2022");
+		AnsearchtabVerificationPage = AnsearchtabIndexPage.enterpassword((Common.getCellValue("Sheet1",1,1)));
+		//AnsearchtabVerificationPage = AnsearchtabIndexPage.enterpassword("ama@2022");
 		extentTest.log(Status.PASS, "Password entered correctly" );
 		
 		testStepsLog("Step " + (stepCount++) + " : Click on Sign in button.");
@@ -52,7 +53,8 @@ public class AnSearchtabIndex extends SeleniumInit{
 		
 		testStepsLog("Step " + (stepCount++) + " : Enter Search item.");
 		extentTest.log(Status.PASS, "Step " + (extentStepCount++) + " : Enter Search item.");
-		AnsearchtabVerificationPage = AnsearchtabIndexPage.searchtab("suit");
+		AnsearchtabVerificationPage = AnsearchtabIndexPage.searchtab((Common.getCellValue("Sheet1",1,2)));
+		//AnsearchtabVerificationPage = AnsearchtabIndexPage.searchtab("suit");
 		extentTest.log(Status.PASS, "Search item entered correctly" );
 		
 		
